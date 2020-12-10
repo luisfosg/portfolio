@@ -1,6 +1,13 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "author": "LuisFOsG",
+  "description": "my portfolio",
+  "homepage": "https://github.com/LuisFOsG/portfolio#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisFOsG/portfolio.git"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
@@ -22,6 +29,9 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "bugs": {
+    "url": "https://github.com/LuisFOsG/portfolio/issues"
   },
   "browserslist": {
     "production": [
