@@ -5,19 +5,11 @@
     --animation-time: .3s;
 }
 
-body {
-    background-color: $color-background-light;
-
-    &.dark {
-        background-color: $color-background-dark;
-    }
-}
-
-.float-button {
+.button-nav {
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
-    position: absolute;
+    position: fixed;
     background-color: $color-button-light;
     top: 1rem;
     right: 1rem;
@@ -35,7 +27,14 @@ body {
         &.dark {
             background-color: $color-button-light;
         }
+    }
+    &:active {
+        transform: rotate(-45deg);
+        background-color: $color-button-active-light;
 
+        &.dark {
+            background-color: $color-button-active-dark;
+        }
     }
 
     &::before,

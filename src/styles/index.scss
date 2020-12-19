@@ -1,0 +1,9 @@
+@import 'theme/var';
+
+body {
+    background-color: $color-background-light;
+
+    &.dark {
+        background-color: $color-background-dark;
+    }
+}

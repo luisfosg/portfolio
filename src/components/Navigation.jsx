@@ -5,7 +5,7 @@ import "../styles/Navigation.scss";
 function Navigation() {
   return (
     <div>
-      <div className="float-button dark" id="float-button">
+      <div className="button-nav dark" id="float-button">
       </div>
       <header>
         <ul>
