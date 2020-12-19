@@ -5,11 +5,13 @@ import "../styles/Navigation.scss";
 function Navigation() {
   return (
     <div>
+      <div className="float-button dark" id="float-button">
+      </div>
       <header>
         <ul>
           <li><Link to="/">Inicio</Link></li>
-          <li>Proyect</li>
-          <li>About</li>
+          <li><a href="/#proyect">Proyect</a></li>
+          <li><a href="/#about">About</a></li>
           <li><Link to="/contact">Contact</Link></li>
           <br/>
           <li>Language</li>

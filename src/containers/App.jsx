@@ -4,8 +4,8 @@ import {
   Route
 } from "react-router-dom";
 
-import Navigation from './../components/Navigation';
-import Contact from './../components/Contact';
+import Home from './Home';
+import ContactPage from './ContactPage';
 
 import "../styles/App.scss";
 
@@ -13,14 +13,15 @@ function App() {
   return (
     <Router>
       <Switch>
+
         <Route path="/contact" exact>
-          <Navigation/>
-          <Contact/>
+          <ContactPage/>
         </Route>
+
         <Route path="/" exact>
-          <Navigation/>
-          Luis F. Osorio
+          <Home/>
         </Route>
+
       </Switch>
     </Router>
   );

@@ -1,0 +1,55 @@
+@import 'theme/var';
+
+:root {
+    --size: 3rem;
+    --animation-time: .3s;
+}
+
+body {
+    background-color: $color-background-light;
+
+    &.dark {
+        background-color: $color-background-dark;
+    }
+}
+
+.float-button {
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    position: absolute;
+    background-color: $color-button-light;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+    transition: transform var(--animation-time);
+
+    &.dark {
+        background-color: $color-button-dark;
+    }
+
+    &:hover {
+        transform: rotate(-45deg);
+        background-color: $color-button-dark;
+
+        &.dark {
+            background-color: $color-button-light;
+        }
+
+    }
+
+    &::before,
+    &::after {
+        position: absolute;
+        width: 40%;
+        height: 4%;
+        content: "";
+        top: 49%;
+        left: 30%;
+        background: #fff;
+    }
+    &::after {
+        transform: rotate(90deg);
+        background: #fff;
+    }
+}
