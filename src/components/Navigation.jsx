@@ -5,9 +5,9 @@ import "../styles/Navigation.scss";
 function Navigation() {
   return (
     <div>
-      <div className="button-nav dark" id="float-button">
-      </div>
-      <header>
+      <nav>
+        <div className="button-nav dark" id="float-button">
+        </div>
         <ul>
           <li><Link to="/">Inicio</Link></li>
           <li><a href="/#proyect">Proyect</a></li>
@@ -17,7 +17,7 @@ function Navigation() {
           <li>Language</li>
           <li>Dark</li>
         </ul>
-      </header>
+      </nav>
     </div>
   );
 }
