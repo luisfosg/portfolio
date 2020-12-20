@@ -9,6 +9,8 @@ class Navigation extends React.Component {
 
     this.state = {
       clasesMenu: "enlaces circulo",
+      titleDark: "Dark",
+      classDark: "far fa-moon",
       activarMenu: true,
     };
 
@@ -37,8 +39,10 @@ class Navigation extends React.Component {
     const body = document.getElementById('body');
     if(body.classList.toggle("dark")){
       this.saveDark("true");
+      this.setState({ titleDark: "Light", classDark: "far fa-sun" });
     } else {
       this.saveDark("false");
+      this.setState({ titleDark: "Dark", classDark: "far fa-moon" });
     }
   }
 
@@ -47,9 +51,11 @@ class Navigation extends React.Component {
 
     if(!dark){
       this.saveDark("false");
+      this.setState({ titleDark: "Dark", classDark: "far fa-moon" });
     } else if(dark === "true") {
       const body = document.getElementById('body');
       body.classList.add("dark");
+      this.setState({ titleDark: "Light", classDark: "far fa-sun" });
     }
   }
 
@@ -72,7 +78,11 @@ class Navigation extends React.Component {
             <li><Link to="/contact" className="enlace">Contact <i className="far fa-envelope"></i></Link></li>
             <br/>
             <li><a href="/" className="enlace">Language <i className="fas fa-language"></i></a></li>
-            <li className="modeDark" onClick={ this.activarDark }>Dark <i className="far fa-moon"></i></li>
+
+            <li className="modeDark" onClick={ this.activarDark }>
+              { this.state.titleDark } <i className={ this.state.classDark }></i>
+            </li>
+
             <br/>
           </ul>
 
