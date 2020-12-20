@@ -126,17 +126,17 @@ class Navigation extends React.Component {
             </li>
             <li>
               <a href="/#about" className="enlace">
-                About <i className="fas fa-address-card"></i>
+                { this.state.idioma.about } <i className="fas fa-address-card"></i>
               </a>
             </li>
             <li>
               <a href="/#proyect" className="enlace">
-                Proyect <i className="fas fa-briefcase"></i>
+              { this.state.idioma.proyect } <i className="fas fa-briefcase"></i>
               </a>
             </li>
             <li>
               <Link to="/contact" className="enlace">
-                Contact <i className="far fa-envelope"></i>
+              { this.state.idioma.contact } <i className="far fa-envelope"></i>
               </Link>
             </li>
 

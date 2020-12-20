@@ -1,9 +1,8 @@
 {
-    "holamundo": "Hello World",
     "inicio": "Index",
-    "about": "",
-    "proyect": "",
-    "contact": "",
+    "about": "About",
+    "proyect": "Proyects",
+    "contact": "Contact",
     "lenguaje": "Español",
     "dark": "Dark",
     "light": "Light"

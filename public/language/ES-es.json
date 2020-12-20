@@ -1,9 +1,8 @@
 {
-    "holamundo": "Hola Mundo",
     "inicio": "Inicio",
-    "about": "",
-    "proyect": "",
-    "contact": "",
+    "about": "Acerca de",
+    "proyect": "Proyectos",
+    "contact": "Contacto",
     "lenguaje": "English",
     "dark": "Oscuro",
     "light": "Claro"
