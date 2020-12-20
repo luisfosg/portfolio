@@ -23,6 +23,7 @@
     &:hover {
         transform: rotate(-45deg);
         background-color: $color-button-dark;
+        cursor: pointer;
 
         &.dark {
             background-color: $color-button-light;

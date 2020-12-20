@@ -3,6 +3,22 @@
 body {
     background-color: $color-background-light;
 
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: $color-scrollbar-bg-light;
+        &.dark {
+            background-color: $color-scrollbar-bg-dark;
+        }
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $color-scrollbar-bar-light;
+        border-radius: 5%;
+        &.dark {
+            background-color: $color-scrollbar-bar-dark;
+        }
+    }
+
     &.dark {
         background-color: $color-background-dark;
     }
