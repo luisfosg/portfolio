@@ -1,10 +1,24 @@
 /* Color Fondo Pagina */
-$color-background-light: rgb(228, 116, 116);
+$color-background-light: #90c2e7;
+
+/* Texto */
+$color-texto-primary-light: #000;
+
+/* Navigations Color ===============================================  */
 
 /* Boton Menu */
 $color-button-light: rgb(83, 128, 150);
-$color-button-active-light: rgb(16, 19, 26);
+$color-button-active-light: #00a9a5;
+
+/* Menu Despegable */
+$color-menudespe-primary-light: #16222A;
+$color-menudespe-secundary-light: #3A6073;
+$color-menudespe-tertiary-light: #3A7270;
+
+/* Texto Menu */
+$color-textmenu-light: rgb(255, 255, 255);
+$color-textmenu-hover-light: #3c5a66;
 
 /* Scroll Bar */
-$color-scrollbar-bg-light: rgb(116, 126, 150);
-$color-scrollbar-bar-light: rgb(223, 130, 130);
+$color-scrollbar-bg-light: #00a9a5;
+$color-scrollbar-bar-light: #0b5351;

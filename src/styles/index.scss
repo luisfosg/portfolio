@@ -10,6 +10,7 @@
 
 body {
     background-color: $color-background-light;
+    color: $color-texto-primary-light;
 
     &::-webkit-scrollbar {
         width: 10px;
@@ -23,6 +24,8 @@ body {
 
     &.dark {
         background-color: $color-background-dark;
+        color: $color-texto-primary-dark;
+
         &::-webkit-scrollbar {
             background-color: $color-scrollbar-bg-dark;
         }
