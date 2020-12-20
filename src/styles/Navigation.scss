@@ -81,7 +81,7 @@
     }
 }
 
-.modeDark {
+.mode {
     text-decoration: none;
     list-style: none;
     color: $color-textmenu-light;
@@ -142,7 +142,7 @@ body.dark {
         }
     }
 
-    .modeDark {
+    .mode {
         color: $color-textmenu-dark;
         &:hover {
             color: $color-textmenu-hover-dark;

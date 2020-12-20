@@ -8,18 +8,30 @@ class Navigation extends React.Component {
     super();
 
     this.state = {
+      idioma: [],
+      activarIdioma: true,
+
+      /* Para Activar el Menu despegable */
       clasesMenu: "enlaces circulo",
+      activarMenu: true,
+
+      /* Para Cambiar la apariencia de el Modo Dark */
       titleDark: "Dark",
       classDark: "far fa-moon",
-      activarMenu: true,
     };
 
     this.activarMenu = this.activarMenu.bind(this);
     this.activarDark = this.activarDark.bind(this);
+    this.cambiarLenguaje = this.cambiarLenguaje.bind(this);
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     this.loadDark();
+
+    const Search = await fetch("/language/EN-en.json");
+    const lang = await Search.json();
+
+    this.setState({idioma: lang});
   }
 
   activarMenu() {
@@ -32,6 +44,25 @@ class Navigation extends React.Component {
       this.setState({clasesMenu: "enlaces circulo circuloactive"});
     } else {
       this.setState({clasesMenu: "enlaces circulo"});
+    }
+  }
+
+  async cambiarLenguaje(){
+    let estado = this.state.activarIdioma;
+    estado = !estado;
+
+    this.setState({activarIdioma: estado});
+
+    if(this.state.activarIdioma){
+      const Search = await fetch("/language/ES-es.json");
+      const lang = await Search.json();
+
+      this.setState({idioma: lang});
+    } else {
+      const Search = await fetch("/language/EN-en.json");
+      const lang = await Search.json();
+
+      this.setState({idioma: lang});
     }
   }
 
@@ -72,14 +103,34 @@ class Navigation extends React.Component {
           </div>
 
           <ul className={ this.state.clasesMenu } >
-            <li><Link to="/" className="enlace">Home <i className="fas fa-address-book"></i></Link></li>
-            <li><a href="/#about" className="enlace">About <i className="fas fa-address-card"></i></a></li>
-            <li><a href="/#proyect" className="enlace">Proyect <i className="fas fa-briefcase"></i></a></li>
-            <li><Link to="/contact" className="enlace">Contact <i className="far fa-envelope"></i></Link></li>
-            <br/>
-            <li><a href="/" className="enlace">Language <i className="fas fa-language"></i></a></li>
+            <li>
+              <Link to="/" className="enlace">
+                { this.state.idioma.inicio } <i className="fas fa-address-book"></i>
+              </Link>
+            </li>
+            <li>
+              <a href="/#about" className="enlace">
+                About <i className="fas fa-address-card"></i>
+              </a>
+            </li>
+            <li>
+              <a href="/#proyect" className="enlace">
+                Proyect <i className="fas fa-briefcase"></i>
+              </a>
+            </li>
+            <li>
+              <Link to="/contact" className="enlace">
+                Contact <i className="far fa-envelope"></i>
+              </Link>
+            </li>
 
-            <li className="modeDark" onClick={ this.activarDark }>
+            <br/>
+
+            <li className="mode" onClick={ this.cambiarLenguaje }>
+              { this.state.idioma.lenguaje } <i className="fas fa-language"></i>
+            </li>
+
+            <li className="mode" onClick={ this.activarDark }>
               { this.state.titleDark } <i className={ this.state.classDark }></i>
             </li>
 
