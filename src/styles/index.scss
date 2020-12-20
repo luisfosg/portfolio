@@ -1,4 +1,5 @@
-@import 'theme/var';
+@import 'theme/light';
+@import 'theme/dark';
 
 * {
     margin: 0;
@@ -18,9 +19,6 @@ body {
     &::-webkit-scrollbar-thumb {
         background: $color-scrollbar-bar-light;
         border-radius: 5%;
-        &.dark {
-            background-color: $color-scrollbar-bar-dark;
-        }
     }
 
     &.dark {

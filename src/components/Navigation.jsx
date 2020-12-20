@@ -33,7 +33,7 @@ class Navigation extends React.Component {
       <div>
         <nav>
 
-          <div className="button-nav dark" id="float-button" onClick={ this.activarMenu }>
+          <div className="button-nav" id="float-button" onClick={ this.activarMenu }>
           </div>
 
           <ul className={ this.state.clasesMenu } >

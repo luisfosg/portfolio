@@ -1,4 +1,5 @@
-@import 'theme/var';
+@import 'theme/light';
+@import 'theme/dark';
 
 :root {
     --size: 3rem;
@@ -42,15 +43,6 @@
         background: #fff;
     }
 
-    &.dark {
-        background-color: $color-button-dark;
-        &:hover {
-            background-color: $color-button-light;
-        }
-        &:active {
-            background-color: $color-button-active-dark;
-        }
-    }
 }
 
 .enlaces {
@@ -91,6 +83,22 @@
     -webkit-clip-path: circle(50% at 100% 0%);
     clip-path: circle(50% at 100% 0%);
 }
+
+
+body.dark {
+
+    .button-nav {
+        background-color: $color-button-dark;
+        &:hover {
+            background-color: $color-button-light;
+        }
+        &:active {
+            background-color: $color-button-active-dark;
+        }
+    }
+
+}
+
 
 @media screen and (max-width:660px){
     .enlaces {
