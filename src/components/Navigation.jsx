@@ -16,7 +16,7 @@ class Navigation extends React.Component {
       activarMenu: true,
 
       /* Para Cambiar la apariencia de el Modo Dark */
-      titleDark: "Dark",
+      titleDark: "",
       classDark: "far fa-moon",
     };
 
@@ -32,6 +32,14 @@ class Navigation extends React.Component {
     const lang = await Search.json();
 
     this.setState({idioma: lang});
+
+    const dark = localStorage.getItem("darkmode");
+
+    if(dark === "false"){
+      this.setState({ titleDark: this.state.idioma.dark, classDark: "far fa-moon" });
+    } else if(dark === "true") {
+      this.setState({ titleDark: this.state.idioma.light, classDark: "far fa-sun" });
+    }
   }
 
   activarMenu() {
@@ -64,16 +72,24 @@ class Navigation extends React.Component {
 
       this.setState({idioma: lang});
     }
+
+    const dark = localStorage.getItem("darkmode");
+
+    if(dark === "false"){
+      this.setState({ titleDark: this.state.idioma.dark, classDark: "far fa-moon" });
+    } else if(dark === "true") {
+      this.setState({ titleDark: this.state.idioma.light, classDark: "far fa-sun" });
+    }
   }
 
   activarDark() {
     const body = document.getElementById('body');
     if(body.classList.toggle("dark")){
       this.saveDark("true");
-      this.setState({ titleDark: "Light", classDark: "far fa-sun" });
+      this.setState({ titleDark: this.state.idioma.light, classDark: "far fa-sun" });
     } else {
       this.saveDark("false");
-      this.setState({ titleDark: "Dark", classDark: "far fa-moon" });
+      this.setState({ titleDark: this.state.idioma.dark, classDark: "far fa-moon" });
     }
   }
 
@@ -82,11 +98,11 @@ class Navigation extends React.Component {
 
     if(!dark){
       this.saveDark("false");
-      this.setState({ titleDark: "Dark", classDark: "far fa-moon" });
+      this.setState({ titleDark: this.state.idioma.dark, classDark: "far fa-moon" });
     } else if(dark === "true") {
       const body = document.getElementById('body');
       body.classList.add("dark");
-      this.setState({ titleDark: "Light", classDark: "far fa-sun" });
+      this.setState({ titleDark: this.state.idioma.light, classDark: "far fa-sun" });
     }
   }
 
