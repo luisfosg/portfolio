@@ -13,9 +13,6 @@ body {
     &::-webkit-scrollbar {
         width: 10px;
         background-color: $color-scrollbar-bg-light;
-        &.dark {
-            background-color: $color-scrollbar-bg-dark;
-        }
     }
 
     &::-webkit-scrollbar-thumb {
@@ -28,5 +25,11 @@ body {
 
     &.dark {
         background-color: $color-background-dark;
+        &::-webkit-scrollbar {
+            background-color: $color-scrollbar-bg-dark;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $color-scrollbar-bar-dark;
+        }
     }
 }

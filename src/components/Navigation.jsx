@@ -32,8 +32,10 @@ class Navigation extends React.Component {
     return (
       <div>
         <nav>
+
           <div className="button-nav dark" id="float-button" onClick={ this.activarMenu }>
           </div>
+
           <ul className={ this.state.clasesMenu } >
             <li><Link to="/" className="enlace">Home <i className="fas fa-address-book"></i></Link></li>
             <li><a href="/#about" className="enlace">About <i className="fas fa-address-card"></i></a></li>
@@ -44,6 +46,7 @@ class Navigation extends React.Component {
             <li><a href="/" className="enlace">Dark <i className="far fa-moon"></i></a></li>
             <br/>
           </ul>
+
         </nav>
       </div>
     );

@@ -16,26 +16,15 @@
     z-index: 100;
     transition: transform var(--animation-time);
 
-    &.dark {
-        background-color: $color-button-dark;
-    }
-
     &:hover {
         transform: rotate(-45deg);
         background-color: $color-button-dark;
         cursor: pointer;
-
-        &.dark {
-            background-color: $color-button-light;
-        }
     }
+
     &:active {
         transform: rotate(-45deg);
         background-color: $color-button-active-light;
-
-        &.dark {
-            background-color: $color-button-active-dark;
-        }
     }
 
     &::before,
@@ -51,6 +40,16 @@
     &::after {
         transform: rotate(90deg);
         background: #fff;
+    }
+
+    &.dark {
+        background-color: $color-button-dark;
+        &:hover {
+            background-color: $color-button-light;
+        }
+        &:active {
+            background-color: $color-button-active-dark;
+        }
     }
 }
 
@@ -75,11 +74,14 @@
     list-style: none;
     color: rgb(255, 255, 255);
 }
+.enlace:hover {
+    color: #3c5a66;
+}
 
 .circulo {
     list-style: none;
 
-    -webkit-clip-path: circle(50% at 100% 0%);
+    -webkit-clip-path: circle(0% at 100% 0%);
     clip-path: circle(0% at 100% 0%);
 }
 
@@ -96,7 +98,7 @@
     }
     .circuloactive {
         list-style: none;
-        -webkit-clip-path: circle(50% at 100% 0%);
+        -webkit-clip-path: circle(60% at 100% 0%);
         clip-path: circle(60% at 100% 0%);
     }
 }
@@ -107,7 +109,7 @@
     }
     .circuloactive {
         list-style: none;
-        -webkit-clip-path: circle(50% at 100% 0%);
+        -webkit-clip-path: circle(65% at 100% 0%);
         clip-path: circle(65% at 100% 0%);
     }
 }

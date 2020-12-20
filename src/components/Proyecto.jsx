@@ -4,6 +4,15 @@ function Proyecto() {
   return (
     <div>
       Proyecto
+      <br/> Espacio <br/>
+      <br/> Espacio <br/>
+      <br/> Espacio <br/>
+      <br/> Espacio <br/>
+      <br/> Espacio <br/>
+      <br/> Espacio <br/>
+      <br/> Espacio <br/>
+      <br/> Espacio <br/>
+      <br/> Espacio <br/>
     </div>
   );
 }
