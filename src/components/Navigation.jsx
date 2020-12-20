@@ -13,6 +13,11 @@ class Navigation extends React.Component {
     };
 
     this.activarMenu = this.activarMenu.bind(this);
+    this.activarDark = this.activarDark.bind(this);
+  }
+
+  componentDidMount() {
+    this.loadDark();
   }
 
   activarMenu() {
@@ -26,6 +31,30 @@ class Navigation extends React.Component {
     } else {
       this.setState({clasesMenu: "enlaces circulo"});
     }
+  }
+
+  activarDark() {
+    const body = document.getElementById('body');
+    if(body.classList.toggle("dark")){
+      this.saveDark("true");
+    } else {
+      this.saveDark("false");
+    }
+  }
+
+  loadDark() {
+    const dark = localStorage.getItem("darkmode");
+
+    if(!dark){
+      this.saveDark("false");
+    } else if(dark === "true") {
+      const body = document.getElementById('body');
+      body.classList.add("dark");
+    }
+  }
+
+  saveDark(dark){
+    localStorage.setItem("darkmode", dark);
   }
 
   render() {
@@ -43,7 +72,7 @@ class Navigation extends React.Component {
             <li><Link to="/contact" className="enlace">Contact <i className="far fa-envelope"></i></Link></li>
             <br/>
             <li><a href="/" className="enlace">Language <i className="fas fa-language"></i></a></li>
-            <li><a href="/" className="enlace">Dark <i className="far fa-moon"></i></a></li>
+            <li className="modeDark" onClick={ this.activarDark }>Dark <i className="far fa-moon"></i></li>
             <br/>
           </ul>
 
