@@ -7,8 +7,8 @@ function Home() {
   return (
     <div>
       <Navigation/>
-      <Profile/>
       <About/>
+      <Profile/>
       <Proyectos/>
     </div>
   );

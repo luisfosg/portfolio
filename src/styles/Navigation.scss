@@ -92,6 +92,22 @@
 
 @media screen and (max-width:660px){
     .enlaces {
-        padding: 50%;
+        padding: 18%;
+    }
+    .circuloactive {
+        list-style: none;
+        -webkit-clip-path: circle(50% at 100% 0%);
+        clip-path: circle(60% at 100% 0%);
+    }
+}
+
+@media screen and (max-width:340px){
+    .enlaces {
+        padding: 30%;
+    }
+    .circuloactive {
+        list-style: none;
+        -webkit-clip-path: circle(50% at 100% 0%);
+        clip-path: circle(65% at 100% 0%);
     }
 }

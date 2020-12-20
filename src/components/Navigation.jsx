@@ -35,13 +35,13 @@ class Navigation extends React.Component {
           <div className="button-nav dark" id="float-button" onClick={ this.activarMenu }>
           </div>
           <ul className={ this.state.clasesMenu } >
-            <li><Link to="/" className="enlace">Inicio</Link></li>
-            <li><a href="/#proyect" className="enlace">Proyect</a></li>
-            <li><a href="/#about" className="enlace">About</a></li>
-            <li><Link to="/contact" className="enlace">Contact</Link></li>
+            <li><Link to="/" className="enlace">Home <i className="fas fa-address-book"></i></Link></li>
+            <li><a href="/#about" className="enlace">About <i className="fas fa-address-card"></i></a></li>
+            <li><a href="/#proyect" className="enlace">Proyect <i className="fas fa-briefcase"></i></a></li>
+            <li><Link to="/contact" className="enlace">Contact <i className="far fa-envelope"></i></Link></li>
             <br/>
-            <li><a href="/" className="enlace">Language</a></li>
-            <li><a href="/" className="enlace">Dark</a></li>
+            <li><a href="/" className="enlace">Language <i className="fas fa-language"></i></a></li>
+            <li><a href="/" className="enlace">Dark <i className="far fa-moon"></i></a></li>
             <br/>
           </ul>
         </nav>
