@@ -1,18 +1,9 @@
 import "../styles/Proyecto.scss";
 
-function Proyecto() {
+function Proyecto(props) {
   return (
     <div>
       Proyecto
-      <br/> Espacio <br/>
-      <br/> Espacio <br/>
-      <br/> Espacio <br/>
-      <br/> Espacio <br/>
-      <br/> Espacio <br/>
-      <br/> Espacio <br/>
-      <br/> Espacio <br/>
-      <br/> Espacio <br/>
-      <br/> Espacio <br/>
     </div>
   );
 }

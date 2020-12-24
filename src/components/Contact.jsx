@@ -1,6 +1,6 @@
 import "../styles/Contact.scss";
 
-function Contact() {
+function Contact(props) {
   return (
     <div>
       <header>

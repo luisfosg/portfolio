@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom';
 
 import "../styles/Navigation.scss";
 
+/* TODO realizar cambio de lenguaje para todo el espacio de trabajo de forma eficiente.
+*/
+
 class Navigation extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       idioma: [],
-      activarIdioma: true,
-
       /* Para Activar el Menu despegable */
       clasesMenu: "enlaces circulo",
       activarMenu: true,
@@ -22,24 +23,10 @@ class Navigation extends React.Component {
 
     this.activarMenu = this.activarMenu.bind(this);
     this.activarDark = this.activarDark.bind(this);
-    this.cambiarLenguaje = this.cambiarLenguaje.bind(this);
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     this.loadDark();
-
-    const Search = await fetch("/language/EN-en.json");
-    const lang = await Search.json();
-
-    this.setState({idioma: lang});
-
-    const dark = localStorage.getItem("darkmode");
-
-    if(dark === "false"){
-      this.setState({ titleDark: this.state.idioma.dark, classDark: "far fa-moon" });
-    } else if(dark === "true") {
-      this.setState({ titleDark: this.state.idioma.light, classDark: "far fa-sun" });
-    }
   }
 
   activarMenu() {
@@ -52,33 +39,6 @@ class Navigation extends React.Component {
       this.setState({clasesMenu: "enlaces circulo circuloactive"});
     } else {
       this.setState({clasesMenu: "enlaces circulo"});
-    }
-  }
-
-  async cambiarLenguaje(){
-    let estado = this.state.activarIdioma;
-    estado = !estado;
-
-    this.setState({activarIdioma: estado});
-
-    if(this.state.activarIdioma){
-      const Search = await fetch("/language/ES-es.json");
-      const lang = await Search.json();
-
-      this.setState({idioma: lang});
-    } else {
-      const Search = await fetch("/language/EN-en.json");
-      const lang = await Search.json();
-
-      this.setState({idioma: lang});
-    }
-
-    const dark = localStorage.getItem("darkmode");
-
-    if(dark === "false"){
-      this.setState({ titleDark: this.state.idioma.dark, classDark: "far fa-moon" });
-    } else if(dark === "true") {
-      this.setState({ titleDark: this.state.idioma.light, classDark: "far fa-sun" });
     }
   }
 
@@ -111,6 +71,8 @@ class Navigation extends React.Component {
   }
 
   render() {
+    let props = this.props;
+
     return (
       <div>
         <nav>
@@ -121,29 +83,29 @@ class Navigation extends React.Component {
           <ul className={ this.state.clasesMenu } >
             <li>
               <Link to="/" className="enlace">
-                { this.state.idioma.inicio } <i className="fas fa-address-book"></i>
+                { props.lang.inicio } <i className="fas fa-address-book"></i>
               </Link>
             </li>
             <li>
               <a href="/#about" className="enlace">
-                { this.state.idioma.about } <i className="fas fa-address-card"></i>
+                { props.lang.about } <i className="fas fa-address-card"></i>
               </a>
             </li>
             <li>
               <a href="/#proyect" className="enlace">
-              { this.state.idioma.proyect } <i className="fas fa-briefcase"></i>
+              { props.lang.proyect } <i className="fas fa-briefcase"></i>
               </a>
             </li>
             <li>
               <Link to="/contact" className="enlace">
-              { this.state.idioma.contact } <i className="far fa-envelope"></i>
+              { props.lang.contact } <i className="far fa-envelope"></i>
               </Link>
             </li>
 
             <br/>
 
-            <li className="mode" onClick={ this.cambiarLenguaje }>
-              { this.state.idioma.lenguaje } <i className="fas fa-language"></i>
+            <li className="mode" onClick={ props.cambiarLenguaje }>
+              { props.lang.lenguaje } <i className="fas fa-language"></i>
             </li>
 
             <li className="mode" onClick={ this.activarDark }>

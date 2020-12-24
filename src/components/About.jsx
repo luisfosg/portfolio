@@ -1,6 +1,6 @@
 import "../styles/About.scss";
 
-function About() {
+function About(props) {
   return (
     <div id="about">
       <header>

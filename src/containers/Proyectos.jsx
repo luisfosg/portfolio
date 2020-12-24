@@ -2,16 +2,16 @@ import Proyecto from './../components/Proyecto';
 
 import "../styles/Proyectos.scss";
 
-function Proyectos() {
+function Proyectos(props) {
   return (
     <div id="proyect">
       <header>
-        <Proyecto/>
-        <Proyecto/>
-        <Proyecto/>
-        <Proyecto/>
-        <Proyecto/>
-        <Proyecto/>
+        <Proyecto leng = { props.leng } />
+        <Proyecto leng = { props.leng } />
+        <Proyecto leng = { props.leng } />
+        <Proyecto leng = { props.leng } />
+        <Proyecto leng = { props.leng } />
+        <Proyecto leng = { props.leng } />
       </header>
     </div>
   );

@@ -1,6 +1,6 @@
 import "../styles/Profile.scss";
 
-function Profile() {
+function Profile(props) {
   return (
     <div>
         Luis F. Osorio
