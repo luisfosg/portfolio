@@ -3,21 +3,16 @@ import { Link } from 'react-router-dom';
 
 import "../styles/Navigation.scss";
 
-/* TODO realizar cambio de lenguaje para todo el espacio de trabajo de forma eficiente.
-*/
-
 class Navigation extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      idioma: [],
       /* Para Activar el Menu despegable */
       clasesMenu: "enlaces circulo",
       activarMenu: true,
 
       /* Para Cambiar la apariencia de el Modo Dark */
-      titleDark: "",
       classDark: "far fa-moon",
     };
 
@@ -25,7 +20,7 @@ class Navigation extends React.Component {
     this.activarDark = this.activarDark.bind(this);
   }
 
-  componentDidMount() {
+  componentDidMount(){
     this.loadDark();
   }
 
@@ -46,23 +41,26 @@ class Navigation extends React.Component {
     const body = document.getElementById('body');
     if(body.classList.toggle("dark")){
       this.saveDark("true");
-      this.setState({ titleDark: this.state.idioma.light, classDark: "far fa-sun" });
+      this.setState({ classDark: "far fa-sun" });
     } else {
       this.saveDark("false");
-      this.setState({ titleDark: this.state.idioma.dark, classDark: "far fa-moon" });
+      this.setState({ classDark: "far fa-moon" });
     }
   }
 
-  loadDark() {
+  async loadDark() {
     const dark = localStorage.getItem("darkmode");
 
     if(!dark){
       this.saveDark("false");
-      this.setState({ titleDark: this.state.idioma.dark, classDark: "far fa-moon" });
+      this.setState({ classDark: "far fa-moon" });
     } else if(dark === "true") {
       const body = document.getElementById('body');
       body.classList.add("dark");
-      this.setState({ titleDark: this.state.idioma.light, classDark: "far fa-sun" });
+      this.setState({ classDark: "far fa-sun" });
+    } else {
+      this.saveDark("false");
+      this.setState({ classDark: "far fa-moon" });
     }
   }
 
@@ -72,52 +70,54 @@ class Navigation extends React.Component {
 
   render() {
     let props = this.props;
+    if(props.lang.menu){
+      return (
+        <div>
+          <nav>
 
-    return (
-      <div>
-        <nav>
+            <div className="button-nav" id="float-button" onClick={ this.activarMenu }>
+            </div>
 
-          <div className="button-nav" id="float-button" onClick={ this.activarMenu }>
-          </div>
+            <ul className={ this.state.clasesMenu } >
+              <li>
+                <Link to="/" className="enlace">
+                   { props.lang.menu.inicio } <i className="fas fa-address-book"></i>
+                </Link>
+              </li>
+              <li>
+                <a href="/#about" className="enlace">
+                { props.lang.menu.about } <i className="fas fa-address-card"></i>
+                </a>
+              </li>
+              <li>
+                <a href="/#proyect" className="enlace">
+                { props.lang.menu.proyect } <i className="fas fa-briefcase"></i>
+                </a>
+              </li>
+              <li>
+                <Link to="/contact" className="enlace">
+                { props.lang.menu.contact } <i className="far fa-envelope"></i>
+                </Link>
+              </li>
 
-          <ul className={ this.state.clasesMenu } >
-            <li>
-              <Link to="/" className="enlace">
-                { props.lang.inicio } <i className="fas fa-address-book"></i>
-              </Link>
-            </li>
-            <li>
-              <a href="/#about" className="enlace">
-                { props.lang.about } <i className="fas fa-address-card"></i>
-              </a>
-            </li>
-            <li>
-              <a href="/#proyect" className="enlace">
-              { props.lang.proyect } <i className="fas fa-briefcase"></i>
-              </a>
-            </li>
-            <li>
-              <Link to="/contact" className="enlace">
-              { props.lang.contact } <i className="far fa-envelope"></i>
-              </Link>
-            </li>
+              <br/>
 
-            <br/>
+              <li className="mode" onClick={ props.cambiarLenguaje }>
+              { props.lang.menu.lenguage } <i className="fas fa-language"></i>
+              </li>
 
-            <li className="mode" onClick={ props.cambiarLenguaje }>
-              { props.lang.lenguaje } <i className="fas fa-language"></i>
-            </li>
+              <li className="mode" onClick={ this.activarDark }>
+                <i className={ this.state.classDark }></i>
+              </li>
 
-            <li className="mode" onClick={ this.activarDark }>
-              { this.state.titleDark } <i className={ this.state.classDark }></i>
-            </li>
+              <br/>
+            </ul>
 
-            <br/>
-          </ul>
-
-        </nav>
-      </div>
-    );
+          </nav>
+        </div>
+      );
+    }
+    return(<div>Cargando</div>);
   }
 }
 

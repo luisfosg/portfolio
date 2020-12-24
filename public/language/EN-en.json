@@ -1,9 +1,17 @@
 {
-    "inicio": "Index",
-    "about": "About",
-    "proyect": "Proyects",
-    "contact": "Contact",
-    "lenguaje": "Español",
-    "dark": "Dark",
-    "light": "Light"
+    "menu": {
+        "inicio": "Index",
+        "about": "About",
+        "proyect": "Proyects",
+        "contact": "Contact",
+        "lenguage": "Español",
+        "dark": "Dark",
+        "light": "Light"
+    },
+    "proyect": {
+        "text": "proyect"
+    },
+    "about": {
+        "text": "About"
+    }
 }

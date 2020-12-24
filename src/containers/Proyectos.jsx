@@ -6,12 +6,12 @@ function Proyectos(props) {
   return (
     <div id="proyect">
       <header>
-        <Proyecto leng = { props.leng } />
-        <Proyecto leng = { props.leng } />
-        <Proyecto leng = { props.leng } />
-        <Proyecto leng = { props.leng } />
-        <Proyecto leng = { props.leng } />
-        <Proyecto leng = { props.leng } />
+        <Proyecto lang = { props.lang } />
+        <Proyecto lang = { props.lang } />
+        <Proyecto lang = { props.lang } />
+        <Proyecto lang = { props.lang } />
+        <Proyecto lang = { props.lang } />
+        <Proyecto lang = { props.lang } />
       </header>
     </div>
   );

@@ -19,6 +19,7 @@ class App extends React.Component {
       lang : [],
       activarIdioma: true,
     }
+
     this.cambiarLenguaje = this.cambiarLenguaje.bind(this);
   }
 
@@ -40,6 +41,7 @@ class App extends React.Component {
 
       document.documentElement.setAttribute("lang", "es");
       this.saveLeng("es");
+
     } else {
       const Search = await fetch("/language/EN-en.json");
       const lang = await Search.json();
@@ -48,15 +50,6 @@ class App extends React.Component {
       document.documentElement.setAttribute("lang", "en");
       this.saveLeng("en");
     }
-
-    /* No se Puede :X */
-    /* const dark = localStorage.getItem("darkmode");
-
-    if(dark === "false"){
-      this.setState({ titleDark: this.state.lang.dark, classDark: "far fa-moon" });
-    } else if(dark === "true") {
-      this.setState({ titleDark: this.state.lang.light, classDark: "far fa-sun" });
-    } */
   }
 
   async loadLeng() {
@@ -82,18 +75,7 @@ class App extends React.Component {
 
       this.saveLeng("en");
     }
-
     this.setState({lang: lang});
-
-    /* No se puede :X */
-
-    /* const dark = localStorage.getItem("darkmode");
-
-    if(dark === "false"){
-      this.setState({ titleDark: this.state.lang.dark, classDark: "far fa-moon" });
-    } else if(dark === "true") {
-      this.setState({ titleDark: this.state.lang.light, classDark: "far fa-sun" });
-    } */
   }
 
   saveLeng(leng){
