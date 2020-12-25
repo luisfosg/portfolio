@@ -1,2 +1,16 @@
 @import 'theme/light';
 @import 'theme/dark';
+
+.cuadroProyecto {
+    display: grid;
+
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: auto auto auto;
+    column-gap: 10px;
+    row-gap: 15px;
+
+    justify-items: center;
+
+    /* border: solid;
+    border-color: black; */
+}

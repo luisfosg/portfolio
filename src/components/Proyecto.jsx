@@ -3,7 +3,7 @@ import "../styles/Proyecto.scss";
 function Proyecto(props) {
   if(props.lang.proyect){
     return (
-      <div>
+      <div className="item">
         { props.lang.proyect.text }
       </div>
     )

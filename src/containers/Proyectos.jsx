@@ -6,12 +6,14 @@ function Proyectos(props) {
   return (
     <div id="proyect">
       <header>
-        <Proyecto lang = { props.lang } />
-        <Proyecto lang = { props.lang } />
-        <Proyecto lang = { props.lang } />
-        <Proyecto lang = { props.lang } />
-        <Proyecto lang = { props.lang } />
-        <Proyecto lang = { props.lang } />
+        <div className="cuadroProyecto">
+          <Proyecto lang = { props.lang } />
+          <Proyecto lang = { props.lang } />
+          <Proyecto lang = { props.lang } />
+          <Proyecto lang = { props.lang } />
+          <Proyecto lang = { props.lang } />
+          <Proyecto lang = { props.lang } />
+        </div>
       </header>
     </div>
   );

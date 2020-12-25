@@ -1,2 +1,11 @@
 @import 'theme/light';
 @import 'theme/dark';
+
+.item {
+    display: block;
+
+    padding: 15px;
+
+    border: solid;
+    border-color: rgb(167, 94, 94);
+}
