@@ -14,3 +14,18 @@
     /* border: solid;
     border-color: black; */
 }
+
+@media screen and (max-width:750px){
+    .cuadroProyecto {
+        display: grid;
+
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        column-gap: 0%;
+        row-gap: 1%;
+
+        justify-items: center;
+
+    }
+
+}
