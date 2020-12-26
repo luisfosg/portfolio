@@ -6,7 +6,7 @@ function Profile(props) {
     return (
       <div className="text-center">
         Luis F. Osorio <br/>
-        <a target="_blank" rel="noreferrer" href="https://github.com/LuisFOsG" className="enlace github">
+        <a target="_blank" rel="noreferrer" href="https://github.com/LuisFOsG" className="enlacetexto github">
           <i className="fab fa-github"></i>
         </a>
       </div>

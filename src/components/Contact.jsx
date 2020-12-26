@@ -1,12 +1,38 @@
 import "../styles/Contact.scss";
 
 function Contact(props) {
-  return (
-    <div>
+  if(props.lang.menu){
+    return (
       <header>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum reiciendis placeat officiis eius mollitia ipsa explicabo quisquam accusantium autem sed? Consequuntur aut iusto modi hic perspiciatis doloremque. Esse quaerat in, est accusamus fugit tenetur facilis perspiciatis voluptas praesentium animi totam qui? Laudantium at fugiat sint, laboriosam nobis blanditiis autem nulla totam! Debitis repellat, hic fuga quo officiis laboriosam optio voluptatem perspiciatis vero ab ex, error nisi officia eos alias quam ullam ea. Asperiores est culpa deleniti labore qui, molestias unde beatae, repellendus optio sit suscipit error quidem numquam exercitationem dignissimos incidunt, reiciendis saepe amet tempore perspiciatis excepturi iste? Ratione ab maiores dicta consequuntur vel facere nisi nobis perferendis officiis, rerum assumenda ipsum modi iste explicabo aliquam cumque accusamus? Quasi eum blanditiis optio accusamus voluptate ea enim perspiciatis dolor sed omnis dolore explicabo, facere dignissimos officiis dolorem ratione dolorum expedita alias ducimus necessitatibus sunt possimus praesentium deleniti? Sapiente adipisci porro soluta.
+        <div className="text-center">
+          <div>
+            Contact Me
+          </div>
+          <div>
+            <label>Name</label><br/>
+            <input type="text" name="name" id="name" placeholder="Name"/>
+          </div>
+          <div>
+            <label>Email</label><br/>
+            <input type="email" name="email" id="email" placeholder="Email"/>
+          </div>
+          <div>
+            <label>Message</label><br/>
+            <textarea name="description" id="description" placeholder="Description"></textarea>
+          </div>
+          <div>
+            <button>Send</button>
+          </div>
+        </div>
       </header>
-    </div>
+    );
+  }
+  return (
+      <header>
+        <div>
+          Contact
+        </div>
+      </header>
   );
 }
 

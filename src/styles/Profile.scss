@@ -5,15 +5,24 @@
     text-align: center;
 }
 
-.enlace {
+.enlacetexto {
     text-decoration: none;
     list-style: none;
-    color: $color-textmenu-light;
+    color: $color-text-light;
     &:hover {
-        color: $color-textmenu-hover-light;
+        color: $color-text-hover-light;
     }
 }
 
 .github {
     font-size: 50px;
+}
+
+body.dark {
+    .enlacetexto {
+        color: $color-text-dark;
+        &:hover {
+            color: $color-text-hover-dark;
+        }
+    }
 }
