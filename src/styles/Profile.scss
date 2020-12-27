@@ -18,11 +18,49 @@
     font-size: 50px;
 }
 
+.foto {
+    border-radius: 100%;
+}
+
+.colum-2 {
+    display: flex;
+    justify-content: center;
+}
+
+.cuadroPerfil {
+    display: grid;
+
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    column-gap: 1.1%;
+    row-gap: 5%;
+}
+
 body.dark {
     .enlacetexto {
         color: $color-text-dark;
         &:hover {
             color: $color-text-hover-dark;
         }
+    }
+}
+
+@media screen and (max-width:750px){
+    .cuadroPerfil {
+        display: grid;
+
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "a"
+            "b";
+
+        justify-items: center;
+    }
+    .colum-1 {
+        grid-area: b;
+    }
+    .colum-2 {
+        grid-area: a;
     }
 }
