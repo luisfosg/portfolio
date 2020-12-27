@@ -1,2 +1,55 @@
 @import 'theme/light';
 @import 'theme/dark';
+
+.container-center{
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 50%;
+    height: 50%;
+
+    padding: 15px;
+
+    border: solid;
+    border-radius: 10%;
+    background-color: $color-background-contact-light;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.form-control-textarea {
+    width: 100%;
+    resize: vertical;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: $color-scrollbar-bg-light;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $color-scrollbar-bar-light;
+        border-radius: 5%;
+    }
+}
+
+.contact-title {
+    padding: 20px;
+}
+
+body.dark {
+    .container {
+        background-color: $color-background-contact-dark;
+    }
+    .form-control-textarea {
+        &::-webkit-scrollbar {
+            background-color: $color-scrollbar-bg-dark;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $color-scrollbar-bar-dark;
+        }
+    }
+}

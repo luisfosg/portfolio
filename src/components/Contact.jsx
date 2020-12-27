@@ -3,30 +3,31 @@ import "../styles/Contact.scss";
 function Contact(props) {
   if(props.lang.menu){
     return (
-      <header>
-        <div className="text-center">
-          <div>
+      <header className="container-center">
+        <div className="container">
+          <div className="contact-title text-center">
             Contact Me
           </div>
           <div>
             <label>Name</label><br/>
-            <input type="text" name="name" id="name" placeholder="Name"/>
+            <input className="form-control" type="text" name="name" id="name" placeholder="Name"/>
           </div>
           <div>
             <label>Email</label><br/>
-            <input type="email" name="email" id="email" placeholder="Email"/>
+            <input className="form-control" type="email" name="email" id="email" placeholder="Email"/>
           </div>
           <div>
             <label>Message</label><br/>
-            <textarea name="description" id="description" placeholder="Description"></textarea>
+            <textarea className="form-control-textarea" name="description" id="description" placeholder="Description"></textarea>
           </div>
-          <div>
+          <div className="text-center">
             <button>Send</button>
           </div>
         </div>
       </header>
     );
   }
+
   return (
       <header>
         <div>
