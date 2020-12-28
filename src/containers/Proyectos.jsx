@@ -3,18 +3,15 @@ import Proyecto from './../components/Proyecto';
 import "../styles/Proyectos.scss";
 
 function Proyectos(props) {
+  let img = "http://placehold.it/150x150";
+  let number = [1,2,3,4,5,6]
   return (
     <div id="proyect">
-      <header>
+      <main>
         <div className="cuadroProyecto">
-          <Proyecto lang = { props.lang } />
-          <Proyecto lang = { props.lang } />
-          <Proyecto lang = { props.lang } />
-          <Proyecto lang = { props.lang } />
-          <Proyecto lang = { props.lang } />
-          <Proyecto lang = { props.lang } />
+        { number.map((proy)=> <Proyecto key={ proy } lang = { props.lang } img = { img } />) }
         </div>
-      </header>
+      </main>
     </div>
   );
 }
