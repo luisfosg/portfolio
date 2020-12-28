@@ -6,11 +6,11 @@ function Profile(props) {
     return (
       <div className="cuadroPerfil">
         <div className="column-1 text-center">
-          <div>
+          <div className="espacio">
             Luis F. Osorio <br/><br/>
             Programming is art 🤯. I am a programming student looking to learn something new every day.
           </div>
-          <div>
+          <div className="espacio">
             <a target="_blank" rel="noreferrer" href="https://github.com/LuisFOsG" className="enlacetexto icon">
               <i className="fab fa-github"></i>
             </a>
