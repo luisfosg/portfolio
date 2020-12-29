@@ -18,7 +18,7 @@ function Contact(props) {
           </div>
           <div>
             <label>Message</label><br/>
-            <textarea className="form-control-textarea" name="description" id="description" placeholder="Description"></textarea>
+            <textarea rows="10" className="form-control-textarea" name="description" id="description" placeholder="Description"></textarea>
           </div>
           <div className="text-center">
             <button>Send</button>

@@ -4,7 +4,6 @@ import Navigation from './../components/Navigation';
 import Profile from './../components/Profile';
 import About from './../components/About';
 import Proyectos from './Proyectos';
-import Footer from './../components/Footer';
 
 class Home extends React.Component {
 
@@ -16,12 +15,10 @@ class Home extends React.Component {
         <Navigation lang = { props.lang } cambiarLenguaje = { props.cambiarLenguaje } />
         <br/><br/><br/><br/>
         <Profile lang = { props.lang } />
-        <br/>
+        <br/><br/>
         <About lang = { props.lang } />
-        <br/>
+        <br/><br/>
         <Proyectos lang = { props.lang } />
-        <br/><br/><br/>
-        <Footer lang = { props.lang } />
     </div>
     );
   }

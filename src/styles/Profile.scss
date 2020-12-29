@@ -18,7 +18,7 @@
     font-size: 50px;
 }
 
-.foto {
+.fotoPerfil {
     border-radius: 100%;
     width: 85%;
     height: 85%;
@@ -61,7 +61,7 @@ body.dark {
 }
 
 @media screen and (max-width:750px){
-    .foto {
+    .fotoPerfil {
         width: 100%;
         height: 100%;
     }

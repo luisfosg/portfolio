@@ -20,7 +20,7 @@ function Profile(props) {
           </div>
         </div>
         <div className="column-2">
-          <img className="foto" src={ img } alt=""/>
+          <img className="fotoPerfil" src={ img } alt=""/>
         </div>
       </div>
     );
