@@ -12,6 +12,7 @@
     border-radius: 50%;
     position: fixed;
     background-color: $color-button-light;
+    opacity: 0.5;
     top: 1rem;
     right: 1rem;
     z-index: 100;
@@ -100,6 +101,7 @@
 
 .circuloactive {
     list-style: none;
+    opacity: 0.7;
 
     -webkit-clip-path: circle(50% at 100% 0%);
     clip-path: circle(50% at 100% 0%);

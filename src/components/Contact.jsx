@@ -3,7 +3,7 @@ import "../styles/Contact.scss";
 function Contact(props) {
   if(props.lang.menu){
     return (
-      <header className="container-center">
+      <main className="container-center" id="contact">
         <div className="container">
           <div className="contact-title text-center">
             Contact Me
@@ -24,7 +24,7 @@ function Contact(props) {
             <button>Send</button>
           </div>
         </div>
-      </header>
+      </main>
     );
   }
 
