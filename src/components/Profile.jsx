@@ -4,7 +4,7 @@ function Profile(props) {
   if(props.lang.menu){
     let img = "https://avatars0.githubusercontent.com/u/52636768?s=460&u=408f631763488a459ed343e35efbe2f97a013a81&v=4";
     return (
-      <div className="cuadroPerfil">
+      <div className="cuadroPerfil" id="perfil">
         <div className="column-1 text-center">
           <div className="espacio">
             Luis F. Osorio <br/><br/>

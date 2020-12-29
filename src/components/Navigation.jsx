@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import "../styles/Navigation.scss";
 
@@ -80,9 +79,9 @@ class Navigation extends React.Component {
 
             <ul className={ this.state.clasesMenu } >
               <li>
-                <Link to="/" className="enlace">
-                   { props.lang.menu.inicio } <i className="fas fa-address-book"></i>
-                </Link>
+                <a href="/#perfil" className="enlace">
+                { props.lang.menu.inicio } <i className="fas fa-address-book"></i>
+                </a>
               </li>
               <li>
                 <a href="/#about" className="enlace">
@@ -95,9 +94,9 @@ class Navigation extends React.Component {
                 </a>
               </li>
               <li>
-                <Link to="/contact#contact" className="enlace">
+                <a href="/contact#contact" className="enlace">
                 { props.lang.menu.contact } <i className="far fa-envelope"></i>
-                </Link>
+                </a>
               </li>
 
               <br/>
