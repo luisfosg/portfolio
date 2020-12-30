@@ -6,8 +6,7 @@ function ContactPage(props) {
   return (
     <div>
         <Navigation lang = { props.lang } cambiarLenguaje = { props.cambiarLenguaje } />
-        <br/><br/><br/><br/>
-        <br/>
+        <br/><br/><br/>
         <Contact lang = { props.lang }/>
         <br/>
         <Footer  lang = { props.lang }/>

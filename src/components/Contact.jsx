@@ -10,19 +10,20 @@ function Contact(props) {
           </div>
           <div>
             <label>Name</label><br/>
-            <input className="form-control" type="text" name="name" id="name" placeholder="Name"/>
+            <input className="form-control border" type="text" name="name" id="name" placeholder="Name"/>
           </div>
           <div>
             <label>Email</label><br/>
-            <input className="form-control" type="email" name="email" id="email" placeholder="Email"/>
+            <input className="form-control border" type="email" name="email" id="email" placeholder="Email"/>
           </div>
           <div>
             <label>Message</label><br/>
             <textarea rows="10" className="form-control-textarea" name="description" id="description" placeholder="Description"></textarea>
+          </div><br/>
+          <div className="text-center border">
+            <button className="button">Send</button>
           </div>
-          <div className="text-center">
-            <button>Send</button>
-          </div>
+          <br/>
         </div>
       </main>
     );
