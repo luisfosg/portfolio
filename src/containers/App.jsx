@@ -3,6 +3,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+
 import React from 'react';
 
 import Home from './Home';
@@ -17,6 +18,7 @@ class App extends React.Component {
 
     this.state = {
       lang : [],
+      loader: true,
       activarIdioma: true,
     }
 
@@ -25,6 +27,7 @@ class App extends React.Component {
 
   componentDidMount(){
     this.loadLeng();
+    this.setState({loader: false});
   }
 
   async cambiarLenguaje(){
@@ -83,21 +86,29 @@ class App extends React.Component {
   }
 
   render() {
-    return(
-      <Router>
-      <Switch>
+    if(this.state.loader){
+      return(
+        <div>
+          Cargando... ;D
+        </div>
+      );
+    }else {
+      return(
+        <Router>
+        <Switch>
 
-        <Route path="/contact" exact>
-          <ContactPage lang = { this.state.lang } cambiarLenguaje = { this.cambiarLenguaje } />
-        </Route>
+          <Route path="/contact" exact>
+            <ContactPage lang = { this.state.lang } cambiarLenguaje = { this.cambiarLenguaje } />
+          </Route>
 
-        <Route path="/" exact>
-          <Home lang = { this.state.lang } cambiarLenguaje = { this.cambiarLenguaje } />
-        </Route>
+          <Route path="/" exact>
+            <Home lang = { this.state.lang } cambiarLenguaje = { this.cambiarLenguaje } />
+          </Route>
 
-      </Switch>
-    </Router>
-    );
+        </Switch>
+      </Router>
+      );
+    }
   }
 }
 

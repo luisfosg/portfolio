@@ -28,7 +28,6 @@ function Profile(props) {
   }
   return (
     <div>
-      Luis F. Osorio
     </div>
   );
 }

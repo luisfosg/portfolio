@@ -13,11 +13,11 @@ class Home extends React.Component {
     return(
       <div>
         <Navigation lang = { props.lang } cambiarLenguaje = { props.cambiarLenguaje } />
-        <br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
         <Profile lang = { props.lang } />
-        <br/><br/>
+        <br/><br/><br/><br/><br/>
         <About lang = { props.lang } />
-        <br/><br/>
+        <br/><br/><br/><br/><br/>
         <Proyectos lang = { props.lang } />
     </div>
     );

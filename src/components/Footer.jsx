@@ -11,7 +11,6 @@ function Footer(props) {
 
   return (
     <div>
-      pie de pagina
     </div>
   );
 }

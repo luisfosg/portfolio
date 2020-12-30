@@ -32,7 +32,6 @@ function Contact(props) {
   return (
       <header>
         <div>
-          Contact
         </div>
       </header>
   );

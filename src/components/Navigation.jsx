@@ -116,7 +116,7 @@ class Navigation extends React.Component {
         </div>
       );
     }
-    return(<div>Cargando</div>);
+    return(<div></div>);
   }
 }
 
