@@ -34,11 +34,11 @@ class App extends React.Component {
 
   scroll() {
     var animacion = document.querySelectorAll(".ocultar");
-    let scrollTop = document.documentElement.scrollTop;
+    let tamPantalla = window.innerHeight - 50;
 
     for(let i = 0; i < animacion.length; i++){
-      let alturaAnimado = animacion[i].offsetTop;
-      if(alturaAnimado - 550 < scrollTop){
+      let alturaAnimado = animacion[i].getBoundingClientRect().top;
+      if(alturaAnimado < tamPantalla){
         animacion[i].style.opacity = 1;
         animacion[i].classList.add("animar");
       }
