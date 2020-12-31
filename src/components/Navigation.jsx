@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Route } from "react-router-dom";
+
 import "../styles/Navigation.scss";
 
 class Navigation extends React.Component {
@@ -83,28 +85,31 @@ class Navigation extends React.Component {
                 { props.lang.menu.inicio } <i className="fas fa-address-book"></i>
                 </a>
               </li>
-              <li>
-                <a href="/#about" className="enlace">
-                { props.lang.menu.about } <i className="fas fa-address-card"></i>
-                </a>
-              </li>
-              <li>
-                <a href="/#proyect" className="enlace">
-                { props.lang.menu.proyect } <i className="fas fa-briefcase"></i>
-                </a>
-              </li>
-              <li>
+
+              <Route path="/" exact>
+                <li>
+                  <a href="/#about" className="enlace">
+                  { props.lang.menu.about } <i className="fas fa-address-card"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="/#proyect" className="enlace">
+                  { props.lang.menu.proyect } <i className="fas fa-briefcase"></i>
+                  </a>
+                </li>
+                <li>
                 <a href="/contact#contact" className="enlace">
                 { props.lang.menu.contact } <i className="far fa-envelope"></i>
                 </a>
               </li>
+              </Route>
 
               <br/>
 
               <li className="mode" onClick={ props.cambiarLenguaje }>
               { props.lang.menu.lenguage } <i className="fas fa-language"></i>
               </li>
-
+              <br/>
               <li className="mode" onClick={ this.activarDark }>
                 <i className={ this.state.classDark }></i>
               </li>
