@@ -10,6 +10,7 @@ import Home from './Home';
 import ContactPage from './ContactPage';
 
 import "../styles/App.scss";
+import "animate.css";
 
 class App extends React.Component {
 
