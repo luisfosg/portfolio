@@ -3,7 +3,7 @@ import "../styles/Proyecto.scss";
 function Proyecto(props) {
   if(props.lang.proyect){
     return (
-      <div className="item animacion">
+      <div className="item ocultar">
         <img src={ props.img } alt="Img"/>
         { props.lang.proyect.text }
       </div>

@@ -23,11 +23,26 @@ class App extends React.Component {
     }
 
     this.cambiarLenguaje = this.cambiarLenguaje.bind(this);
+    this.scroll = this.scroll.bind(this);
   }
 
   componentDidMount(){
     this.loadLeng();
     this.setState({loader: false});
+    window.addEventListener("scroll", this.scroll);
+  }
+
+  scroll() {
+    var animacion = document.querySelectorAll(".ocultar");
+    let scrollTop = document.documentElement.scrollTop;
+
+    for(let i = 0; i < animacion.length; i++){
+      let alturaAnimado = animacion[i].offsetTop;
+      if(alturaAnimado - 550 < scrollTop){
+        animacion[i].style.opacity = 1;
+        animacion[i].classList.add("animar");
+      }
+    }
   }
 
   async cambiarLenguaje(){

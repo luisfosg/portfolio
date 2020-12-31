@@ -4,7 +4,23 @@
 
 /* Animacion General ==================================== */
 
-.animacion {
-    opacity: 50%;
+.ocultar {
+    opacity: 0;
+    transition: all 0.5s;
+
     z-index: 0;
+}
+
+.animar {
+    animation: deslizar 1s;
+}
+
+@keyframes deslizar{
+    0% {
+        transform: translateY(60px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
