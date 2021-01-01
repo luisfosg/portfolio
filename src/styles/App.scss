@@ -4,6 +4,10 @@
 
 /* Animacion General ==================================== */
 
+html {
+    scroll-behavior: smooth;
+}
+
 .ocultar {
     opacity: 0;
     z-index: 0;
