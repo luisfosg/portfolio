@@ -10,6 +10,7 @@ import Home from './Home';
 import ContactPage from './ContactPage';
 
 import "../styles/App.scss";
+import "../styles/services/imagehover.min.css";
 import "animate.css";
 
 class App extends React.Component {
