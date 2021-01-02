@@ -2,14 +2,22 @@
 @import 'theme/dark';
 
 .item {
-    display: block;
+    border-radius: 27px 27px 27px 27px;
+    -moz-border-radius: 27px 27px 27px 27px;
+    -webkit-border-radius: 27px 27px 27px 27px;
+
+    -webkit-box-shadow: inset 7px 10px 16px 3px rgba(0,0,0,0.49);
+    -moz-box-shadow: inset 7px 10px 16px 3px rgba(0,0,0,0.49);
+    box-shadow: inset 7px 10px 16px 3px rgba(0,0,0,0.49);
+
+    /* -webkit-box-shadow: 7px 10px 16px 3px rgba(0,0,0,0.49);
+    -moz-box-shadow: 7px 10px 16px 3px rgba(0,0,0,0.49);
+    box-shadow: 7px 10px 16px 3px rgba(0,0,0,0.49); */
 
     padding: 15px;
     width: 100%;
     height: 100%;
 
-    border: solid;
-    border-radius: 10%;
     background-color: $color-background-proyect-light;
     border-color: $color-border-proyect-light;
 }
@@ -19,11 +27,4 @@ body.dark {
         background-color: $color-background-proyect-dark;
         border-color: $color-border-proyect-dark;
     }
-}
-
-@media screen and (max-width:750px){
-    .item {
-        border-radius: 3%;
-    }
-
 }
