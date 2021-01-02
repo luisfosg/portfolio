@@ -98,7 +98,7 @@ class Navigation extends React.Component {
                   </a>
                 </li>
                 <li>
-                <a href="/contact#contact" className="enlace">
+                <a href="/contact" className="enlace">
                 { props.lang.menu.contact } <i className="far fa-envelope"></i>
                 </a>
               </li>
