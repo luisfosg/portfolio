@@ -20,8 +20,6 @@ function About(props) {
 
   return (
     <div id="about">
-      <section>
-      </section>
     </div>
   );
 }

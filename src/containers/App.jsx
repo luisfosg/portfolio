@@ -9,9 +9,9 @@ import React from 'react';
 import Home from './Home';
 import ContactPage from './ContactPage';
 
-import "../styles/App.scss";
-import "../styles/services/imagehover.min.css";
 import "animate.css";
+import "../styles/services/imagehover.min.css";
+import "../styles/App.scss";
 
 class App extends React.Component {
 

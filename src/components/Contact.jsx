@@ -38,8 +38,6 @@ function Contact(props) {
 
   return (
       <header>
-        <div>
-        </div>
       </header>
   );
 }
