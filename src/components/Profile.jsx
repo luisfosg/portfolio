@@ -11,12 +11,45 @@ function Profile(props) {
             Programming is art 🤯. I am a programming student looking to learn something new every day.
           </div>
           <div className="espacio">
-            <a target="_blank" rel="noreferrer" href="https://github.com/LuisFOsG" className="enlacetexto icon">
-              <i className="fab fa-github"></i>
-            </a>
-            <a target="_blank" rel="noreferrer" href="mailto:luisfosg@gmail.com" className="enlacetexto icon">
-              <i className="fas fa-envelope"></i>
-            </a>
+            <br/><br/><br/>
+            <ul className="enlacesInteres">
+              <li>
+                <a target="_blank" rel="noreferrer" href="https://github.com/LuisFOsG">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span className="fab fa-facebook"></span>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" rel="noreferrer" href="https://github.com/LuisFOsG">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span className="fab fa-twitter"></span>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" rel="noreferrer" href="https://github.com/LuisFOsG">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span className="fab fa-instagram"></span>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" rel="noreferrer" href="https://github.com/LuisFOsG">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span className="fab fa-linkedin"></span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="column-2 animate__animated animate__fadeInDown">
