@@ -6,9 +6,15 @@
     height: auto;
 }
 
-.imghvr-hinge-right {
-    background-color: $color-background-proyect-light;
-    border-color: $color-border-proyect-light;
+figcaption, [class^=imghvr-] figcaption {
+    background-color: #2f7ca5;
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
 }
 
 .item {
@@ -42,5 +48,15 @@ body.dark {
     .item {
         background-color: $color-background-proyect-dark;
         border-color: $color-border-proyect-dark;
+    }
+    figcaption, [class^=imghvr-] figcaption {
+        background-color: #165170;
+        padding: 30px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: #fff;
     }
 }

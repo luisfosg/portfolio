@@ -4,6 +4,8 @@ import Navigation from './../components/Navigation';
 import Profile from './../components/Profile';
 import About from './../components/About';
 import Proyectos from './Proyectos';
+import Contact from './../components/Contact';
+import Footer from './../components/Footer';
 
 class Home extends React.Component {
 
@@ -19,6 +21,11 @@ class Home extends React.Component {
         <About lang = { props.lang } />
         <br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <Proyectos lang = { props.lang } />
+        <br/><br/><br/><br/><br/>
+        <Contact lang = { props.lang } />
+        <br/>
+        <Footer lang = { props.lang } />
+        <br/><br/>
     </div>
     );
   }
