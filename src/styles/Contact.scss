@@ -2,11 +2,26 @@
 @import 'theme/dark';
 
 .button {
-    width: 80%;
-    height: 30px;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
     background-color: $color-button-contact-light;
+
+    -webkit-box-shadow: inset -8px 10px 29px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset -8px 10px 29px 0px rgba(0,0,0,0.5);
+    box-shadow: inset -8px 10px 29px 0px rgba(0,0,0,0.5);
+
     &:hover {
         background-color: $color-button-contact-dark;
+        opacity: 1;
     }
 }
 
@@ -34,7 +49,7 @@
 }
 
 .border {
-    border-radius: 10%;
+    border-radius: 2%;
 }
 
 .container-center{
@@ -50,13 +65,15 @@
     grid-template-columns: 50% 50%;
 
     padding: 15px;
-
-    border-radius: 10%;
 }
 
 .form-control {
     width: 100%;
     height: 30px;
+
+    -webkit-box-shadow: inset 8px 9px 43px -10px rgba(0,0,0,0.31);
+    -moz-box-shadow: inset 8px 9px 43px -10px rgba(0,0,0,0.31);
+    box-shadow: inset 8px 9px 43px -10px rgba(0,0,0,0.31);
 }
 
 .form-control-textarea {
@@ -73,6 +90,10 @@
         background: $color-scrollbar-bar-light;
         border-radius: 5%;
     }
+
+    -webkit-box-shadow: inset 8px 9px 43px -10px rgba(0,0,0,0.31);
+    -moz-box-shadow: inset 8px 9px 43px -10px rgba(0,0,0,0.31);
+    box-shadow: inset 8px 9px 43px -10px rgba(0,0,0,0.31);
 }
 
 .contact-title {
@@ -81,12 +102,12 @@
 
 body.dark {
     .button {
-        width: 80%;
-        height: 30px;
         background-color: $color-button-contact-dark;
+
         &:hover {
             background-color: $color-button-contact-light;
         }
+
     }
     .form-control-textarea {
         &::-webkit-scrollbar {
