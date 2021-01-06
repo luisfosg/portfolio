@@ -28,7 +28,15 @@ function Contact(props) {
               <textarea rows="10" className="form-control-textarea" name="description" id="description" placeholder="Description"></textarea>
             </div><br/>
             <div className="text-center border">
-              <button className="button">Send</button>
+              <div className="botonPrueba">
+                <button className="transparent button">
+                  <p>
+                    <span className="bg"></span>
+                    <span className="base"></span>
+                    <span className="text">Send</span>
+                  </p>
+                </button>
+              </div>
             </div>
           </div>
         </div>
