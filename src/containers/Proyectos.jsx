@@ -3,7 +3,7 @@ import Proyecto from './../components/Proyecto';
 import "../styles/Proyectos.scss";
 
 function Proyectos(props) {
-  let img = "http://placekitten.com/1000/500";
+  let img = "http://placekitten.com/2000/1000";
   let number = [1,2,3,4,5,6]
   return (
     <div id="proyect">

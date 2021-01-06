@@ -4,7 +4,7 @@ import Navigation from './../components/Navigation';
 import Profile from './../components/Profile';
 import About from './../components/About';
 import Proyectos from './Proyectos';
-
+import GetInTouch from './../components/GetInTouch';
 
 class Home extends React.Component {
 
@@ -21,8 +21,7 @@ class Home extends React.Component {
         <br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <Proyectos lang = { props.lang } />
         <br/><br/><br/><br/><br/>
-        Get In Touch
-        <br/><br/>
+        <GetInTouch lang = { props.lang } />
     </div>
     );
   }
