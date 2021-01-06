@@ -11,7 +11,15 @@ function Profile(props) {
             Programming is art 🤯. I am a programming student looking to learn something new every day.
           </div>
           <div className="espacio">
-            <br/><br/><br/>
+            <div className="enlacesOcultos">
+              <br/>
+              <a target="_blank" rel="noreferrer" href="https://github.com/LuisFOsG" className="enlacetexto icon">
+                <i className="fab fa-github"></i>
+              </a>
+              <a target="_blank" rel="noreferrer" href="mailto:luisfosg@gmail.com" className="enlacetexto icon">
+                <i className="fas fa-envelope"></i>
+              </a>
+            </div>
             <ul className="enlacesInteres">
               <li>
                 <a target="_blank" rel="noreferrer" href="https://github.com/LuisFOsG">
@@ -19,34 +27,16 @@ function Profile(props) {
                   <span></span>
                   <span></span>
                   <span></span>
-                  <span className="fab fa-facebook"></span>
+                  <span className="fab fa-github"></span>
                 </a>
               </li>
               <li>
-                <a target="_blank" rel="noreferrer" href="https://github.com/LuisFOsG">
+                <a target="_blank" rel="noreferrer" href="mailto:luisfosg@gmail.com">
                   <span></span>
                   <span></span>
                   <span></span>
                   <span></span>
-                  <span className="fab fa-twitter"></span>
-                </a>
-              </li>
-              <li>
-                <a target="_blank" rel="noreferrer" href="https://github.com/LuisFOsG">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span className="fab fa-instagram"></span>
-                </a>
-              </li>
-              <li>
-                <a target="_blank" rel="noreferrer" href="https://github.com/LuisFOsG">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span className="fab fa-linkedin"></span>
+                  <span className="fas fa-envelope"></span>
                 </a>
               </li>
             </ul>

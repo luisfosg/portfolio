@@ -5,10 +5,15 @@
     text-align: center;
 }
 
+.enlacesOcultos {
+    display: none;
+}
+
 .enlacetexto {
     text-decoration: none;
     list-style: none;
     color: $color-text-light;
+    padding: 5%;
     &:hover {
         color: $color-text-hover-light;
     }
@@ -54,6 +59,9 @@
 .enlacesInteres {
     padding: 0px;
     margin: 0px;
+    left: -30%;
+    top: 30%;
+
     position: relative;
     display: flex;
     transform: rotate(-25deg) skew(25deg);
@@ -62,9 +70,9 @@
     li {
         position: relative;
         list-style: none;
-        width: 60px;
-        height: 60px;
-        margin: 0px 20px;
+        width: 50px;
+        height: 50px;
+        margin: 0px 10px;
 
         &::before {
             content: '';
@@ -90,16 +98,16 @@
         }
 
         &:nth-child(1):hover span {
-            background: #52E19F !important;
+            background: #2c2c2c !important;
         }
         &:nth-child(2):hover span {
-            background: #52E19F !important;
+            background: #2f9b7b !important;
         }
         &:nth-child(3):hover span {
-            background: #52E19F !important;
+            background: #585bbf !important;
         }
         &:nth-child(4):hover span {
-            background: #52E19F !important;
+            background: #e44c32 !important;
         }
 
         &:hover {
@@ -160,13 +168,14 @@ body.dark {
     }
 }
 
-@media screen and (max-width:760px){
+@media screen and (max-width:750px){
     .enlacesInteres {
         display: none;
     }
-}
+    .enlacesOcultos {
+        display: block;
+    }
 
-@media screen and (max-width:750px){
     .cuadroPerfil {
         display: grid;
 
