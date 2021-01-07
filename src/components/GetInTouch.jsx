@@ -5,6 +5,7 @@ function GetInTouch(props) {
     return (
       <div className="text-center centrar">
         <div className="get-in-touch">
+
             <a href="/contact">
                 <svg className="icon-arrow before">
                     <use href="#arrow" />

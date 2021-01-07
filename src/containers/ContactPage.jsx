@@ -12,6 +12,7 @@ function ContactPage(props) {
           <li></li>
           <li></li>
           <li></li>
+          <li></li>
         </div>
 
         <Navigation lang = { props.lang } cambiarLenguaje = { props.cambiarLenguaje } />

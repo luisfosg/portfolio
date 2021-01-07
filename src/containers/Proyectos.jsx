@@ -7,6 +7,8 @@ function Proyectos(props) {
   let number = [1,2,3,4,5,6]
   return (
     <div id="proyect">
+      <h1>My Proyects</h1>
+      <br/>
       <main>
         <div className="cuadroProyecto">
         { number.map((proy)=> <Proyecto key={ proy } lang = { props.lang } img = { img } />) }

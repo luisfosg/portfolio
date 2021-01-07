@@ -19,8 +19,8 @@
         position: relative;
         width: 200%;
         left: -50px;
-        border: 4px solid #3F3F3F;
-        color: #3F3F3F;
+        border: 4px solid $color-active-getintouch-dark;
+        color: $color-active-getintouch-dark;
         display: inline-block;
         font-weight: bold;
         line-height: 24px;
@@ -41,7 +41,7 @@
     }
 
     a .icon-arrow {
-        fill: #3F3F3F;
+        fill: $color-active-getintouch-dark;
         height: 15px;
         top: 17px;
         transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1), opacity .4s cubic-bezier(0.86, 0, 0.07, 1);
@@ -79,15 +79,38 @@
     }
 
     a:active {
-        border-color: #FD6154;
-        color: #FD6154;
+        border-color: $color-active-getintouch-light;
+        color: $color-active-getintouch-light;
     }
 
     a:active .icon-arrow {
-        fill: #FD6154;
+        fill: $color-active-getintouch-light;
     }
 }
 
+body {
+    &.dark {
+        .get-in-touch {
+            a {
+                border: 4px solid $color-active-getintouch-light;
+                color: $color-active-getintouch-light;
+            }
+
+            a .icon-arrow {
+                fill: $color-active-getintouch-light;
+            }
+
+            a:active {
+                border-color: $color-active-getintouch-dark;
+                color: $color-active-getintouch-dark;
+            }
+
+            a:active .icon-arrow {
+                fill: $color-active-getintouch-dark;
+            }
+        }
+    }
+}
 
 @media screen and (max-width:380px){
     .centrar {
