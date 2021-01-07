@@ -1,2 +1,19 @@
 @import 'theme/light';
 @import 'theme/dark';
+
+.background-footer {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 45px;
+    left: 0px;
+
+    background-color: #151515;
+    color: white;
+}

@@ -3,8 +3,8 @@ import "../styles/Footer.scss";
 function Footer(props) {
   if(props.lang.proyect){
     return (
-      <div className="text-center">
-        Luis Osorio 2020
+      <div className="background-footer">
+        Luis Osorio - { props.lang.proyect.year }
       </div>
     )
   }
