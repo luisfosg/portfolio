@@ -1,35 +1,30 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import React from 'react';
+import React from "react";
 
-import Home from './Home';
-import ContactPage from './ContactPage';
+import Home from "./Home";
+import ContactPage from "./ContactPage";
 
 import "animate.css";
 import "../styles/App.scss";
 
 class App extends React.Component {
-
-  constructor(){
+  constructor() {
     super();
 
     this.state = {
-      lang : [],
+      lang: [],
       loader: true,
       activarIdioma: true,
-    }
+    };
 
     this.cambiarLenguaje = this.cambiarLenguaje.bind(this);
     this.scroll = this.scroll.bind(this);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.loadLeng();
-    this.setState({loader: false});
+    this.setState({ loader: false });
     window.addEventListener("scroll", this.scroll);
   }
 
@@ -37,35 +32,34 @@ class App extends React.Component {
     var animacion = document.querySelectorAll(".ocultar");
     let tamPantalla = window.innerHeight - 50;
 
-    for(let i = 0; i < animacion.length; i++){
+    for (let i = 0; i < animacion.length; i++) {
       let alturaAnimado = animacion[i].getBoundingClientRect().top;
-      if(alturaAnimado < tamPantalla){
+      if (alturaAnimado < tamPantalla) {
         animacion[i].style.opacity = 1;
         animacion[i].classList.add("animar");
       }
     }
   }
 
-  async cambiarLenguaje(){
+  async cambiarLenguaje() {
     let estado = this.state.activarIdioma;
     estado = !estado;
 
-    this.setState({activarIdioma: estado});
+    this.setState({ activarIdioma: estado });
 
-    if(this.state.activarIdioma){
+    if (this.state.activarIdioma) {
       const Search = await fetch("/language/ES-es.json");
       const lang = await Search.json();
 
-      this.setState({lang: lang});
+      this.setState({ lang: lang });
 
       document.documentElement.setAttribute("lang", "es");
       this.saveLeng("es");
-
     } else {
       const Search = await fetch("/language/EN-en.json");
       const lang = await Search.json();
 
-      this.setState({lang: lang});
+      this.setState({ lang: lang });
       document.documentElement.setAttribute("lang", "en");
       this.saveLeng("en");
     }
@@ -73,20 +67,18 @@ class App extends React.Component {
 
   async loadLeng() {
     const leng = localStorage.getItem("lenguage");
-    if(leng){
-      if(leng==="es"){
+    if (leng) {
+      if (leng === "es") {
         document.documentElement.setAttribute("lang", "es");
         const Search = await fetch("/language/ES-es.json");
         var lang = await Search.json();
 
-        this.setState({activarIdioma: false});
+        this.setState({ activarIdioma: false });
         this.saveLeng("es");
-
       } else {
         const Search = await fetch("/language/EN-en.json");
         lang = await Search.json();
         this.saveLeng("en");
-
       }
     } else {
       const Search = await fetch("/language/EN-en.json");
@@ -94,35 +86,29 @@ class App extends React.Component {
 
       this.saveLeng("en");
     }
-    this.setState({lang: lang});
+    this.setState({ lang: lang });
   }
 
-  saveLeng(leng){
+  saveLeng(leng) {
     localStorage.setItem("lenguage", leng);
   }
 
   render() {
-    if(this.state.loader){
-      return(
-        <div>
-          Cargando... ;D
-        </div>
-      );
-    }else {
-      return(
-        <Router>
-        <Switch>
+    if (this.state.loader) {
+      return <div>Cargando... ;D</div>;
+    } else {
+      return (
+          <Router>
+            <Switch>
+              <Route path="/contact" exact>
+                <ContactPage lang={this.state.lang} cambiarLenguaje={this.cambiarLenguaje} />
+              </Route>
 
-          <Route path="/contact" exact>
-            <ContactPage lang = { this.state.lang } cambiarLenguaje = { this.cambiarLenguaje } />
-          </Route>
-
-          <Route path="/" exact>
-            <Home lang = { this.state.lang } cambiarLenguaje = { this.cambiarLenguaje } />
-          </Route>
-
-        </Switch>
-      </Router>
+              <Route path="/" exact>
+                <Home lang={this.state.lang} cambiarLenguaje={this.cambiarLenguaje} />
+              </Route>
+            </Switch>
+          </Router>
       );
     }
   }

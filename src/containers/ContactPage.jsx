@@ -5,6 +5,15 @@ import Footer from './../components/Footer';
 function ContactPage(props) {
   return (
     <div>
+
+        <div className="box-area">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </div>
+
         <Navigation lang = { props.lang } cambiarLenguaje = { props.cambiarLenguaje } />
         <br/><br/><br/>
         <Contact lang = { props.lang }/>
