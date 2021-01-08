@@ -11,21 +11,21 @@ function Contact(props) {
           </div>
           <div className="formulario animate__animated animate__slideInRight">
             <div className="contact-title text-center">
-              Contact Me
+              <h2>Drop me a line…</h2>
             </div>
             <div>
               <label>Name</label><br/>
-              <input className="form-control border" type="text" name="name" id="name" placeholder="Name"/>
+              <input className="form-control name-control border" type="text" name="name" id="name" placeholder="Your Name"/>
             </div>
             <br/>
             <div>
               <label>Email</label><br/>
-              <input className="form-control border" type="email" name="email" id="email" placeholder="Email"/>
+              <input className="form-control email-control border" type="email" name="email" id="email" placeholder="your@account.com"/>
             </div>
             <br/>
             <div>
               <label>Message</label><br/>
-              <textarea rows="10" className="form-control-textarea" name="description" id="description" placeholder="Description"></textarea>
+              <textarea rows="10" className="form-control-textarea" name="description" id="description" placeholder="Hi Luis,"></textarea>
             </div><br/>
             <div className="text-center border">
               <div className="botonPrueba">
