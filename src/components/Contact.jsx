@@ -14,17 +14,17 @@ function Contact(props) {
               <h2>Drop me a line…</h2>
             </div>
             <div>
-              <label>Name</label><br/>
+              <label className="font-px" >Name</label><br/>
               <input className="form-control name-control border" type="text" name="name" id="name" placeholder="Your Name"/>
             </div>
             <br/>
             <div>
-              <label>Email</label><br/>
+              <label className="font-px" >Email</label><br/>
               <input className="form-control email-control border" type="email" name="email" id="email" placeholder="your@account.com"/>
             </div>
             <br/>
             <div>
-              <label>Message</label><br/>
+              <label className="font-px" >Message</label><br/>
               <textarea rows="10" className="form-control-textarea" name="description" id="description" placeholder="Hi Luis,"></textarea>
             </div><br/>
             <div className="text-center border">

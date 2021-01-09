@@ -20,8 +20,9 @@ class Home extends React.Component {
         <About lang = { props.lang } />
         <br/><br/><br/><br/><br/><br/>
         <Proyectos lang = { props.lang } />
-        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/>
         <GetInTouch lang = { props.lang } />
+        <br/>
     </div>
     );
   }
