@@ -296,22 +296,28 @@ body.dark {
     }
 }
 
-@media screen and (max-width:750px){
-    .container {
-        width: 100%;
-        height: 100%;
-    }
-
+@media screen and (max-width:950px){
+  .contact-title {
+    padding: 1.5vh;
+    font-size: 3vh;
+  }
 }
 
-@media screen and (max-width:600px){
-    .imagen {
+@media screen and (max-width:750px){
+  .imagen {
         display: none;
     }
     .container {
         display: grid;
         grid-template-columns: 100%;
+        margin: 0;
     }
+}
+@media screen and (max-width:350px){
+  .contact-title {
+    padding: 1vh;
+    font-size: 2vh;
+  }
 }
 
 /* Animacion CSS */

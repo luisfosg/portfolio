@@ -6,6 +6,10 @@
     justify-content: center;
     align-items: center;
 
+    background-color: rgb(17, 17, 17);
+    position: absolute;
+    left: 0;
+
     width: 100%;
     height: 200px;
 }
@@ -115,7 +119,6 @@ body {
 @media screen and (max-width:380px){
     .centrar {
         justify-content: start;
-        align-items: baseline;
     }
     .get-in-touch {
         a {

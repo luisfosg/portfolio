@@ -20,7 +20,7 @@ function About(props) {
         </div>
         <br/>
         <div className="text-center ocultar">
-          <h3>Skill</h3>
+          <h3>Skill & Tools</h3>
         </div>
       </div>
     );
