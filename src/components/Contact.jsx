@@ -2,7 +2,7 @@ import "../styles/Contact.scss";
 
 function Contact(props) {
   if(props.lang.menu){
-    let img = "https://avatars0.githubusercontent.com/u/52636768?s=460&u=408f631763488a459ed343e35efbe2f97a013a81&v=4";
+    let img = "https://avatars2.githubusercontent.com/u/52636768?s=460&u=4fc943596bd723d31f1f943942dd2e02a0f09983&v=4";
     return (
       <main className="container-center">
         <div className="container">
