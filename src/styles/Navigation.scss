@@ -55,6 +55,7 @@
     align-items: center;
     padding: 10%;
     z-index: 101;
+    font-size: 3vh;
 
     flex-direction: column;
     transition: all 1s ease;
@@ -173,7 +174,8 @@ body.dark {
 
 @media screen and (max-width:340px){
     .enlaces {
-        padding: 30%;
+        padding: 20%;
+        padding-top: 30%;
     }
     .circuloactive {
         list-style: none;
@@ -184,6 +186,7 @@ body.dark {
 
 @media screen and (max-width:300px){
     .enlaces {
-        font-size: 14px;
+        padding-top: 50%;
+        font-size: 2vh;
     }
 }
