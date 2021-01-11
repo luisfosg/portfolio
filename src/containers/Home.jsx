@@ -18,7 +18,7 @@ class Home extends React.Component {
         <Profile lang = { props.lang } />
         <br/><br/><br/><br/><br/><br/>
         <About lang = { props.lang } />
-        <br/><br/><br/><br/><br/><br/>
+        <br/><br/>
         <Proyectos lang = { props.lang } />
         <br/><br/>
         <GetInTouch lang = { props.lang } />

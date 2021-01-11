@@ -43,6 +43,47 @@
     padding-top: 130px;
 }
 
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 52px 0;
+}
+
+.about-margin {
+    margin-top: 5%;
+}
+
+.arriba {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 35vh 100vw 0 0;
+    border-style: solid;
+    border-color: $color-background-light transparent transparent transparent;
+}
+
+.abajo {
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 35vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent $color-background-light transparent;
+}
+
+body.dark {
+    .abajo {
+        border-color: transparent transparent $color-background-dark transparent;
+    }
+    .arriba {
+        border-color: $color-background-dark transparent transparent transparent;
+    }
+}
+
 @media screen and (max-width:750px){
     .cuadroAbout {
         display: grid;
