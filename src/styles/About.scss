@@ -31,6 +31,18 @@
     }
 }
 
+.imagenAbout {
+    height: 900px;
+    width: 100%;
+    position: relative;
+    background-image: url(https://cdn.pixabay.com/photo/2017/02/07/09/45/city-2045453_960_720.jpg);
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding-top: 130px;
+}
+
 @media screen and (max-width:750px){
     .cuadroAbout {
         display: grid;

@@ -4,7 +4,7 @@ function About(props) {
   if (props.lang.about) {
     const img = "https://enlacetelevision.com/wp-content/uploads/2020/06/ejercito-Recuperado-3-1140x641.jpg";
     return (
-      <div>
+      <div className="imagenAbout">
         <div className="text-center ocultar" id="about">
           <h1>{props.lang.about.text}</h1>
           <div className="cuadroAbout">
