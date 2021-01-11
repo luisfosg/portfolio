@@ -1,58 +1,19 @@
 @import 'theme/light';
 @import 'theme/dark';
 
-.cuadro1, .cuadro2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.cuadroAbout {
-    display: grid;
-
-    grid-template-columns: 40% 60%;
-    grid-template-rows: auto auto auto;
-    column-gap: 1.1%;
-    row-gap: 5%;
-}
-
-.foto {
-    border-radius: 15%;
-    width: 100%;
-    height: 100%;
-    filter: grayscale(80%);
-
-    -webkit-box-shadow: 7px 10px 16px 3px rgba(0,0,0,0.49);
-    -moz-box-shadow: 7px 10px 16px 3px rgba(0,0,0,0.49);
-    box-shadow: 7px 10px 16px 3px rgba(0,0,0,0.49);
-
-    &:hover {
-        filter: grayscale(0%);
-    }
-}
-
 .imagenAbout {
     height: 900px;
     width: 100%;
     position: relative;
-    background-image: url(https://cdn.pixabay.com/photo/2017/02/07/09/45/city-2045453_960_720.jpg);
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.01),
+        rgba(255, 255, 255, 0.01)
+      ), url(https://cdn.pixabay.com/photo/2017/02/07/09/45/city-2045453_960_720.jpg);
     overflow: hidden;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     padding-top: 130px;
-}
-
-.contenedor {
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
-    padding: 52px 0;
-}
-
-.about-margin {
-    margin-top: 5%;
 }
 
 .arriba {
@@ -75,22 +36,27 @@
     border-color: transparent transparent $color-background-light transparent;
 }
 
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 52px 0;
+}
+
+.about-margin {
+    margin-top: 15%;
+}
+
+.cuadroAbout, .cuadroSkill {
+    margin-top: 9%;
+}
+
 body.dark {
     .abajo {
         border-color: transparent transparent $color-background-dark transparent;
     }
     .arriba {
         border-color: $color-background-dark transparent transparent transparent;
-    }
-}
-
-@media screen and (max-width:750px){
-    .cuadroAbout {
-        display: grid;
-
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-
-        justify-items: center;
     }
 }
