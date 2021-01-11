@@ -4,19 +4,19 @@ function About(props) {
   if (props.lang.about) {
     return (
       <div className="imagenAbout">
-        <div className="arriba"></div>
-        <div className="contenedor">
-          <div className="text-center about-margin ocultar" id="about">
+        <div className="arriba paddperc"></div>
+        <div className="contenedor paddperc">
+          <div className="text-center paddperc about-margin ocultar" id="about">
             <h1>{props.lang.about.text}</h1>
-            <div className="cuadroAbout">
+            <div className="cuadroAbout paddperc">
               Hello, I am a Colombian computer engineering student, since the fourth semester of my career I began to study little by little computer technologies that help me in my day to day practice.
             </div>
           </div>
-          <div className="text-center cuadroSkill ocultar">
+          <div className="text-center paddperc cuadroSkill ocultar">
             <h3>Skill & Tools</h3>
           </div>
         </div>
-        <div className="abajo"></div>
+        <div className="abajo paddperc"></div>
       </div>
     );
   }

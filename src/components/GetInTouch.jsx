@@ -3,8 +3,8 @@ import "../styles/GetInTouch.scss";
 function GetInTouch(props) {
   if(props.lang.proyect){
     return (
-      <div className="text-center centrar">
-        <div className="get-in-touch">
+      <div className="text-center paddperc centrar">
+        <div className="get-in-touch paddperc">
 
             <a href="/contact">
                 <svg className="icon-arrow before">
@@ -16,7 +16,7 @@ function GetInTouch(props) {
                 </svg>
             </a>
 
-            <svg className="d-none">
+            <svg className="d-none paddperc">
                 <defs>
                     <symbol id="arrow" viewBox="0 0 35 15">
                     <title>Arrow</title>

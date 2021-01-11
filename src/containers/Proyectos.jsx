@@ -7,11 +7,11 @@ function Proyectos(props) {
   let number = [1,2,3,4,5,6]
   if(props.lang.proyect){
     return (
-      <div id="proyect">
-        <h1>My Proyects</h1>
+      <div className="paddperc" id="proyect">
+        <h1 className="paddperc">My Proyects</h1>
         <br/>
-        <main>
-          <div className="cuadroProyecto">
+        <main className="paddperc">
+          <div className="cuadroProyecto paddperc">
           { number.map((proy)=> <Proyecto key={ proy } lang = { props.lang } img = { img } />) }
           </div>
         </main>
