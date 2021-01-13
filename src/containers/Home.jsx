@@ -14,6 +14,7 @@ class Home extends React.Component {
     return(
       <div>
         <Navigation lang = { props.lang } cambiarLenguaje = { props.cambiarLenguaje } />
+        <br/><br/>
         <Profile lang = { props.lang } />
         <About lang = { props.lang } />
         <br/><br/>
