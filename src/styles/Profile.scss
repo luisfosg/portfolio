@@ -47,6 +47,8 @@
 
 .cuadroPerfil {
     display: grid;
+    margin-top: 15vh;
+    height: 85vh;
 
     grid-template-columns: 59% 39%;
     grid-template-rows: auto auto;
@@ -58,7 +60,6 @@
     padding: 0px;
     margin: 0px;
     left: -30%;
-    top: 30%;
 
     position: relative;
     display: flex;
@@ -204,19 +205,22 @@ body.dark {
         grid-template-rows: 300px auto;
         column-gap: 0%;
         row-gap: 0%;
+
+        height: auto;
         grid-template-areas:
             "a"
             "b";
 
         justify-items: center;
     }
+
     .fotoPerfil {
         width: 100%;
         height: 100%;
     }
     .column-1 {
         grid-area: b;
-        align-items: baseline;
+        align-items: center;
     }
     .column-2 {
         grid-area: a;
@@ -224,5 +228,7 @@ body.dark {
     }
     .espacio {
         display: block;
+        justify-content: baseline;
+        align-items: initial;
     }
 }

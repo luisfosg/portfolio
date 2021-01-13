@@ -14,6 +14,9 @@ function About(props) {
           </div>
           <div className="text-center paddperc cuadroSkill ocultar">
             <h3>Skill & Tools</h3>
+            <div className="skill">
+              <img className="imgSkill" src="https://www.flaticon.es/svg/vstatic/svg/136/136528.svg?token=exp=1610409397~hmac=8811560b587de84207f05dbbb699949e" alt="html"/>
+            </div>
           </div>
         </div>
         <div className="abajo paddperc"></div>
