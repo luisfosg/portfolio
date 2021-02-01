@@ -8,7 +8,7 @@ function Proyectos(props) {
   if(props.lang.proyect){
     return (
       <div className="paddperc" id="proyect">
-        <h1 className="paddperc">My Proyects</h1>
+        <h1 className="paddperc"> { props.lang.proyect.title } </h1>
         <br/>
         <main className="paddperc">
           <div className="cuadroProyecto paddperc">

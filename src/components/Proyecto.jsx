@@ -8,7 +8,7 @@ function Proyecto(props) {
         <figure className="imghvr-zoom-out item text-center ocultar">
           <img className="imagenProyecto" src={ props.img } alt="Img"/>
             <figcaption>
-              { props.lang.proyect.text }
+              { props.lang.proyect.title }
             </figcaption>
         </figure>
       </div>

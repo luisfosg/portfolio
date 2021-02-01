@@ -9,8 +9,9 @@
         "light": "Claro"
     },
     "proyect": {
-        "text": "proyecto",
-        "year": "2020"
+        "title": "Mis Proyectos",
+        "year": "2021",
+        "description": "Lista de proyectos realizados en eventos o de forma personal o laboral. incluyendo trabajos grupales o individuales."
     },
     "about": {
         "text": "Acerca de"
