@@ -8,12 +8,28 @@
         "dark": "Oscuro",
         "light": "Claro"
     },
+    "profile": {
+        "about": "La programación es arte 🤯. Soy un estudiante de programación que busca aprender algo nuevo todos los días."
+    },
+    "about": {
+        "text": "Acerca de",
+        "description": "Hola soy un estudiante colombiano de Ingeniería Informática, desde el cuarto semestre de mi carrera comencé a estudiar poco a poco tecnologías informáticas que me ayudan en mi práctica del día a día.",
+        "skillTitles": "Habilidades y Herramientas"
+    },
     "proyect": {
         "title": "Mis Proyectos",
         "year": "2021",
         "description": "Lista de proyectos realizados en eventos o de forma personal o laboral. incluyendo trabajos grupales o individuales."
     },
-    "about": {
-        "text": "Acerca de"
+    "contact": {
+        "button": "¡Saludame!.",
+        "title": "Contacto.",
+        "name": "Nombre",
+        "placeholderName": "Pepito Perez",
+        "email": "Correo",
+        "placeholderEmail": "tu@correo.com",
+        "message": "Mensaje",
+        "placeholderMessage": "Hola Luis, ",
+        "send": "Enviar"
     }
 }

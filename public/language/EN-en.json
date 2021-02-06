@@ -8,12 +8,28 @@
         "dark": "Dark",
         "light": "Light"
     },
+    "profile": {
+        "about": "Programming is art 🤯. I am a programming student looking to learn something new every day."
+    },
+    "about": {
+        "text": "About",
+        "description": "Hello, I am a Colombian computer engineering student, since the fourth semester of my career I began to study little by little computer technologies that help me in my day to day practice.",
+        "skillTitles": "Skills & Tools"
+    },
     "proyect": {
         "title": "My Proyects",
         "year": "2021",
         "description": "Lista de proyectos realizados en eventos o de forma personal o laboral. incluyendo trabajos grupales o individuales."
     },
-    "about": {
-        "text": "About"
+    "contact": {
+        "button": "Get In Touch",
+        "title": "Drop me a line…",
+        "name": "Name",
+        "placeholderName": "Your Name",
+        "email": "Email",
+        "placeholderEmail": "your@account.com",
+        "message": "Message",
+        "placeholderMessage": "Hi Luis, ",
+        "send": "Send"
     }
 }
