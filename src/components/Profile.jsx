@@ -8,7 +8,7 @@ function Profile(props) {
         <div className="column-1 text-center paddperc animate__animated animate__fadeInLeftBig">
           <div className="espacio paddperc">
             Luis F. Osorio <br/><br/>
-            Programming is art 🤯. I am a programming student looking to learn something new every day.
+            { props.lang.profile.about }
           </div>
           <div className="espacio paddperc">
             <div className="enlacesOcultos paddperc">

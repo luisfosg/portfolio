@@ -22,7 +22,7 @@
         "description": "Lista de proyectos realizados en eventos o de forma personal o laboral. incluyendo trabajos grupales o individuales."
     },
     "contact": {
-        "button": "¡Saludame!.",
+        "button": "¡Saludame!",
         "title": "Contacto.",
         "name": "Nombre",
         "placeholderName": "Pepito Perez",

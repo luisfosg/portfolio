@@ -10,7 +10,7 @@ function GetInTouch(props) {
                 <svg className="icon-arrow before">
                     <use href="#arrow" />
                 </svg>
-                <span className="label">Get In Touch</span>
+                <span className="label">{ props.lang.contact.button }</span>
                 <svg className="icon-arrow after">
                     <use href="#arrow" />
                 </svg>

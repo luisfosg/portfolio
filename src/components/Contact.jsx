@@ -11,21 +11,21 @@ function Contact(props) {
           </div>
           <div className="formulario animate__animated animate__slideInRight">
             <div className="contact-title text-center">
-              <h2>Drop me a line…</h2>
+              <h2>{ props.lang.contact.title }</h2>
             </div>
             <div>
-              <label className="font-px" >Name</label><br/>
-              <input className="form-control name-control border" type="text" name="name" id="name" placeholder="Your Name"/>
-            </div>
-            <br/>
-            <div>
-              <label className="font-px" >Email</label><br/>
-              <input className="form-control email-control border" type="email" name="email" id="email" placeholder="your@account.com"/>
+              <label className="font-px" >{ props.lang.contact.name }</label><br/>
+              <input className="form-control name-control border" type="text" name="name" id="name" placeholder={ props.lang.contact.placeholderName }/>
             </div>
             <br/>
             <div>
-              <label className="font-px" >Message</label><br/>
-              <textarea rows="10" className="form-control-textarea" name="description" id="description" placeholder="Hi Luis,"></textarea>
+              <label className="font-px" >{ props.lang.contact.email }</label><br/>
+              <input className="form-control email-control border" type="email" name="email" id="email" placeholder={ props.lang.contact.placeholderEmail }/>
+            </div>
+            <br/>
+            <div>
+              <label className="font-px" >{ props.lang.contact.message }</label><br/>
+              <textarea rows="10" className="form-control-textarea" name="description" id="description" placeholder={ props.lang.contact.placeholderMessage } ></textarea>
             </div><br/>
             <div className="text-center border">
               <div className="botonPrueba">
@@ -33,7 +33,7 @@ function Contact(props) {
                   <p>
                     <span className="bg"></span>
                     <span className="base"></span>
-                    <span className="text">Send</span>
+                    <span className="text">{ props.lang.contact.send }</span>
                   </p>
                 </button>
               </div>
