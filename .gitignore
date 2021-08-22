@@ -1,7 +1,8 @@
 .eslintcache
 
 node_modules
-docs
 dist
 build
 .env-cmdrc
+package-lock.json
+yarn.lock
