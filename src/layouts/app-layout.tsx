@@ -1,11 +1,16 @@
-import { WithChildren } from 'util/index'
+import Toggle from 'components/Toggle'
 
-type LayoutProps = WithChildren<{}>
+import { WithChildren } from 'utils/index'
 
-const AppLayout = ({ children }: LayoutProps) => {
+type LayoutProps = WithChildren<{
+  setThemeMode: Function,
+}>
+
+const AppLayout = ({ children, setThemeMode }: LayoutProps) => {
   return (
     <div>
-      <main>{ children }</main>
+      <Toggle setToggle={setThemeMode} />
+      <>{ children }</>
     </div>
   )
 }

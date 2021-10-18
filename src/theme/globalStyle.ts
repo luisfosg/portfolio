@@ -5,6 +5,10 @@ export const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
+    -webkit-transition: .3s ease-in-out all;
+    transition: .3s ease all;
+    background-color: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.text};
   }
 
   a {

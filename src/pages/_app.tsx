@@ -3,11 +3,14 @@ import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
 
 import AppLayout from 'layouts/app-layout'
+import { useDarkMode } from 'hooks/useDarkMode'
 
 import { GlobalStyle } from 'theme/globalStyle'
-import { theme } from 'theme'
+import { themes } from 'theme'
 
 function MyApp ({ Component, pageProps }: AppProps) {
+  const { theme, toggleTheme } = useDarkMode()
+
   return (
     <>
       <Head>
@@ -15,9 +18,9 @@ function MyApp ({ Component, pageProps }: AppProps) {
         <meta name="description" content="LuisFOsG´s Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <GlobalStyle/>
-      <ThemeProvider theme={theme}>
-        <AppLayout>
+      <ThemeProvider theme={themes[theme]}>
+        <GlobalStyle/>
+        <AppLayout setThemeMode={toggleTheme}>
           <Component {...pageProps} />
         </AppLayout>
       </ThemeProvider>
