@@ -11,7 +11,7 @@ import {
   Card,
   Footer,
   Logo
-} from './index.styles'
+} from 'layouts/index.styles'
 
 const Home: NextPage = () => {
   return (
