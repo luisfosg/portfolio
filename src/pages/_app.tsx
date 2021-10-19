@@ -14,9 +14,9 @@ function MyApp ({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Portfolio</title>
-        <meta name="description" content="LuisFOsG´s Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>LuisFOsG´s Page</title>
+        <meta name="description" content="LuisFOsG´s Page and the Portfolio Site" />
+        <link rel="icon" href="/logo.svg" />
       </Head>
       <ThemeProvider theme={themes[theme]}>
         <GlobalStyle/>
