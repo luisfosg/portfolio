@@ -14,8 +14,10 @@ function MyApp ({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <meta charSet="utf-8"/>
         <title>LuisFOsG´s Page</title>
         <meta name="description" content="LuisFOsG´s Page and the Portfolio Site" />
+        <meta property="og:image" content="https://avatars.githubusercontent.com/u/52636768?v=4?s=400" />
         <link rel="icon" href="/logo.svg" />
       </Head>
       <ThemeContextProvider>
