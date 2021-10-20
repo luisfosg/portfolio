@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     transition: .3s ease all;
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
+    /* scrollbar-gutter: stable; */
   }
 
   a {
@@ -17,8 +18,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   * {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
   }
 `

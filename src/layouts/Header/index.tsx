@@ -1,11 +1,13 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-import Toggle from 'components/toggle'
 import Sun from 'components/icons/sun'
 import Moon from 'components/icons/moon'
+import { ContentBox as Content } from 'components/content/content.styles'
 
 import useDarkMode from 'hooks/useDarkMode'
+
+import { Header as StyledHeader, Nav, NavLink } from './header.styles'
 
 const Header = () => {
   const router = useRouter()
@@ -13,21 +15,25 @@ const Header = () => {
 
   const isDark = theme === 'dark'
   return (
-    <>
-      <label>
-        {isDark ? <Sun fill="#fff"/> : <Moon/>}
-        <Toggle toggle={isDark} setToggle={toggleTheme}/>
-      </label>
-      <ul>
-        {
-          router.locales?.map(locale => (
-            <li key={locale}>
-              <Link href={router.asPath} locale={locale} ><a>{ locale }</a></Link>
-            </li>
-          ))
-        }
-      </ul>
-    </>
+    <StyledHeader bg="secondary">
+      <Content centered>
+        <div>
+          <h1>LuisFOsG</h1>
+        </div>
+        <Nav>
+          {
+            router.locales?.map(locale => (
+              <Link key={locale} href={router.asPath} locale={locale} passHref>
+                <NavLink key={locale}>{ locale }</NavLink>
+              </Link>
+            ))
+          }
+          <NavLink onClick={() => toggleTheme()}>
+            {isDark ? <Sun fill="#fff"/> : <Moon/>}
+          </NavLink>
+        </Nav>
+      </Content>
+    </StyledHeader>
   )
 }
 
