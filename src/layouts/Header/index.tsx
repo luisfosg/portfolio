@@ -1,16 +1,23 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-import Toggle from 'components/Toggle'
+import Toggle from 'components/toggle'
+import Sun from 'components/icons/sun'
+import Moon from 'components/icons/moon'
+
 import useDarkMode from 'hooks/useDarkMode'
 
 const Header = () => {
   const router = useRouter()
   const { theme, toggleTheme } = useDarkMode()
 
+  const isDark = theme === 'dark'
   return (
     <>
-      <Toggle toggle={theme === 'dark'} setToggle={toggleTheme} />
+      <label>
+        {isDark ? <Sun fill="#fff"/> : <Moon/>}
+        <Toggle toggle={isDark} setToggle={toggleTheme}/>
+      </label>
       <ul>
         {
           router.locales?.map(locale => (

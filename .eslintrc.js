@@ -4,6 +4,9 @@ module.exports = {
     es2021: true,
     node: true
   },
+  globals: {
+    JSX: true
+  },
   extends: ['plugin:react/recommended', 'next/core-web-vitals', 'standard'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
