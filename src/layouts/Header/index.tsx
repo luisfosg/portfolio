@@ -1,17 +1,16 @@
-import Toggle from 'components/Toggle'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-type HeaderProps = {
-  setThemeMode: Function,
-}
+import Toggle from 'components/Toggle'
+import useDarkMode from 'hooks/useDarkMode'
 
-const Header = ({ setThemeMode }: HeaderProps) => {
+const Header = () => {
   const router = useRouter()
+  const { theme, toggleTheme } = useDarkMode()
 
   return (
     <>
-      <Toggle setToggle={setThemeMode} />
+      <Toggle toggle={theme === 'dark'} setToggle={toggleTheme} />
       {
         router.locales?.map(locale => (
           <li key={locale}>

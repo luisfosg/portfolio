@@ -1,15 +1,15 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import { ThemeProvider } from 'styled-components'
 
 import AppLayout from 'layouts/app-layout'
-import { useDarkMode } from 'hooks/useDarkMode'
 
 import { GlobalStyle } from 'theme/globalStyle'
-import { themes } from 'theme'
+import { ThemeContextProvider } from 'context/ThemeContext'
+import useDarkMode from 'hooks/useDarkMode'
 
 function MyApp ({ Component, pageProps }: AppProps) {
-  const { theme, toggleTheme } = useDarkMode()
+  const { mounted } = useDarkMode()
+  if (!mounted) return null
 
   return (
     <>
@@ -18,12 +18,12 @@ function MyApp ({ Component, pageProps }: AppProps) {
         <meta name="description" content="LuisFOsG´s Page and the Portfolio Site" />
         <link rel="icon" href="/logo.svg" />
       </Head>
-      <ThemeProvider theme={themes[theme]}>
+      <ThemeContextProvider>
         <GlobalStyle/>
-        <AppLayout setThemeMode={toggleTheme}>
+        <AppLayout>
           <Component {...pageProps} />
         </AppLayout>
-      </ThemeProvider>
+      </ThemeContextProvider>
     </>
   )
 }

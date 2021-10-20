@@ -2,13 +2,12 @@ import styled from 'styled-components'
 import { color } from 'styled-system'
 
 export const Container = styled.div`
-  min-height: 90vh;
+  min-height: 80vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
 `
 
 export const Main = styled.main`

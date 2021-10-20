@@ -1,10 +1,11 @@
 import useTranslation from 'next-translate/useTranslation'
 
 type ToggleProps = {
+  toggle: boolean,
   setToggle: Function,
 }
 
-const Toggle = ({ setToggle }: ToggleProps) => {
+const Toggle = ({ setToggle, toggle }: ToggleProps) => {
   const { t } = useTranslation('toggle')
 
   return (

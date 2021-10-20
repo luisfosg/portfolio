@@ -1,14 +1,12 @@
 import { WithChildren } from 'utils/index'
 import Header from './Header/index'
 
-type LayoutProps = WithChildren<{
-  setThemeMode: Function,
-}>
+type LayoutProps = WithChildren<{}>
 
-const AppLayout = ({ children, setThemeMode }: LayoutProps) => {
+const AppLayout = ({ children }: LayoutProps) => {
   return (
     <div>
-      <Header setThemeMode={setThemeMode} />
+      <Header />
       <>{ children }</>
     </div>
   )
