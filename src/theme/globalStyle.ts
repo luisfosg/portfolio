@@ -1,24 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url("/.assets/fonts/rubik300.woff2") format('woff2');
-  }
-
-  @font-face {
-    font-family: "Prototype";
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url("/.assets/fonts/prototype.ttf");
-  }
-
   .prototype {
-    font-family: "Prototype";
+    font-family: 'Redacted Script', sans-serif;
     color: #999;
   }
 
@@ -51,7 +35,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   * {
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
   }
 `
