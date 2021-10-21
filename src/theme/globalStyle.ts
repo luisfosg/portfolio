@@ -1,6 +1,24 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("/.assets/fonts/rubik300.woff2") format('woff2');
+  }
+
+  @font-face {
+    font-family: "Redacted";
+    src: url("/.assets/fonts/redacted-script-regular.ttf") format('ttf');
+  }
+
+  .prototype {
+    font-family: "Redacted Script";
+    color: #999;
+  }
+
   html,
   body {
     padding: 0;

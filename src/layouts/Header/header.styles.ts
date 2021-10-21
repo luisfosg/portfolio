@@ -32,7 +32,11 @@ export const Nav = styled.nav`
   justify-content: center;
 `
 
-export const NavLink = styled.a`
+type NavLinkProps = {
+  active?: boolean
+}
+
+export const NavLink = styled.a<NavLinkProps>`
   cursor: pointer;
   border-radius: 0.25em;
   padding: 0.15em 0.5em;
@@ -40,10 +44,15 @@ export const NavLink = styled.a`
   font-size: 1.5em;
   transition: background-color 0.2ms ease-in-out;
   max-height: 1.5em;
+  background-color: ${({ active, theme }) => active ? theme.colors.primary : 'transparent'};
 
   &:active,
   &:focus,
   &:hover {
     background-color: ${({ theme }) => theme.colors.primary};
   }
+`
+
+export const Name = styled.h1`
+cursor: pointer;
 `
