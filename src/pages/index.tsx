@@ -10,7 +10,7 @@ const Home: NextPage = () => {
     <Container>
       <Main>
         <Title color="primary">
-          { t('greeting') } <Link href="#" color="terciary">{ t('portfolio') }</Link>
+          { t('greeting') } <Link color="terciary">{ t('portfolio') }</Link>
         </Title>
         <h2>{ t('construction') }</h2>
         <p className="prototype">

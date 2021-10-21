@@ -13,15 +13,12 @@ interface HeaderProps extends LayoutProps, ColorProps, SpaceProps {}
 
 export const Header = styled.header<HeaderProps>`
   display: flex;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1;
 
-  align-items: center;
-  justify-content: space-between;
   user-select: none;
-
   ${compose(space, layout, color)}
 `
 

@@ -10,12 +10,15 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @font-face {
-    font-family: "Redacted";
-    src: url("/.assets/fonts/redacted-script-regular.ttf") format('ttf');
+    font-family: "Prototype";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("/.assets/fonts/prototype.ttf");
   }
 
   .prototype {
-    font-family: "Redacted Script";
+    font-family: "Prototype";
     color: #999;
   }
 
@@ -28,6 +31,18 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
     /* scrollbar-gutter: stable; */
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      background-color: ${({ theme }) => theme.colors.background};
+      transition: .3s ease all;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => theme.colors.primary};
+      border-radius: 9999px;
+      transition: .3s ease all;
+    }
   }
 
   a {
@@ -36,7 +51,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   * {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik';
     box-sizing: border-box;
   }
 `
