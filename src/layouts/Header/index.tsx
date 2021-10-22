@@ -16,7 +16,7 @@ const Header = () => {
   const isDark = theme === 'dark'
   return (
     <StyledHeader bg="secondary">
-      <Content centered>
+      <Content>
         <Link href="/" passHref>
           <Name>LuisFOsG</Name>
         </Link>

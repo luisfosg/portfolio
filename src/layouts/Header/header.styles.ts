@@ -3,15 +3,12 @@ import {
   space,
   layout,
   color,
-  compose,
-  LayoutProps,
-  ColorProps,
-  SpaceProps
+  compose
 } from 'styled-system'
 
-interface HeaderProps extends LayoutProps, ColorProps, SpaceProps {}
+import { SystemProps } from 'utils'
 
-export const Header = styled.header<HeaderProps>`
+export const Header = styled.header<SystemProps>`
   display: flex;
   position: sticky;
   top: 0;
