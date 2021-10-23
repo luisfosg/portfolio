@@ -24,6 +24,6 @@ export const Title = styled.h1<SystemProps>`
   ${compose(space, layout, color)}
 `
 
-export const Link = styled.a<SystemProps>`
+export const Span = styled.span<SystemProps>`
   ${compose(space, layout, color)}
 `

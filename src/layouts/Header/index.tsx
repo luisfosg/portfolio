@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import Sun from 'components/icons/sun'
 import Moon from 'components/icons/moon'
@@ -18,7 +19,7 @@ const Header = () => {
     <StyledHeader bg="secondary">
       <Content>
         <Link href="/" passHref>
-          <Name>LuisFOsG</Name>
+          <Name><Image src="/logo.svg" width="35" height="35" alt="Logo LuisFOsG"/>LuisFOsG</Name>
         </Link>
         <Nav>
           {
