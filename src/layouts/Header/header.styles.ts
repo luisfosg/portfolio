@@ -11,6 +11,7 @@ import { SystemProps } from 'utils'
 export const Header = styled.header<SystemProps>`
   display: flex;
   position: sticky;
+  flex-wrap: wrap;
   top: 0;
   width: 100%;
   z-index: 1;
@@ -24,10 +25,30 @@ export const Nav = styled.nav`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  position: relative;
+`
+
+type NavHiddenProps = {
+  isOpen: boolean,
+}
+
+export const NavHidden = styled.div<NavHiddenProps>`
+  display: inline-block;
+
+  @media (max-width: 768px) {
+    display: ${props => props.isOpen ? 'inline-block' : 'none'};
+
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 `
 
 type NavLinkProps = {
-  active?: boolean
+  active?: boolean,
+  animated?: boolean,
 }
 
 export const NavLink = styled.a<NavLinkProps>`
@@ -43,7 +64,10 @@ export const NavLink = styled.a<NavLinkProps>`
   &:active,
   &:focus,
   &:hover {
-    background-color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme, animated }) => animated ? 'transparent' : theme.colors.primary};
+    transform: ${({ animated }) => animated ? 'rotate(180deg)' : 'none'};
+    opacity: ${({ animated }) => animated ? '0.5' : '1'};
+    transition: opacity, transform 1s;
   }
 `
 
@@ -53,4 +77,36 @@ export const Name = styled.h1`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    span {
+      display: none;
+    }
+  }
+`
+
+export const Hamburger = styled.div`
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+
+  span {
+    height: 2px;
+    width: 25px;
+    background: ${({ theme }) => theme.colors.text};
+    margin-bottom: 4px;
+    border-radius: 5px;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    span {
+      background: ${({ theme }) => theme.colors.primary};
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
 `

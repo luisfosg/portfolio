@@ -10,8 +10,8 @@ export const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    -webkit-transition: .3s ease-in-out all;
-    transition: .3s ease all;
+    -webkit-transition: .3s ease-in-out background-color;
+    transition: .3s ease background-color;
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
     /* scrollbar-gutter: stable; */
@@ -19,13 +19,13 @@ export const GlobalStyle = createGlobalStyle`
     ::-webkit-scrollbar {
       width: 10px;
       background-color: ${({ theme }) => theme.colors.background};
-      transition: .3s ease all;
+      transition: .3s ease background-color;
     }
 
     ::-webkit-scrollbar-thumb {
       background-color: ${({ theme }) => theme.colors.primary};
       border-radius: 9999px;
-      transition: .3s ease all;
+      transition: .3s ease background-color;
     }
   }
 

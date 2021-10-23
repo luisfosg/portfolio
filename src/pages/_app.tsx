@@ -19,9 +19,10 @@ function MyApp ({ Component, pageProps }: AppProps) {
         <meta charSet="utf-8"/>
         <title>{ t('title') }</title>
         <meta name="description" content={ t('description') } />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <meta property="og:title" content="LuisFOsG - Luis Osorio | Página y Blog" />
         <meta property="og:type" content="website" />
+        <meta property="og:title" content="LuisFOsG - Luis Osorio | Página y Blog" />
         <meta property="og:url" content="https://luisfosg.vercel.app/" />
         <meta property="og:image" content="https://luisfosg.vercel.app/images/view.png" />
         <meta property="og:image:type" content="image/png" />
@@ -29,7 +30,7 @@ function MyApp ({ Component, pageProps }: AppProps) {
         <meta property="og:image:height" content="539" />
         <meta property="og:description" content="Página, Blog y Portafolio de LuisFOsG - Luis Osorio" />
 
-        <meta name="twitter:card" content="https://luisfosg.vercel.app/images/view.png" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="LuisFOsG - Luis Osorio | Página y Blog" />
         <meta name="twitter:description" content="Página, Blog y Portafolio de LuisFOsG - Luis Osorio" />
         <meta name="twitter:creator" content="@LuisFOsG_" />
