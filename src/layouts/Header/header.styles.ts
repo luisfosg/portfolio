@@ -9,7 +9,7 @@ import {
 import { SystemProps } from 'utils'
 
 export const Header = styled.header<SystemProps>`
-  display: flex;
+  display: inline-flex;
   position: sticky;
   flex-wrap: wrap;
   top: 0;
@@ -21,33 +21,40 @@ export const Header = styled.header<SystemProps>`
 `
 
 export const Nav = styled.nav`
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  position: relative;
 `
 
-type NavHiddenProps = {
+type NavHiddenProps = SystemProps & {
   isOpen: boolean,
 }
 
 export const NavHidden = styled.div<NavHiddenProps>`
-  display: inline-block;
+  display: inline-flex;
+  height: 100%;
 
   @media (max-width: 768px) {
-    display: ${props => props.isOpen ? 'inline-block' : 'none'};
-
     overflow: hidden;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 45px;
+    left: ${props => props.isOpen ? '0' : '-100%'};
     width: 100%;
+    min-height: 93vh;
+    transition: .5s all ease;
+    ${compose(space, layout, color)}
   }
 `
 
 type NavLinkProps = {
   active?: boolean,
+  isHidden?: boolean,
   animated?: boolean,
 }
 
@@ -69,6 +76,17 @@ export const NavLink = styled.a<NavLinkProps>`
     opacity: ${({ animated }) => animated ? '0.5' : '1'};
     transition: opacity, transform 1s;
   }
+
+  ${({ isHidden }) => isHidden && `
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
+      max-height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  `}
 `
 
 export const Name = styled.h1`
@@ -76,6 +94,7 @@ export const Name = styled.h1`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  font-size: 1.5em;
   cursor: pointer;
 
   @media (max-width: 768px) {

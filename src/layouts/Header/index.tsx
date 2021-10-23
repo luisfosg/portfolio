@@ -24,6 +24,11 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const isDark = theme === 'dark'
+
+  const handleClick = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
     <StyledHeader bg="secondary">
       <Content>
@@ -31,16 +36,19 @@ const Header = () => {
           <Name><Image src="/logo.svg" width="35" height="35" alt="Logo LuisFOsG"/><span>LuisFOsG</span></Name>
         </Link>
         <Nav>
-          <NavHidden isOpen={isOpen}>
+          <NavHidden isOpen={isOpen} bg="secondary">
+            <NavLink href="#" isHidden onClick={() => handleClick()}>Ejemplo</NavLink>
             {
               router.locales?.map(locale => (
                 <Link key={locale} href={router.asPath} locale={locale} passHref>
-                  <NavLink key={locale} active={locale === router.locale}>{ locale }</NavLink>
+                  <NavLink key={locale} active={locale === router.locale} isHidden onClick={() => handleClick()}>
+                    { locale }
+                  </NavLink>
                 </Link>
               ))
             }
           </NavHidden>
-          <Hamburger onClick={() => setIsOpen(!isOpen)}>
+          <Hamburger onClick={() => handleClick()}>
             <span />
             <span />
             <span />
