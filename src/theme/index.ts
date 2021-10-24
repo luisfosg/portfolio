@@ -10,9 +10,22 @@ type Themes = {
 export type Colors = {
   background: string,
   text: string,
-  primary: string;
-  secondary: string;
-  terciary: string;
+  nord1: string,
+  nord2: string,
+  nord3: string,
+  nord4: string,
+  nord5: string,
+  nord6: string,
+  nord7: string,
+  nord8: string,
+  nord9: string,
+  nord10: string,
+  nord11: string,
+  nord12: string,
+  nord13: string,
+  nord14: string,
+  nord15: string,
+  nord16: string,
   darkness: string;
   darknessLight: string;
   light: string;

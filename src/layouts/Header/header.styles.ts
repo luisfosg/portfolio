@@ -9,12 +9,13 @@ import {
 import { SystemProps } from 'utils'
 
 type HeaderProps = SystemProps & {
+  isDark?: boolean,
   scroll: number
 }
 
 export const Header = styled.header<HeaderProps>`
-  -webkit-transition: .3s ease-in-out background-color;
-  transition: .3s ease-in-out background-color;
+  -webkit-transition: .3s ease-in-out background-color, box-shadow;
+  transition: .3s ease-in-out background-color, box-shadow;
   display: inline-flex;
   position: sticky;
   flex-wrap: wrap;
@@ -22,7 +23,11 @@ export const Header = styled.header<HeaderProps>`
   width: 100%;
   z-index: 1;
 
-  box-shadow: ${({ scroll }) => scroll > 0 ? '0px 0px 10px rgba(0, 0, 0, 0.1)' : 'none'};
+  box-shadow: ${({ scroll, isDark }) => {
+    return isDark
+    ? scroll > 0 ? '0px 4px 4px rgba(0, 0, 0, 0.1)' : 'none'
+    : scroll > 0 ? '0px 0px 10px rgba(0, 0, 0, 0.1)' : 'none'
+  }};
 
   user-select: none;
   ${compose(space, layout, color)}
@@ -54,7 +59,7 @@ export const NavHidden = styled.div<NavHiddenProps>`
     top: 45px;
     left: ${props => props.isOpen ? '0' : '-100%'};
     width: 100%;
-    min-height: 95vh;
+    min-height: 92.8vh;
     transition: .5s all ease;
     ${compose(space, layout, color)}
   }
@@ -66,17 +71,20 @@ type NavLinkProps = {
 }
 
 export const NavLink = styled.a<NavLinkProps>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   cursor: pointer;
   border-radius: 0.25em;
   padding: 0.15em 0.5em;
   margin: 0 10px;
   font-size: 1.5em;
   transition: background-color 0.2ms ease-in-out;
-  max-height: 1.5em;
 
   &:active,
   &:hover {
-    background-color: ${({ theme, animated }) => animated ? 'transparent' : theme.colors.darknessLight};
+    background-color: ${({ theme, animated }) => animated ? 'transparent' : theme.colors.nord5};
     transform: ${({ animated }) => animated ? 'rotate(360deg)' : 'none'};
     opacity: ${({ animated }) => animated ? '0.5' : '1'};
     transition: opacity, transform 1s;
@@ -99,7 +107,7 @@ export const Name = styled.h1`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: 1.5em;
+  font-size: 1.4em;
   cursor: pointer;
 
   @media (max-width: 768px) {
@@ -114,14 +122,6 @@ export const Hamburger = styled.div`
   flex-direction: column;
   cursor: pointer;
   margin: 0 10px;
-
-  &:active,
-  &:focus,
-  &:hover {
-    span {
-      background: ${({ theme }) => theme.colors.darknessLight};
-    }
-  }
 
   @media (max-width: 768px) {
     display: flex;

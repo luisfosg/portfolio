@@ -6,9 +6,9 @@ const NotFound = () => {
 
   return (
     <>
-    <Container>
-      <h1>404 | { t('notFound') }</h1>
-    </Container>
+      <Container>
+        <h1>404 | { t('notFound') }</h1>
+      </Container>
     </>
   )
 }

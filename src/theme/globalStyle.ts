@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     ::-webkit-scrollbar-thumb {
       -webkit-transition: .3s ease-in-out background-color;
       transition: .3s ease-in-out background-color;
-      background-color: ${({ theme }) => theme.colors.primary};
+      background-color: ${({ theme }) => theme.colors.nord1};
       border-radius: 9999px;
     }
   }

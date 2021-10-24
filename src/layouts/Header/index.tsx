@@ -30,21 +30,21 @@ const Header = () => {
   const isDark = theme === 'dark'
   const fill = isDark ? '#fff' : '#434C5E'
 
-  const handleClick = () => {
+  const handleClick = (num: number) => {
+    if (!isOpen && num === 2) return
     setIsOpen(!isOpen)
   }
 
   return (
-    <StyledHeader bg="background" scroll={scrollY}>
+    <StyledHeader bg="background" isDark={isDark} scroll={scrollY}>
       <Content>
         <Link href="/" passHref>
-          <Name><Image src="/logo.svg" width="35" height="35" alt="Logo LuisFOsG"/><span>LuisFOsG</span></Name>
+          <Name><Image src="/logo.svg" width="30" height="30" alt="Logo LuisFOsG"/><span>LuisFOsG</span></Name>
         </Link>
         <Nav>
           <NavHidden isOpen={isOpen} bg="background">
-            <NavLink href="#" isHidden onClick={() => handleClick()}>Ejemplo</NavLink>
           </NavHidden>
-          <Hamburger onClick={() => handleClick()}>
+          <Hamburger onClick={() => handleClick(1)}>
             { isOpen ? <Close fill={fill} /> : <Burger fill={ fill } /> }
           </Hamburger>
           <NavLink animated onClick={() => toggleTheme()}>
