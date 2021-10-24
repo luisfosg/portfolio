@@ -9,6 +9,7 @@ import Close from 'components/icons/close'
 import { ContentBox as Content } from 'components/content/content.styles'
 
 import useDarkMode from 'hooks/useDarkMode'
+import useScroll from 'hooks/useScroll'
 
 import {
   Header as StyledHeader,
@@ -22,6 +23,8 @@ import {
 const Header = () => {
   const router = useRouter()
   const { theme, toggleTheme } = useDarkMode()
+  const { scrollY } = useScroll()
+
   const [isOpen, setIsOpen] = useState(false)
 
   const isDark = theme === 'dark'
@@ -32,13 +35,13 @@ const Header = () => {
   }
 
   return (
-    <StyledHeader bg="secondary">
+    <StyledHeader bg="background" scroll={scrollY}>
       <Content>
         <Link href="/" passHref>
           <Name><Image src="/logo.svg" width="35" height="35" alt="Logo LuisFOsG"/><span>LuisFOsG</span></Name>
         </Link>
         <Nav>
-          <NavHidden isOpen={isOpen} bg="secondary">
+          <NavHidden isOpen={isOpen} bg="background">
             <NavLink href="#" isHidden onClick={() => handleClick()}>Ejemplo</NavLink>
           </NavHidden>
           <Hamburger onClick={() => handleClick()}>

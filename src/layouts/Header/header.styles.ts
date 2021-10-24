@@ -8,13 +8,21 @@ import {
 
 import { SystemProps } from 'utils'
 
-export const Header = styled.header<SystemProps>`
+type HeaderProps = SystemProps & {
+  scroll: number
+}
+
+export const Header = styled.header<HeaderProps>`
+  -webkit-transition: .3s ease-in-out background-color;
+  transition: .3s ease-in-out background-color;
   display: inline-flex;
   position: sticky;
   flex-wrap: wrap;
   top: 0;
   width: 100%;
   z-index: 1;
+
+  box-shadow: ${({ scroll }) => scroll > 0 ? '0px 0px 10px rgba(0, 0, 0, 0.1)' : 'none'};
 
   user-select: none;
   ${compose(space, layout, color)}
@@ -67,9 +75,8 @@ export const NavLink = styled.a<NavLinkProps>`
   max-height: 1.5em;
 
   &:active,
-  &:focus,
   &:hover {
-    background-color: ${({ theme, animated }) => animated ? 'transparent' : theme.colors.primary};
+    background-color: ${({ theme, animated }) => animated ? 'transparent' : theme.colors.darknessLight};
     transform: ${({ animated }) => animated ? 'rotate(360deg)' : 'none'};
     opacity: ${({ animated }) => animated ? '0.5' : '1'};
     transition: opacity, transform 1s;
@@ -112,7 +119,7 @@ export const Hamburger = styled.div`
   &:focus,
   &:hover {
     span {
-      background: ${({ theme }) => theme.colors.primary};
+      background: ${({ theme }) => theme.colors.darknessLight};
     }
   }
 
