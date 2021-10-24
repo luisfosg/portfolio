@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -10,6 +10,7 @@ import { ContentBox as Content } from 'components/content/content.styles'
 
 import useDarkMode from 'hooks/useDarkMode'
 import useScroll from 'hooks/useScroll'
+import useScrollBlock from 'hooks/useScrollBlock'
 
 import {
   Header as StyledHeader,
@@ -23,9 +24,14 @@ import {
 const Header = () => {
   const router = useRouter()
   const { theme, toggleTheme } = useDarkMode()
+  const { allowScroll, blockScroll } = useScrollBlock()
   const { scrollY } = useScroll()
 
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    isOpen ? blockScroll() : allowScroll()
+  }, [isOpen, blockScroll, allowScroll])
 
   const isDark = theme === 'dark'
   const fill = isDark ? '#fff' : '#434C5E'

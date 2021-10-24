@@ -23,7 +23,7 @@ export const ContentBox = styled(Content)`
 `
 
 export const Container = styled(Content)`
-  min-height: 80vh;
+  min-height: 51.3vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
