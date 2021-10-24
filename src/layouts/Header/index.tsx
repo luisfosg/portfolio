@@ -5,6 +5,9 @@ import Image from 'next/image'
 
 import Sun from 'components/icons/sun'
 import Moon from 'components/icons/moon'
+import Burger from 'components/icons/burger'
+import Close from 'components/icons/close'
+
 import { ContentBox as Content } from 'components/content/content.styles'
 
 import useDarkMode from 'hooks/useDarkMode'
@@ -24,6 +27,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const isDark = theme === 'dark'
+  const fill = isDark ? '#fff' : '#434C5E'
 
   const handleClick = () => {
     setIsOpen(!isOpen)
@@ -49,12 +53,10 @@ const Header = () => {
             }
           </NavHidden>
           <Hamburger onClick={() => handleClick()}>
-            <span />
-            <span />
-            <span />
+            { isOpen ? <Close fill={fill} /> : <Burger fill={ fill } /> }
           </Hamburger>
           <NavLink animated onClick={() => toggleTheme()}>
-            {isDark ? <Sun fill="#fff"/> : <Moon fill="#434C5E"/>}
+            {isDark ? <Sun fill={ fill }/> : <Moon fill={ fill }/>}
           </NavLink>
         </Nav>
       </Content>

@@ -46,7 +46,7 @@ export const NavHidden = styled.div<NavHiddenProps>`
     top: 45px;
     left: ${props => props.isOpen ? '0' : '-100%'};
     width: 100%;
-    min-height: 93vh;
+    min-height: 95vh;
     transition: .5s all ease;
     ${compose(space, layout, color)}
   }
@@ -72,7 +72,7 @@ export const NavLink = styled.a<NavLinkProps>`
   &:focus,
   &:hover {
     background-color: ${({ theme, animated }) => animated ? 'transparent' : theme.colors.primary};
-    transform: ${({ animated }) => animated ? 'rotate(180deg)' : 'none'};
+    transform: ${({ animated }) => animated ? 'rotate(360deg)' : 'none'};
     opacity: ${({ animated }) => animated ? '0.5' : '1'};
     transition: opacity, transform 1s;
   }
@@ -108,14 +108,6 @@ export const Hamburger = styled.div`
   display: none;
   flex-direction: column;
   cursor: pointer;
-
-  span {
-    height: 2px;
-    width: 25px;
-    background: ${({ theme }) => theme.colors.text};
-    margin-bottom: 4px;
-    border-radius: 5px;
-  }
 
   &:active,
   &:focus,
