@@ -53,7 +53,6 @@ export const NavHidden = styled.div<NavHiddenProps>`
 `
 
 type NavLinkProps = {
-  active?: boolean,
   isHidden?: boolean,
   animated?: boolean,
 }
@@ -66,7 +65,6 @@ export const NavLink = styled.a<NavLinkProps>`
   font-size: 1.5em;
   transition: background-color 0.2ms ease-in-out;
   max-height: 1.5em;
-  background-color: ${({ active, theme }) => active ? theme.colors.primary : 'transparent'};
 
   &:active,
   &:focus,
@@ -108,6 +106,7 @@ export const Hamburger = styled.div`
   display: none;
   flex-direction: column;
   cursor: pointer;
+  margin: 0 10px;
 
   &:active,
   &:focus,

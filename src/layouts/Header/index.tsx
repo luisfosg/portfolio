@@ -3,8 +3,6 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import Sun from 'components/icons/sun'
-import Moon from 'components/icons/moon'
 import Burger from 'components/icons/burger'
 import Close from 'components/icons/close'
 
@@ -42,22 +40,28 @@ const Header = () => {
         <Nav>
           <NavHidden isOpen={isOpen} bg="secondary">
             <NavLink href="#" isHidden onClick={() => handleClick()}>Ejemplo</NavLink>
-            {
-              router.locales?.map(locale => (
-                <Link key={locale} href={router.asPath} locale={locale} passHref>
-                  <NavLink key={locale} active={locale === router.locale} isHidden onClick={() => handleClick()}>
-                    { locale }
-                  </NavLink>
-                </Link>
-              ))
-            }
           </NavHidden>
           <Hamburger onClick={() => handleClick()}>
             { isOpen ? <Close fill={fill} /> : <Burger fill={ fill } /> }
           </Hamburger>
           <NavLink animated onClick={() => toggleTheme()}>
-            {isDark ? <Sun fill={ fill }/> : <Moon fill={ fill }/>}
+            {isDark ? '🌞' : '🌙'}
           </NavLink>
+          {
+            router.locales?.map(locale => (
+              locale !== router.locale && (
+                <Link key={locale} href={router.asPath} locale={locale} passHref>
+                  <NavLink key={locale}>
+                    {
+                      locale === 'es'
+                        ? <Image src="/images/es.svg" width="25" height="25" alt="España" />
+                        : <Image src="/images/en.svg" width="25" height="25" alt="United States" />
+                    }
+                  </NavLink>
+                </Link>
+              )
+            ))
+          }
         </Nav>
       </Content>
     </StyledHeader>
