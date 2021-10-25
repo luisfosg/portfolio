@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     transition: .3s ease-in-out background-color;
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
-    /* scrollbar-gutter: stable; */
+    scrollbar-gutter: stable;
 
     ::-webkit-scrollbar {
       width: 10px;

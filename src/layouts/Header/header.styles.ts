@@ -21,6 +21,7 @@ export const Header = styled.header<HeaderProps>`
   flex-wrap: wrap;
   top: 0;
   width: 100%;
+  min-height: 7.2vh;
   z-index: 1;
 
   box-shadow: ${({ scroll, isDark }) => {
@@ -56,7 +57,7 @@ export const NavHidden = styled.div<NavHiddenProps>`
     align-items: center;
 
     position: absolute;
-    top: 45px;
+    top: 7.2vh;
     left: ${props => props.isOpen ? '0' : '-100%'};
     width: 100%;
     min-height: 92.8vh;

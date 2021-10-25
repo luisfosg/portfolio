@@ -5,15 +5,10 @@ const useScrollBlock = () => {
 
   const blockScroll = () => {
     if (typeof document === 'undefined') return
-    const html = document.documentElement
     const { body } = document
 
     if (!body || !body.style || scroll.current) return
-
-    const scrollBarWidth = window.innerWidth - html.clientWidth
-    const bodyPaddingRight = Number(window.getComputedStyle(body).getPropertyValue('padding-right')) || 0
     body.style.overflow = 'hidden'
-    body.style.paddingRight = `${bodyPaddingRight + scrollBarWidth}px`
 
     scroll.current = true
   }
@@ -23,9 +18,7 @@ const useScrollBlock = () => {
     const { body } = document
 
     if (!body || !body.style || !scroll.current) return
-
     body.style.overflow = ''
-    body.style.paddingRight = ''
 
     scroll.current = false
   }
