@@ -49,6 +49,8 @@ type NavHiddenProps = SystemProps & {
 export const NavHidden = styled.div<NavHiddenProps>`
   display: inline-flex;
   height: 100%;
+  z-index: -1;
+  user-select: none;
 
   @media (max-width: 768px) {
     overflow: hidden;

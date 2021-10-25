@@ -9,7 +9,9 @@ const AppLayout = ({ children }: LayoutProps) => {
   return (
     <div>
       <Header />
-      <>{ children }</>
+        <main>
+          { children }
+        </main>
       <Footer />
     </div>
   )

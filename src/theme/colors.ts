@@ -1,13 +1,13 @@
 import { Colors } from './index'
 
 export const themeDark: Colors = {
-  background: '#242933',
+  background: '#2E3440',
   text: '#fff',
   nord1: '#D8DEE9',
   nord2: '#E5E9F0',
   nord3: '#ECEFF4',
   nord4: '#4C566A',
-  nord5: '#2E3440',
+  nord5: '#242933',
   nord6: '#3B4252',
   nord7: '#434C5E',
   nord8: '#8FBCBB',

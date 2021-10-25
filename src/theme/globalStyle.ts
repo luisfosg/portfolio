@@ -10,22 +10,16 @@ export const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    -webkit-transition: .3s ease-in-out background-color;
-    transition: .3s ease-in-out background-color;
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
     scrollbar-gutter: stable;
 
     ::-webkit-scrollbar {
       width: 10px;
-      -webkit-transition: .3s ease-in-out background-color;
-      transition: .3s ease-in-out background-color;
       background-color: ${({ theme }) => theme.colors.background};
     }
 
     ::-webkit-scrollbar-thumb {
-      -webkit-transition: .3s ease-in-out background-color;
-      transition: .3s ease-in-out background-color;
       background-color: ${({ theme }) => theme.colors.nord1};
       border-radius: 9999px;
     }
@@ -39,5 +33,8 @@ export const GlobalStyle = createGlobalStyle`
   * {
     font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
+
+    -webkit-transition: .3s ease-in-out background-color;
+    transition: .3s ease-in-out background-color;
   }
 `
