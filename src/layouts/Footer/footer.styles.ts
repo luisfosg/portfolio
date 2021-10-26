@@ -12,7 +12,7 @@ export const FooterContainer = styled.footer<SystemProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   height: 25vh;
 
   ${compose(space, layout, color)}
@@ -20,7 +20,7 @@ export const FooterContainer = styled.footer<SystemProps>`
 
 export const SectionFooter = styled.section<SystemProps>`
   width: 100%;
-  padding-top: 2rem;
+  padding: 2rem 0;
 
   display: flex;
   flex-wrap: wrap;

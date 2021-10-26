@@ -46,7 +46,7 @@ const Header = () => {
   }
 
   return (
-    <StyledHeader bg="background" isDark={isDark} scroll={scrollY}>
+    <StyledHeader isDark={isDark} scroll={scrollY}>
       <Content>
         <Link href="/" passHref>
           <Name>
@@ -57,7 +57,7 @@ const Header = () => {
           </Name>
         </Link>
         <Nav>
-          <NavHidden isOpen={isOpen} bg="background">
+          <NavHidden isOpen={isOpen}>
             <NavLink href="/blog" isHidden onClick={() => handleClick(3)}>{ t('blog') }</NavLink>
             <NavLink href="/contact" isHidden onClick={() => handleClick(3)}>{ t('contact') }</NavLink>
           </NavHidden>

@@ -12,7 +12,9 @@ const Footer = () => {
         <SectionFooter>
           <FooterLink href="https://github.com/LuisFOsG" target="_blank" color="nord2">GitHub</FooterLink>
           <FooterLink href="https://twitter.com/LuisFOsG_" target="_blank" color="nord2">Twitter</FooterLink>
+          <FooterLink href="/blog" color="nord2">Blog</FooterLink>
           <FooterLink href="mailto:luisfosgdev@gmail.com" target="_blank" color="nord2">{ t('email') }</FooterLink>
+          <FooterLink href="/contact" color="nord2">{ t('contact') }</FooterLink>
         </SectionFooter>
       </Content>
     </FooterContainer>

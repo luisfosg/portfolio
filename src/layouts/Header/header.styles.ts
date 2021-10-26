@@ -1,14 +1,6 @@
 import styled from 'styled-components'
-import {
-  space,
-  layout,
-  color,
-  compose
-} from 'styled-system'
 
-import { SystemProps } from 'utils'
-
-type HeaderProps = SystemProps & {
+type HeaderProps = {
   isDark?: boolean,
   scroll: number
 }
@@ -31,7 +23,8 @@ export const Header = styled.header<HeaderProps>`
   }};
 
   user-select: none;
-  ${compose(space, layout, color)}
+  background-color: ${({ theme }) => `${theme.colors.background}B3`};
+  backdrop-filter: blur(3px);
 `
 
 export const Nav = styled.nav`
@@ -42,7 +35,7 @@ export const Nav = styled.nav`
   justify-content: center;
 `
 
-type NavHiddenProps = SystemProps & {
+type NavHiddenProps = {
   isOpen: boolean,
 }
 
@@ -63,8 +56,10 @@ export const NavHidden = styled.div<NavHiddenProps>`
     width: 100%;
     min-height: 92.8vh;
     transition: .5s all ease;
-    ${compose(space, layout, color)}
     z-index: -1;
+
+    background-color: ${({ theme }) => `${theme.colors.background}E6`};
+    backdrop-filter: blur(5px);
   }
 `
 
