@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
+import useTranslation from 'next-translate/useTranslation'
 
 import Burger from 'components/icons/burger'
 import Close from 'components/icons/close'
@@ -18,10 +19,13 @@ import {
   NavHidden,
   NavLink,
   Name,
-  Hamburger
+  Hamburger,
+  ImageWrapper
 } from './header.styles'
 
 const Header = () => {
+  const { t } = useTranslation('header')
+
   const router = useRouter()
   const { theme, toggleTheme } = useDarkMode()
   const { allowScroll, blockScroll } = useScrollBlock()
@@ -37,7 +41,7 @@ const Header = () => {
   const fill = isDark ? '#fff' : '#434C5E'
 
   const handleClick = (num: number) => {
-    if (!isOpen && num === 2) return
+    if ((!isOpen && num === 2) || num === 3) return
     setIsOpen(!isOpen)
   }
 
@@ -45,10 +49,17 @@ const Header = () => {
     <StyledHeader bg="background" isDark={isDark} scroll={scrollY}>
       <Content>
         <Link href="/" passHref>
-          <Name><Image src="/logo.svg" width="30" height="30" alt="Logo LuisFOsG"/><span>LuisFOsG</span></Name>
+          <Name>
+            <ImageWrapper>
+              <Image src="/logo.svg" layout="fill" alt="Logo LuisFOsG"/>
+            </ImageWrapper>
+            <span>LuisFOsG</span>
+          </Name>
         </Link>
         <Nav>
           <NavHidden isOpen={isOpen} bg="background">
+            <NavLink href="/blog" isHidden onClick={() => handleClick(3)}>{ t('blog') }</NavLink>
+            <NavLink href="/contact" isHidden onClick={() => handleClick(3)}>{ t('contact') }</NavLink>
           </NavHidden>
           <Hamburger onClick={() => handleClick(1)}>
             { isOpen ? <Close fill={fill} /> : <Burger fill={ fill } /> }

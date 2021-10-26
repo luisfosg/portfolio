@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import useTranslation from 'next-translate/useTranslation'
 
-import { Container } from 'components/content/content.styles'
+import { ContentContainer as Container } from 'components/content/content.styles'
 
 const Home: NextPage = () => {
   const { t } = useTranslation('common')

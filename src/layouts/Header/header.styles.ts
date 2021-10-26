@@ -49,7 +49,6 @@ type NavHiddenProps = SystemProps & {
 export const NavHidden = styled.div<NavHiddenProps>`
   display: inline-flex;
   height: 100%;
-  z-index: -1;
   user-select: none;
 
   @media (max-width: 768px) {
@@ -65,6 +64,7 @@ export const NavHidden = styled.div<NavHiddenProps>`
     min-height: 92.8vh;
     transition: .5s all ease;
     ${compose(space, layout, color)}
+    z-index: -1;
   }
 `
 
@@ -74,11 +74,11 @@ type NavLinkProps = {
 }
 
 export const NavLink = styled.a<NavLinkProps>`
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  cursor: pointer;
   border-radius: 0.25em;
   padding: 0.15em 0.5em;
   margin: 0 10px;
@@ -95,12 +95,10 @@ export const NavLink = styled.a<NavLinkProps>`
 
   ${({ isHidden }) => isHidden && `
     @media (max-width: 768px) {
+      margin: 10px 0;
       width: 100%;
       height: 100%;
       max-height: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
   `}
 `
@@ -110,7 +108,7 @@ export const Name = styled.h1`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: 1.4em;
+  font-size: 1.3em;
   cursor: pointer;
 
   @media (max-width: 768px) {
@@ -118,6 +116,12 @@ export const Name = styled.h1`
       display: none;
     }
   }
+`
+
+export const ImageWrapper = styled.div`
+  position: relative;
+  width: 1.3em;
+  height: 1.3em;
 `
 
 export const Hamburger = styled.div`
