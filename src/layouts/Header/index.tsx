@@ -59,17 +59,17 @@ const Header = () => {
         <Nav>
           <NavHidden isOpen={isOpen}>
             <Link href="/blog" passHref>
-              <NavLink isHidden onClick={() => handleClick(3)}>{ t('blog') }</NavLink>
+              <NavLink isHidden onClick={() => handleClick(2)}>{ t('blog') }</NavLink>
             </Link>
             <Link href="/contact" passHref>
-              <NavLink isHidden onClick={() => handleClick(3)}>{ t('contact') }</NavLink>
+              <NavLink isHidden onClick={() => handleClick(2)}>{ t('contact') }</NavLink>
             </Link>
           </NavHidden>
           <Hamburger onClick={() => handleClick(1)}>
             { isOpen ? <Close fill={fill} /> : <Burger fill={ fill } /> }
           </Hamburger>
           <NavLink animated onClick={() => toggleTheme()}>
-            {isDark ? '🌞' : '🌙'}
+            { isDark ? '🌞' : '🌙' }
           </NavLink>
           {
             router.locales?.map(locale => (

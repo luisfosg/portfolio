@@ -14,6 +14,10 @@ export const Content = styled.div<SystemProps>`
 
   padding: unset;
   ${compose(space, layout, color)}
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 export const ContentBox = styled(Content)`
