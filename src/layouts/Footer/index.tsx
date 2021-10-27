@@ -1,7 +1,9 @@
-import { FooterContainer, SectionFooter, FooterLink } from './footer.styles'
-
-import { ContentBox as Content } from 'components/content/content.styles'
+import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
+
+import { ContentBox as Content } from 'components/Content/content.styles'
+
+import { FooterContainer, SectionFooter, FooterLink } from './footer.styles'
 
 const Footer = () => {
   const { t } = useTranslation('footer')
@@ -12,9 +14,13 @@ const Footer = () => {
         <SectionFooter>
           <FooterLink href="https://github.com/LuisFOsG" target="_blank" color="nord2">GitHub</FooterLink>
           <FooterLink href="https://twitter.com/LuisFOsG_" target="_blank" color="nord2">Twitter</FooterLink>
-          <FooterLink href="/blog" color="nord2">Blog</FooterLink>
+          <Link href="/blog" passHref>
+            <FooterLink color="nord2">Blog</FooterLink>
+          </Link>
           <FooterLink href="mailto:luisfosgdev@gmail.com" target="_blank" color="nord2">{ t('email') }</FooterLink>
-          <FooterLink href="/contact" color="nord2">{ t('contact') }</FooterLink>
+          <Link href="/contact" passHref>
+            <FooterLink color="nord2">{ t('contact') }</FooterLink>
+          </Link>
         </SectionFooter>
       </Content>
     </FooterContainer>

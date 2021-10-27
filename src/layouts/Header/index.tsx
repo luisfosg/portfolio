@@ -4,10 +4,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 
-import Burger from 'components/icons/burger'
-import Close from 'components/icons/close'
+import Burger from 'components/Icons/burger'
+import Close from 'components/Icons/close'
 
-import { ContentBox as Content } from 'components/content/content.styles'
+import { ContentBox as Content } from 'components/Content/content.styles'
 
 import useDarkMode from 'hooks/useDarkMode'
 import useScroll from 'hooks/useScroll'
@@ -58,8 +58,12 @@ const Header = () => {
         </Link>
         <Nav>
           <NavHidden isOpen={isOpen}>
-            <NavLink href="/blog" isHidden onClick={() => handleClick(3)}>{ t('blog') }</NavLink>
-            <NavLink href="/contact" isHidden onClick={() => handleClick(3)}>{ t('contact') }</NavLink>
+            <Link href="/blog" passHref>
+              <NavLink isHidden onClick={() => handleClick(3)}>{ t('blog') }</NavLink>
+            </Link>
+            <Link href="/contact" passHref>
+              <NavLink isHidden onClick={() => handleClick(3)}>{ t('contact') }</NavLink>
+            </Link>
           </NavHidden>
           <Hamburger onClick={() => handleClick(1)}>
             { isOpen ? <Close fill={fill} /> : <Burger fill={ fill } /> }

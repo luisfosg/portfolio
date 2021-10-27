@@ -3,6 +3,7 @@
   "locales": ["es", "en"],
   "pages": {
     "*": ["common", "footer", "header"],
+    "/contact": ["contact"],
     "/404": ["404"]
   }
 }
