@@ -1,6 +1,12 @@
 import { FormEvent } from 'react'
 
+import Input from '../Input/index'
+import Textarea from '../Textarea/index'
+import Button from '../Button/index'
+
 import useField from 'hooks/useField'
+
+import { FormContactContainer, FormContainer, FormContactTitle } from './formContact.styles'
 
 const FormContact = () => {
   const name = useField('text')
@@ -15,14 +21,15 @@ const FormContact = () => {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input {...name.form} />
-        <input {...email.form} />
-        <textarea {...message.form}></textarea>
-        <button>Submit</button>
-      </form>
-    </div>
+    <FormContactContainer>
+      <FormContactTitle>Get In Touch</FormContactTitle>
+      <FormContainer onSubmit={handleSubmit}>
+        <Input {...name.form} placeholder="Name" required/>
+        <Input {...email.form} placeholder="Email" required/>
+        <Textarea {...message.form} placeholder="Drop me a line…" required/>
+        <Button>Submit</Button>
+      </FormContainer>
+    </FormContactContainer>
   )
 }
 

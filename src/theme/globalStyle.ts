@@ -13,16 +13,6 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
     scrollbar-gutter: stable;
-
-    ::-webkit-scrollbar {
-      width: 10px;
-      background-color: ${({ theme }) => theme.colors.background};
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background-color: ${({ theme }) => theme.colors.nord1};
-      border-radius: 9999px;
-    }
   }
 
   a {
@@ -36,5 +26,15 @@ export const GlobalStyle = createGlobalStyle`
 
     -webkit-transition: .3s ease-in-out background-color;
     transition: .3s ease-in-out background-color;
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      background-color: ${({ theme }) => theme.colors.background};
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => theme.colors.nord1};
+      border-radius: 9999px;
+    }
   }
 `

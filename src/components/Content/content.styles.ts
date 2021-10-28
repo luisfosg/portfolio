@@ -36,3 +36,9 @@ export const ContentContainer = styled(Container)`
   justify-content: center;
   align-items: center;
 `
+
+export const FormGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+`

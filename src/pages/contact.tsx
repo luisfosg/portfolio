@@ -7,6 +7,7 @@ import FormContact from 'components/FormContact'
 const FormContainer = styled.div`
   margin-top: 3rem;
   margin-bottom: 3rem;
+  min-height: 70vh;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -19,10 +20,6 @@ const FormContainer = styled.div`
 
 const Info = styled.div`
   width: 100%;
-
-  @media (max-width: 768px) {
-    order: 2;
-  }
 `
 
 const Contact = () => {
@@ -30,10 +27,9 @@ const Contact = () => {
 
   return (
     <Container>
-      <h1>{ t('contact') }</h1>
       <FormContainer>
         <Info>
-          <h2>Info</h2>
+          <h2>{ t('info') }</h2>
           <p className="prototype">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, repellat eos sapiente vitae rerum delectus quasi eaque nostrum omnis fugit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores ducimus earum optio eveniet, unde illo ut placeat doloremque quam similique eligendi libero, dignissimos dicta! Consectetur laudantium ipsam repudiandae sequi.
           </p>
