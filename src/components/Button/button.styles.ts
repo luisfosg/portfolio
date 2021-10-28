@@ -1,13 +1,14 @@
 import styled from 'styled-components'
+import { addOpacity } from 'utils/index'
 
 export const ButtonStyled = styled.button`
   cursor: pointer;
   width: 100%;
-  height: 60px;
+  height: 40px;
   font-size: 16px;
   border: none;
   border-radius: 9999px;
-  background-color: ${({ theme }) => theme.colors.nord15};
+  background-color: ${({ theme }) => addOpacity(theme.colors.nord11, 0.5)};
   color: ${({ theme }) => theme.colors.darkness};
 
   &:hover,

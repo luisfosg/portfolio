@@ -8,10 +8,8 @@ export const FormContactContainer = styled.div`
   flex-direction: column;
   padding: 20px;
 
-  background: ${({ theme }) => addOpacity(theme.colors.nord10, 0.2)};
-  box-shadow: 0 2px 12px 0 ${({ theme }) => addOpacity(theme.colors.nord12, 0.1)};
-  backdrop-filter: blur( 4px );
-  -webkit-backdrop-filter: blur( 4px );
+  background: ${({ theme }) => addOpacity(theme.colors.nord4, 0.2)};
+  box-shadow: 2px 2px 10px ${({ theme }) => addOpacity(theme.colors.nord14, 0.1)};
   border-radius: 10px;
 
   @media (max-width: 768px) {
@@ -23,7 +21,7 @@ export const FormContactTitle = styled.h2`
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 0;
 `
 

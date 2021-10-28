@@ -1,8 +1,11 @@
 import { ButtonStyled } from './button.styles'
+import { FormGroup } from '../Content/content.styles'
 
 const Button = ({ children, ...props }: any) => {
   return (
-    <ButtonStyled {...props}>{ children }</ButtonStyled>
+    <FormGroup notMargin>
+      <ButtonStyled {...props}>{ children }</ButtonStyled>
+    </FormGroup>
   )
 }
 

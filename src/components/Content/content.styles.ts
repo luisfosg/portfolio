@@ -37,8 +37,12 @@ export const ContentContainer = styled(Container)`
   align-items: center;
 `
 
-export const FormGroup = styled.div`
+type FormGroupProps = {
+  notMargin?: boolean
+}
+
+export const FormGroup = styled.div<FormGroupProps>`
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: ${({ notMargin }) => notMargin ? '0' : '1rem'};
 `
