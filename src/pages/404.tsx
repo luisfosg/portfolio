@@ -1,6 +1,6 @@
 import Image from 'next/image'
-
 import useTranslation from 'next-translate/useTranslation'
+
 import { ContentContainer as Container } from 'components/Content/content.styles'
 
 const NotFound = () => {

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { addOpacity } from 'utils'
 
 type HeaderProps = {
   isDark?: boolean,
@@ -23,7 +24,7 @@ export const Header = styled.header<HeaderProps>`
   }};
 
   user-select: none;
-  background-color: ${({ theme }) => `${theme.colors.background}B3`};
+  background-color: ${({ theme }) => addOpacity(theme.colors.background, 0.7)};
   backdrop-filter: blur(3px);
 `
 
@@ -58,7 +59,7 @@ export const NavHidden = styled.div<NavHiddenProps>`
     transition: .5s all ease;
     z-index: -1;
 
-    background-color: ${({ theme }) => `${theme.colors.background}E6`};
+    background-color: ${({ theme }) => addOpacity(theme.colors.background, 0.9)};
     backdrop-filter: blur(5px);
   }
 `
