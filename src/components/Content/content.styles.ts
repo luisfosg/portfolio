@@ -42,7 +42,7 @@ type FormGroupProps = {
 }
 
 export const FormGroup = styled.div<FormGroupProps>`
-  display: flex;
-  flex-direction: column;
   margin-bottom: ${({ notMargin }) => notMargin ? '0' : '1rem'};
+  width: 100%;
+  transition: all 0.3s;
 `

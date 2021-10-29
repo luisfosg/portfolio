@@ -24,9 +24,9 @@ const FormContact = () => {
     <FormContactContainer>
       <FormContactTitle>Get In Touch</FormContactTitle>
       <FormContainer onSubmit={handleSubmit}>
-        <Input {...name.form} placeholder="Name" required/>
-        <Input {...email.form} placeholder="Email" required/>
-        <Textarea {...message.form} placeholder="Drop me a line…" required/>
+        <Input {...name.form} id="name" name="name" placeholder="Name" label="Name" required/>
+        <Input {...email.form} id="email" name="email" placeholder="Email" label="Email" required/>
+        <Textarea {...message.form} id="message" name="message" placeholder="Drop me a line…" label="Drop me a line…" required/>
         <Button>Submit</Button>
       </FormContainer>
     </FormContactContainer>

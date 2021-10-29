@@ -1,8 +1,11 @@
-import { TextareaStyled } from './textarea.styles'
+import { TextareaStyled, LabelStyled } from './textarea.styles'
 
-const Textarea = (props: any) => {
+const Textarea = ({ label, ...props }: any) => {
   return (
-    <TextareaStyled {...props}/>
+    <>
+      <TextareaStyled {...props}/>
+      {label ? <LabelStyled htmlFor={props.name}>{label}</LabelStyled> : null}
+    </>
   )
 }
 

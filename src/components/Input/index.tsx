@@ -1,10 +1,11 @@
-import { InputStyled } from './input.styles'
+import { InputStyled, LabelStyled } from './input.styles'
 import { FormGroup } from '../Content/content.styles'
 
-const Input = (props: any) => {
+const Input = ({ label, ...props }: any) => {
   return (
     <FormGroup>
       <InputStyled {...props}/>
+      {label ? <LabelStyled htmlFor={props.name}>{label}</LabelStyled> : null}
     </FormGroup>
   )
 }
