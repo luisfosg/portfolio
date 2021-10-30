@@ -3,15 +3,24 @@ import { addOpacity } from 'utils/index'
 
 export const InputStyled = styled.input`
   width: 100%;
-  height: 40px;
-  font-size: 16px;
+  height: 3rem;
+  font-size: 1.3rem;
   border: none;
-  padding: 0 10px;
+  padding: 0 0.8rem;
   outline: none;
   border-radius: 10px;
 
   background-color: ${({ theme }) => addOpacity(theme.colors.nord7, 0.6)};
   color: ${({ theme }) => theme.colors.text};
+
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active  {
+    box-shadow: 0 0 0 30px ${({ theme }) => addOpacity(theme.colors.nord7, 0.8)} inset;
+    -webkit-box-shadow: 0 0 0 30px ${({ theme }) => addOpacity(theme.colors.nord7, 0.8)} inset !important;
+  }
 
   ::placeholder {
     color: transparent;
@@ -24,8 +33,8 @@ export const InputStyled = styled.input`
   &:focus + label,
   &:not(:placeholder-shown) + label{
     font-size: 1rem;
-    padding-left: 15px;
-    transform: translateY(-3.5em) scale(0.8);
+    padding-left: 1.2rem;
+    transform: translateY(-3.5rem) scale(0.8);
     cursor: default;
   }
 
@@ -35,15 +44,15 @@ export const InputStyled = styled.input`
 `
 
 export const LabelStyled = styled.label`
-  font-size: 16px;
-  padding-left: 10px;
+  font-size: 1.2rem;
+  padding-left: 0.8rem;
   color: ${({ theme }) => addOpacity(theme.colors.nord1, 0.6)};
   display: block;
 
   position: absolute;
   cursor: text;
   opacity: 1;
-  transform: translateY(-1.8em);
+  transform: translateY(-2.2rem);
   transform-origin: 0 0;
   transition: all 0.3s;
   user-select: none;

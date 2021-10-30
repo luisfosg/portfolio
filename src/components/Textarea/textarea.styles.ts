@@ -4,15 +4,15 @@ import { addOpacity } from 'utils/index'
 export const TextareaStyled = styled.textarea`
   width: 100%;
   height: 100%;
-  padding: 10px;
-  font-size: 16px;
+  padding: 0.8rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
   border-radius: 10px;
 
   border: none;
   outline: none;
   resize: vertical;
-  min-height: 100px;
+  min-height: 10rem;
 
   background-color: ${({ theme }) => addOpacity(theme.colors.nord7, 0.6)};
   color: ${({ theme }) => theme.colors.text};
@@ -28,8 +28,8 @@ export const TextareaStyled = styled.textarea`
   &:focus + label,
   &:not(:placeholder-shown) + label{
     font-size: 1rem;
-    padding-left: 15px;
-    transform: translateY(7.7em) scale(0.8);
+    padding-left: 1.2rem;
+    transform: translateY(7.5rem) scale(0.8);
     cursor: default;
   }
 
@@ -39,14 +39,14 @@ export const TextareaStyled = styled.textarea`
 `
 
 export const LabelStyled = styled.label`
-  font-size: 16px;
-  padding-left: 10px;
+  font-size: 1.2rem;
+  padding-left: 0.8rem;
   color: ${({ theme }) => addOpacity(theme.colors.nord1, 0.6)};
 
   position: absolute;
   cursor: text;
   opacity: 1;
-  transform: translateY(7.25em);
+  transform: translateY(8.8rem);
   transform-origin: 0 0;
   transition: all 0.3s;
   user-select: none;

@@ -5,7 +5,7 @@ export const ButtonStyled = styled.button`
   cursor: pointer;
   width: 100%;
   height: 40px;
-  font-size: 16px;
+  font-size: 1.3rem;
   border: none;
   border-radius: 9999px;
   background-color: ${({ theme }) => addOpacity(theme.colors.nord11, 0.5)};

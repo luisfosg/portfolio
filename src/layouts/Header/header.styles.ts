@@ -75,10 +75,10 @@ export const NavLink = styled.a<NavLinkProps>`
   align-items: center;
   justify-content: center;
 
-  border-radius: 0.25em;
-  padding: 0.15em 0.5em;
+  border-radius: 0.25rem;
+  padding: 0.15rem 0.5rem;
   margin: 0 10px;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   transition: background-color 0.2ms ease-in-out;
 
   &:active,
@@ -104,7 +104,7 @@ export const Name = styled.h1`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   cursor: pointer;
 
   @media (max-width: 768px) {
@@ -116,8 +116,8 @@ export const Name = styled.h1`
 
 export const ImageWrapper = styled.div`
   position: relative;
-  width: 1.3em;
-  height: 1.3em;
+  width: 1.7rem;
+  height: 1.65rem;
 `
 
 export const Hamburger = styled.div`

@@ -8,8 +8,6 @@ const Articles = () => {
       <Article/>
       <Article/>
       <Article/>
-      <Article/>
-      <Article/>
     </ArticlesContainer>
   )
 }

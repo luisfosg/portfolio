@@ -10,7 +10,7 @@ import { SystemProps } from 'utils'
 export const Content = styled.div<SystemProps>`
   width: 85%;
   margin: 0 auto;
-  padding: 0 1.5em;
+  padding: 0 1.5rem;
 
   padding: unset;
   ${compose(space, layout, color)}

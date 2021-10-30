@@ -5,7 +5,7 @@ export const ArticlesContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 10px;
   grid-column-gap: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 1.1rem;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;

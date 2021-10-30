@@ -6,14 +6,14 @@ export const FormContactContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 1.5rem;
 
   background: ${({ theme }) => addOpacity(theme.colors.nord4, 0.2)};
   box-shadow: 2px 2px 10px ${({ theme }) => addOpacity(theme.colors.nord14, 0.1)};
   border-radius: 10px;
 
   @media (max-width: 768px) {
-    margin-top: 20px;
+    margin-top: 1rem;
   }
 `
 
@@ -21,7 +21,7 @@ export const FormContactTitle = styled.h2`
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
   padding: 0;
 `
 
