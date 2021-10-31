@@ -59,7 +59,7 @@ const Header = () => {
         <Nav>
           <NavHidden isOpen={isOpen}>
             <Link href="/blog" passHref>
-              <NavLink isHidden onClick={() => handleClick(2)}>{ t('blog') }</NavLink>
+              <NavLink isHidden onClick={() => handleClick(2)}>Blog</NavLink>
             </Link>
             <Link href="/contact" passHref>
               <NavLink isHidden onClick={() => handleClick(2)}>{ t('contact') }</NavLink>

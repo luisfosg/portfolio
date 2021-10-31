@@ -1,3 +1,11 @@
 {
-  "info": "Info"
+  "info": "Info",
+  "title": "Contacto",
+  "name": "Nombre",
+  "email": "Correo Electrónico",
+  "message": "Deja tu Mensaje...",
+  "submit": "Enviar Mensaje",
+  "notName": "No has ingresado un Nombre",
+  "notEmail": "No has ingresado un Correo",
+  "notMessage": "No has ingresado un Mensaje"
 }

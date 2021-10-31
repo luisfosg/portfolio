@@ -1,3 +1,11 @@
 {
-  "info": "Info"
+  "info": "Info",
+  "title": "Get In Touch",
+  "name": "Name",
+  "email": "Email",
+  "message": "Drop me a Line...",
+  "submit": "Send Email",
+  "notName": "Name is required",
+  "notEmail": "Email is required",
+  "notMessage": "Message is required"
 }
