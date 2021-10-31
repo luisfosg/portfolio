@@ -6,7 +6,6 @@ export const TextareaStyled = styled.textarea`
   height: 100%;
   padding: 0.8rem;
   font-size: 1.3rem;
-  margin-bottom: 1rem;
   border-radius: 10px;
 
   border: none;
@@ -50,4 +49,15 @@ export const LabelStyled = styled.label`
   transform-origin: 0 0;
   transition: all 0.3s;
   user-select: none;
+`
+
+export const ErrorStyled = styled.span`
+  font-size: 0.5rem;
+  min-height: 0.5rem;
+  max-height: 0.5rem;
+  padding-left: 0.5rem;
+  color: ${({ theme }) => theme.colors.nord12};
+  cursor: text;
+  opacity: 1;
+  margin-bottom: 1rem;
 `

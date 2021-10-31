@@ -15,4 +15,9 @@ export const ButtonStyled = styled.button`
   &:active {
     background-color: ${({ theme }) => theme.colors.nord10};
   }
+
+  &[disabled] {
+    opacity: .3;
+    pointer-events: none;
+  }
 `

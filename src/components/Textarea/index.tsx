@@ -1,10 +1,11 @@
-import { TextareaStyled, LabelStyled } from './textarea.styles'
+import { TextareaStyled, LabelStyled, ErrorStyled } from './textarea.styles'
 
-const Textarea = ({ label, ...props }: any) => {
+const Textarea = ({ label, error = '', ...props }: any) => {
   return (
     <>
       <TextareaStyled {...props}/>
       {label ? <LabelStyled htmlFor={props.name}>{label}</LabelStyled> : null}
+      {error ? <ErrorStyled>{error}</ErrorStyled> : <ErrorStyled></ErrorStyled>}
     </>
   )
 }

@@ -57,3 +57,17 @@ export const LabelStyled = styled.label`
   transition: all 0.3s;
   user-select: none;
 `
+
+export const ErrorStyled = styled.span`
+  font-size: 0.5rem;
+  padding-left: 0.5rem;
+  color: ${({ theme }) => theme.colors.nord12};
+  display: block;
+
+  position: absolute;
+  cursor: text;
+  opacity: 1;
+  transform: translateY(-0.2rem);
+  transform-origin: 0 0;
+  transition: all 0.3s;
+`
