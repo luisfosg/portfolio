@@ -1,5 +1,16 @@
 import styled from 'styled-components'
 
+export const animationModal = {
+  config: {
+    duration: 300
+  },
+  width: '100%',
+  height: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
+}
+
 export const ModalContainer = styled.div`
   position: fixed;
   top: 0;

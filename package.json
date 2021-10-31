@@ -16,6 +16,7 @@
     "next-translate": "1.1.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-spring": "9.3.0",
     "styled-components": "5.3.3",
     "styled-system": "5.1.5"
   },
@@ -24,7 +25,7 @@
     "@commitlint/config-conventional": "13.2.0",
     "@commitlint/cz-commitlint": "13.2.1",
     "@types/react": "17.0.33",
-    "@types/react-dom": "^17.0.10",
+    "@types/react-dom": "17.0.10",
     "@types/styled-components": "5.1.15",
     "@types/styled-system": "5.1.13",
     "@typescript-eslint/eslint-plugin": "5.2.0",
