@@ -1,9 +1,10 @@
-import { FormEvent } from 'react'
+import { FormEvent, useState } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 
-import Input from '../Input/index'
-import Textarea from '../Textarea/index'
-import Button from '../Button/index'
+import Modal from 'components/Modal/index'
+import Input from 'components/Input/index'
+import Textarea from 'components/Textarea/index'
+import Button from 'components/Button/index'
 
 import useField from 'hooks/useField'
 
@@ -11,10 +12,13 @@ import { FormContactContainer, FormContainer, FormContactTitle } from './formCon
 
 const FormContact = () => {
   const { t } = useTranslation('contact')
+  const [showModal, setShowModal] = useState(false)
 
   const name = useField('text')
   const email = useField('email')
   const message = useField('textarea')
+
+  const closeModal = () => setShowModal(false)
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -39,6 +43,8 @@ const FormContact = () => {
       error = true
     }
     if (error) return
+
+    setShowModal(true)
 
     name.reset()
     email.reset()
@@ -76,6 +82,9 @@ const FormContact = () => {
         />
         <Button disabled={isDisabled}>{ t('submit') }</Button>
       </FormContainer>
+      <Modal show={showModal} onClose={closeModal}>
+        <h1>Hello World</h1>
+      </Modal>
     </FormContactContainer>
   )
 }
