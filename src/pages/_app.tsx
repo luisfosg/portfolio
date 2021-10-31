@@ -2,11 +2,11 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import useTranslation from 'next-translate/useTranslation'
 
-import AppLayout from 'layouts/app-layout'
-
 import { GlobalStyle } from 'theme/globalStyle'
 import { ThemeContextProvider } from 'context/ThemeContext'
 import useDarkMode from 'hooks/useDarkMode'
+
+import AppLayout from 'layouts/app-layout'
 
 function MyApp ({ Component, pageProps }: AppProps) {
   const { t } = useTranslation('common')

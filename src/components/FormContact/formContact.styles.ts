@@ -17,12 +17,17 @@ export const FormContactContainer = styled.div`
   }
 `
 
-export const FormContactTitle = styled.h2`
+type FormContactProps = {
+  center?: boolean
+}
+
+export const FormContactTitle = styled.h2<FormContactProps>`
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
   margin-bottom: 2rem;
   padding: 0;
+  text-align: ${({ center }) => (center ? 'center' : 'left')};
 `
 
 export const FormContainer = styled.form`

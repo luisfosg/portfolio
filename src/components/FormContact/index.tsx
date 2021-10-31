@@ -1,4 +1,5 @@
 import { FormEvent } from 'react'
+import useTranslation from 'next-translate/useTranslation'
 
 import Input from '../Input/index'
 import Textarea from '../Textarea/index'
@@ -7,7 +8,6 @@ import Button from '../Button/index'
 import useField from 'hooks/useField'
 
 import { FormContactContainer, FormContainer, FormContactTitle } from './formContact.styles'
-import useTranslation from 'next-translate/useTranslation'
 
 const FormContact = () => {
   const { t } = useTranslation('contact')
@@ -48,7 +48,7 @@ const FormContact = () => {
   const isDisabled = name.form.value === '' || email.form.value === '' || message.form.value === ''
   return (
     <FormContactContainer>
-      <FormContactTitle>{ t('title') }</FormContactTitle>
+      <FormContactTitle center>{ t('title') }</FormContactTitle>
       <FormContainer onSubmit={handleSubmit}>
         <Input
           {...name.form}
