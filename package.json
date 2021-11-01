@@ -31,7 +31,7 @@
     "@typescript-eslint/eslint-plugin": "5.2.0",
     "@typescript-eslint/parser": "5.2.0",
     "commitizen": "4.2.4",
-    "eslint": "8.1.0",
+    "eslint": "7.32.0",
     "eslint-config-next": "12.0.1",
     "eslint-config-standard": "16.0.3",
     "eslint-plugin-import": "2.25.2",
@@ -53,6 +53,6 @@
     ]
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "*.ts *.js *.tsx *.jsx": "eslint --cache --fix"
   }
 }
