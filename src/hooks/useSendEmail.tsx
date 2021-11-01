@@ -14,6 +14,9 @@ const useSendEmail = () => {
 
   const sendEmail = async (form: sendEmailProps) => {
     setLoading(true)
+    setError(false)
+    setSend(false)
+
     try {
       const res = await sendEmailService(form)
       res ? setSend(true) : setError(true)

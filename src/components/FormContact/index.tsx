@@ -9,7 +9,7 @@ import Button from 'components/Button'
 import useField from 'hooks/useField'
 import useSendEmail from 'hooks/useSendEmail'
 
-import { FormContactContainer, FormContainer, FormContactTitle } from './formContact.styles'
+import { FormContactContainer, FormContainer, FormContactTitle, Title } from './formContact.styles'
 
 const FormContact = () => {
   const { t } = useTranslation('contact')
@@ -61,7 +61,6 @@ const FormContact = () => {
 
   return (
     <FormContactContainer>
-      { Email.loading && <p>Cargando...</p> }
       <FormContactTitle center>{ t('title') }</FormContactTitle>
       <FormContainer onSubmit={handleSubmit}>
         <Input
@@ -88,17 +87,24 @@ const FormContact = () => {
           label={ t('message') }
           error={message.error}
         />
-        <Button>{ t('submit') }</Button>
+        <Button disabled={Email.loading}>{ Email.loading ? t('loading') : t('submit') }</Button>
       </FormContainer>
       <Modal show={showModal} onClose={closeModal}>
         {
           Email.error && (
-            <h1>Error</h1>
+            <>
+              <Title>{ t('titleError') }</Title>
+              <p>{ t('error1') }<br /><strong>{ t('error2') }</strong></p>
+              <h2>{ t('error3') }</h2>
+            </>
           )
         }
         {
           Email.send && (
-            <h1>Hello World</h1>
+            <>
+              <Title>{ t('titleSend') }</Title>
+              <p>{ t('send1') }<br /><strong>{ t('send2') }</strong></p>
+            </>
           )
         }
       </Modal>

@@ -36,3 +36,8 @@ export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
 `
+
+export const Title = styled.h3`
+  font-size: 2rem;
+  color: ${({ theme }) => theme.colors.nord12};
+`

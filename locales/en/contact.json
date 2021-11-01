@@ -7,5 +7,13 @@
   "submit": "Send Email",
   "notName": "Name is required",
   "notEmail": "Email is required",
-  "notMessage": "Message is required"
+  "notMessage": "Message is required",
+  "loading": "Loading...",
+  "titleError": "❌ Error",
+  "error1": "We are experiencing API issues.",
+  "error2": "Even so, the other options are still available",
+  "error3": "Sorry for the inconvenience 😥",
+  "titleSend": "🕊 Submitted successfully",
+  "send1": "The homing pigeons have done their job.",
+  "send2": "It will be at my door as quickly as possible 😁"
 }

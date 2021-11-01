@@ -7,5 +7,13 @@
   "submit": "Enviar Mensaje",
   "notName": "No has ingresado un Nombre",
   "notEmail": "No has ingresado un Correo",
-  "notMessage": "No has ingresado un Mensaje"
+  "notMessage": "No has ingresado un Mensaje",
+  "loading": "Cargando...",
+  "titleError": "❌ Error",
+  "error1": "Estamos presentando problemas en la API.",
+  "error2": "Aun así siguen disponibles las otras opciones",
+  "error3": "Disculpe las molestias 😥",
+  "titleSend": "🕊 Enviado Correctamente",
+  "send1": "Las palomas mensajeras han hecho su trabajo.",
+  "send2": "Estará en mi puerta lo más rápido posible 😁"
 }

@@ -50,6 +50,7 @@ export const ModalContent = styled.div`
   height: 100%;
 
   display: flex;
+  text-align: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;

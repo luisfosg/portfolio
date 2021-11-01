@@ -17,7 +17,7 @@ export const ButtonStyled = styled.button`
   }
 
   &[disabled] {
-    opacity: .3;
+    opacity: .5;
     pointer-events: none;
   }
 `
