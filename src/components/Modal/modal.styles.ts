@@ -29,10 +29,15 @@ export const ModalContainer = styled.div`
 export const ModalSection = styled.div`
   position: absolute;
   background-color: ${({ theme }) => theme.colors.nord5};
-  width: 80%;
+
+  min-width: 40%;
+  width: auto;
+  max-width: 80%;
   min-height: 50%;
+  max-height: 100%;
   border-radius: 10px;
 
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,7 +45,7 @@ export const ModalSection = styled.div`
 `
 
 export const ModalContent = styled.div`
-  padding: 20px;
+  padding: 2rem;
   width: 100%;
   height: 100%;
 

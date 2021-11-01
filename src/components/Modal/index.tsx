@@ -29,8 +29,8 @@ const Modal = ({ show, onClose, children }: ModalProps) => {
   }
 
   const htmlModal = (
-    <ModalContainer ref={modalRef} onClick={closeModal}>
-      <animated.div style={animation}>
+    <ModalContainer onClick={closeModal}>
+      <animated.div style={animation} ref={modalRef}>
         <ModalSection>
           <CloseMoldalButton onClick={handleClose}>✖</CloseMoldalButton>
           <ModalContent>
