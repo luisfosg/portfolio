@@ -1,18 +1,26 @@
-import { FormEvent, useState } from 'react'
+import { FormEvent, useState, useEffect } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 
-import Modal from 'components/Modal/index'
-import Input from 'components/Input/index'
-import Textarea from 'components/Textarea/index'
-import Button from 'components/Button/index'
+import Modal from 'components/Modal'
+import Input from 'components/Input'
+import Textarea from 'components/Textarea'
+import Button from 'components/Button'
 
 import useField from 'hooks/useField'
+import useSendEmail from 'hooks/useSendEmail'
 
 import { FormContactContainer, FormContainer, FormContactTitle } from './formContact.styles'
 
 const FormContact = () => {
   const { t } = useTranslation('contact')
   const [showModal, setShowModal] = useState(false)
+  const Email = useSendEmail()
+
+  useEffect(() => {
+    if (Email.send || Email.error) {
+      setShowModal(true)
+    }
+  }, [Email.send, Email.error])
 
   const name = useField('text')
   const email = useField('email')
@@ -20,7 +28,7 @@ const FormContact = () => {
 
   const closeModal = () => setShowModal(false)
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     let error = false
@@ -44,16 +52,16 @@ const FormContact = () => {
     }
     if (error) return
 
-    setShowModal(true)
+    Email.sendEmail(value)
 
     name.reset()
     email.reset()
     message.reset()
   }
 
-  const isDisabled = name.form.value === '' || email.form.value === '' || message.form.value === ''
   return (
     <FormContactContainer>
+      { Email.loading && <p>Cargando...</p> }
       <FormContactTitle center>{ t('title') }</FormContactTitle>
       <FormContainer onSubmit={handleSubmit}>
         <Input
@@ -80,10 +88,19 @@ const FormContact = () => {
           label={ t('message') }
           error={message.error}
         />
-        <Button disabled={isDisabled}>{ t('submit') }</Button>
+        <Button>{ t('submit') }</Button>
       </FormContainer>
       <Modal show={showModal} onClose={closeModal}>
-        <h1>Hello World</h1>
+        {
+          Email.error && (
+            <h1>Error</h1>
+          )
+        }
+        {
+          Email.send && (
+            <h1>Hello World</h1>
+          )
+        }
       </Modal>
     </FormContactContainer>
   )

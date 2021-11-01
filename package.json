@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
@@ -12,6 +12,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "emailjs-com": "3.2.0",
     "next": "12.0.1",
     "next-translate": "1.1.1",
     "react": "17.0.2",
