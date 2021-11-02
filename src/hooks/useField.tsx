@@ -1,8 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import useTranslation from 'next-translate/useTranslation'
 
 const useField = (type: string) => {
   const [value, setValue] = useState('')
   const [error, setError] = useState('')
+  const { lang } = useTranslation()
+
+  useEffect(() => {
+    setError('')
+  }, [lang])
 
   const onChange = (e: any) => {
     setValue(e.target.value)

@@ -28,7 +28,7 @@ export const TextareaStyled = styled.textarea`
   &:not(:placeholder-shown) + label{
     font-size: 1rem;
     padding-left: 1.2rem;
-    transform: translateY(7.5rem) scale(0.8);
+    transform: translateY(7.5rem);
     cursor: default;
   }
 

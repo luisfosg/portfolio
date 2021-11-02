@@ -34,7 +34,7 @@ export const InputStyled = styled.input`
   &:not(:placeholder-shown) + label{
     font-size: 1rem;
     padding-left: 1.2rem;
-    transform: translateY(-3.5rem) scale(0.8);
+    transform: translateY(-3.5rem);
     cursor: default;
   }
 
@@ -59,7 +59,7 @@ export const LabelStyled = styled.label`
 `
 
 export const ErrorStyled = styled.span`
-  font-size: 0.5rem;
+  font-size: 1rem;
   padding-left: 0.5rem;
   color: ${({ theme }) => theme.colors.nord12};
   display: block;
