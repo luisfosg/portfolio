@@ -52,7 +52,7 @@ export const LabelStyled = styled.label`
 `
 
 export const ErrorStyled = styled.span`
-  font-size: 0.5rem;
+  font-size: 1rem;
   min-height: 0.5rem;
   max-height: 0.5rem;
   padding-left: 0.5rem;

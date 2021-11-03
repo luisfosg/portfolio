@@ -28,6 +28,13 @@ const FormContact = () => {
 
   const closeModal = () => setShowModal(false)
 
+  const handleEmail = async (e: any) => {
+    if (e.target.value === '') return
+    if (!e.target.value.includes('@') || e.target.value.includes(' ')) {
+      email.setError(t('invalidEmail'))
+    }
+  }
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
@@ -42,7 +49,7 @@ const FormContact = () => {
       name.setError(t('notName'))
       error = true
     }
-    if (!value.email.includes('@')) {
+    if (!value.email.includes('@') || value.email.includes(' ')) {
       email.setError(t('notEmail'))
       error = true
     }
@@ -78,6 +85,7 @@ const FormContact = () => {
           placeholder={ t('email') }
           label={ t('email') }
           error={email.error}
+          onBlur={handleEmail}
         />
         <Textarea
           {...message.form}

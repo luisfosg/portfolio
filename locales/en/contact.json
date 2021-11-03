@@ -7,6 +7,7 @@
   "submit": "Send Email",
   "notName": "Name is required",
   "notEmail": "Email is required",
+  "invalidEmail": "Invalid Email",
   "notMessage": "Message is required",
   "loading": "Loading...",
   "titleError": "❌ Error",
