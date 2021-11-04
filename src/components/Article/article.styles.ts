@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { addOpacity } from 'utils'
 
 export const ArticleContainer = styled.article`
+  position: relative;
   width: 100%;
   height: 100%;
   padding: 1.5rem;
@@ -17,10 +18,22 @@ export const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 10rem;
-  background-color: ${({ theme }) => addOpacity(theme.colors.nord4, 0.2)};
 
-  img {
-    position:"relative";
-    object-fit: cover;
+  span {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
+`
+
+export const ArticleTag = styled.span`
+  margin-left: 1rem;
+  color: ${({ theme }) => theme.colors.nord12};
 `

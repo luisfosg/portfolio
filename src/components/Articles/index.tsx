@@ -8,6 +8,7 @@ const Articles = () => {
   const { blogs, loading } = useBlogs()
 
   if (loading) return <h3>Loading...</h3>
+  if (blogs.length < 1) return <h3>No blogs found</h3>
   return (
     <ArticlesContainer>
       {

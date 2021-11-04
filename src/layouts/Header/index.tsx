@@ -49,7 +49,7 @@ const Header = () => {
     <StyledHeader isDark={isDark} scroll={scrollY}>
       <Content>
         <Link href="/" passHref>
-          <Name>
+          <Name onClick={() => handleClick(2)}>
             <ImageWrapper>
               <Image src="/logo.svg" layout="fill" alt="Logo LuisFOsG"/>
             </ImageWrapper>
