@@ -10,10 +10,14 @@ export const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    font-size: 13px;
+    font-size: ${({ theme }) => theme.fontSizes[0]};
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
     scrollbar-gutter: stable;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints[3]}) {
+      font-size: ${({ theme }) => theme.fontSizes[1]};
+    }
   }
 
   a {

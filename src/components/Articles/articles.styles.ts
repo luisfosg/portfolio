@@ -7,7 +7,7 @@ export const ArticlesContainer = styled.div`
   grid-column-gap: 15px;
   margin-bottom: 1.1rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     grid-template-columns: 1fr;
     grid-row-gap: 15px;
   }

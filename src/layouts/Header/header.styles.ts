@@ -45,7 +45,7 @@ export const NavHidden = styled.div<NavHiddenProps>`
   height: 100%;
   user-select: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     overflow: hidden;
     flex-direction: column;
     justify-content: center;
@@ -89,14 +89,14 @@ export const NavLink = styled.a<NavLinkProps>`
     transition: opacity, transform 1s;
   }
 
-  ${({ isHidden }) => isHidden && `
-    @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
+    ${({ isHidden }) => isHidden && `
       margin: 10px 0;
       width: 100%;
       height: 100%;
       max-height: 50px;
-    }
-  `}
+    `}
+  }
 `
 
 export const Name = styled.h1`
@@ -107,7 +107,7 @@ export const Name = styled.h1`
   font-size: 1.3rem;
   cursor: pointer;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     span {
       display: none;
     }
@@ -126,7 +126,7 @@ export const Hamburger = styled.div`
   cursor: pointer;
   margin: 0 10px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     display: flex;
   }
 `

@@ -9,17 +9,17 @@ const Footer = () => {
   const { t } = useTranslation('footer')
 
   return (
-    <FooterContainer bg="nord5">
+    <FooterContainer>
       <Content>
         <SectionFooter>
-          <FooterLink href="https://github.com/LuisFOsG" target="_blank" color="nord2">GitHub</FooterLink>
-          <FooterLink href="https://twitter.com/LuisFOsG_" target="_blank" color="nord2">Twitter</FooterLink>
+          <FooterLink href="https://github.com/LuisFOsG" target="_blank">GitHub</FooterLink>
+          <FooterLink href="https://twitter.com/LuisFOsG_" target="_blank">Twitter</FooterLink>
           <Link href="/blog" passHref>
-            <FooterLink color="nord2">Blog</FooterLink>
+            <FooterLink>Blog</FooterLink>
           </Link>
-          <FooterLink href="mailto:luisfosgdev@gmail.com" target="_blank" color="nord2">{ t('email') }</FooterLink>
+          <FooterLink href="mailto:luisfosgdev@gmail.com" target="_blank">{ t('email') }</FooterLink>
           <Link href="/contact" passHref>
-            <FooterLink color="nord2">{ t('contact') }</FooterLink>
+            <FooterLink>{ t('contact') }</FooterLink>
           </Link>
         </SectionFooter>
       </Content>

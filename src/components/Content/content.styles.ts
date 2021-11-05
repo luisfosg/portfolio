@@ -1,21 +1,13 @@
 import styled from 'styled-components'
-import {
-  space,
-  layout,
-  color,
-  compose
-} from 'styled-system'
-import { SystemProps } from 'utils'
 
-export const Content = styled.div<SystemProps>`
+export const Content = styled.div`
   width: 85%;
   margin: 0 auto;
   padding: 0 1.5rem;
 
   padding: unset;
-  ${compose(space, layout, color)}
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     width: 90%;
   }
 `

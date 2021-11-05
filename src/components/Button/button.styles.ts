@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { addOpacity } from 'utils/index'
+import { addOpacity } from 'utils'
 
 export const ButtonStyled = styled.button`
   cursor: pointer;

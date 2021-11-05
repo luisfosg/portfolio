@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { addOpacity } from './../../utils/index'
+import { addOpacity } from 'utils'
 
 export const FormContactContainer = styled.div`
   width: 100%;
@@ -12,7 +12,7 @@ export const FormContactContainer = styled.div`
   box-shadow: 2px 2px 10px ${({ theme }) => addOpacity(theme.colors.nord14, 0.1)};
   border-radius: 10px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     margin-top: 1rem;
   }
 `

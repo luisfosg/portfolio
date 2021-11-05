@@ -36,15 +36,15 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     space: number[],
     breakpoints: string[],
-    fontSizes: number[],
+    fontSizes: string[],
     colors: Colors;
   }
 }
 
 const globalTheme = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-  breakpoints: ['40em', '52em', '64em', '80em'],
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72]
+  breakpoints: ['40em', '52em', '64em', '120em'],
+  fontSizes: ['13px', '16px']
 }
 
 export const themes: Themes = {
