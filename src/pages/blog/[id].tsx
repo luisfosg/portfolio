@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { parse } from 'marked'
 
-import { getBlog, getAllBlogs } from 'services/blogs'
+import { getBlog } from 'services/blogs'
 import { BlogType } from 'hooks/useBlogs'
 
 import { PostBody } from 'styles/blog.style'
@@ -23,7 +23,8 @@ const BlogId = ({ blog }: BlogIdProps) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const blogs = await getAllBlogs()
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API}/blog`)
+  const blogs = await res.json()
 
   let paths: (string | { params: { id: string; }; locale: string; })[] = []
   json.locales.forEach((locale) => {

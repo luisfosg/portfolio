@@ -1,14 +1,14 @@
 import useTranslation from 'next-translate/useTranslation'
 
-import useBlogs from 'hooks/useBlogs'
+import useBlogs, { BlogProps } from 'hooks/useBlogs'
 
 import Article from '../Article'
 
 import { ArticlesContainer } from './articles.styles'
 
-const Articles = () => {
+const Articles = ({ posts }: BlogProps) => {
   const { t } = useTranslation('blog')
-  const { blogs, loading } = useBlogs()
+  const { blogs, loading } = useBlogs(posts)
 
   if (loading) return <h3>{ t('loading') }</h3>
   if (blogs.length < 1) return <h3>{ t('notFound') }</h3>

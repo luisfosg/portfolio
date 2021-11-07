@@ -1,24 +1,12 @@
 import { BlogType } from 'hooks/useBlogs'
 
-export const getAllBlogs = async () => {
-  /* const res = await fetch(`${process.env.NEXT_PUBLIC_API}/blog`, {
-    headers: {
-      'Content-Type': 'application/json',
-      'User-Agent': '*'
-    }
-  })
-  const data = await res.json() */
-  return []
-}
-
-export const getBlogs = async (lang: string) => {
+export const getBlogs = async (lang: string, blogs: BlogType[]) => {
   const language = lang === 'es' ? 'spanish' : ''
-  const data = await getAllBlogs()
 
   if (language !== 'spanish') {
-    return data.filter((item: BlogType) => !item.tag_list.includes('spanish'))
+    return blogs.filter((item) => !item.tag_list.includes('spanish'))
   }
-  return data.filter((item: BlogType) => item.tag_list.includes(language))
+  return blogs.filter((item) => item.tag_list.includes(language))
 }
 
 export const getBlog = async (id: string) => {

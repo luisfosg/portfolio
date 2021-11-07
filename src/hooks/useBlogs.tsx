@@ -14,21 +14,27 @@ export type BlogType = {
   body_markdown: string,
 }
 
-const useBlogs = () => {
+export type BlogProps = {
+  posts: BlogType[]
+}
+
+const useBlogs = (posts: BlogType[]) => {
   const { lang } = useTranslation()
+  const [allBlogs] = useState<BlogType[]>(posts)
+
   const [blogs, setBlogs] = useState<BlogType[] | []>([])
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     setLoading(true)
     const fetchBlogs = async () => {
-      const blogs = await getBlogs(lang)
+      const blogsGets = await getBlogs(lang, allBlogs)
 
-      setBlogs(blogs)
+      setBlogs(blogsGets)
       setLoading(false)
     }
     fetchBlogs()
-  }, [lang])
+  }, [lang, allBlogs])
 
   return { blogs, loading }
 }
