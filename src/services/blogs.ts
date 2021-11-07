@@ -1,14 +1,14 @@
 import { BlogType } from 'hooks/useBlogs'
 
 export const getAllBlogs = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API}/blog`, {
+  /* const res = await fetch(`${process.env.NEXT_PUBLIC_API}/blog`, {
     headers: {
       'Content-Type': 'application/json',
       'User-Agent': '*'
     }
   })
-  const data = await res.json()
-  return data.data
+  const data = await res.json() */
+  return []
 }
 
 export const getBlogs = async (lang: string) => {
