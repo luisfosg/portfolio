@@ -23,8 +23,17 @@ const BlogId = ({ blog }: BlogIdProps) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API}/blog`)
-  const blogs: BlogType[] = await res.json()
+  let blogs: BlogType[] = []
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API}/blog`)
+    blogs = await res.json()
+  } catch (error) {
+    console.log(error)
+    return {
+      paths: [],
+      fallback: false
+    }
+  }
 
   let paths: (string | { params: { id: string; }; locale: string; })[] = []
   json.locales.forEach((locale) => {
