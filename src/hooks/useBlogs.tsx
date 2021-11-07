@@ -10,6 +10,8 @@ export type BlogType = {
   tag_list: string[],
   cover_image: string,
   canonical_url: string,
+  body_html: string,
+  body_markdown: string,
 }
 
 const useBlogs = () => {

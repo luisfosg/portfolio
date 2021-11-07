@@ -59,8 +59,8 @@ export const NavHidden = styled.div<NavHiddenProps>`
     transition: .5s all ease;
     z-index: -1;
 
-    background-color: ${({ theme }) => addOpacity(theme.colors.background, 0.9)};
-    backdrop-filter: blur(5px);
+    background-color: ${({ theme }) => addOpacity(theme.colors.background, 0.8)};
+    backdrop-filter: blur(3px);
   }
 `
 
@@ -83,7 +83,7 @@ export const NavLink = styled.a<NavLinkProps>`
 
   &:active,
   &:hover {
-    background-color: ${({ theme, animated }) => animated ? 'transparent' : theme.colors.nord5};
+    background-color: ${({ theme, animated }) => animated ? 'transparent' : addOpacity(theme.colors.nord5, 0.5)};
     transform: ${({ animated }) => animated ? 'rotate(360deg)' : 'none'};
     opacity: ${({ animated }) => animated ? '0.5' : '1'};
     transition: opacity, transform 1s;
