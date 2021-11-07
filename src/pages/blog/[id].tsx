@@ -25,7 +25,7 @@ const BlogId = ({ blog }: BlogIdProps) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const blogs = await getAllBlogs()
 
-  let paths: string[] = []
+  let paths: (string | { params: { id: string; }; locale: string; })[] = []
   json.locales.forEach((locale) => {
     paths = [
       ...paths,
