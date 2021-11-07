@@ -29,6 +29,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
     blogs = await res.json()
   } catch (error) {
     console.log(error)
+  }
+
+  console.log(blogs)
+  if (!blogs || blogs.length === 0) {
     return {
       paths: [],
       fallback: false
