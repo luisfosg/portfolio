@@ -8,7 +8,7 @@
 [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
 ### ‼In Construction‼
-  
+
 </div>
 
 ## 🛠 Getting Started
@@ -25,6 +25,9 @@ Create a `.env.local` file. having the following content.
 NEXT_PUBLIC_SERVICEID="" // from email.js
 NEXT_PUBLIC_TEMPLATEID="" // from email.js
 NEXT_PUBLIC_USERID="" // from email.js
+NEXT_PUBLIC_API="http://localhost:3000/api"
+
+API_KEY_DEVTO="" // from dev.to API
 ```
 
 ### 🖥 Open in Localhost

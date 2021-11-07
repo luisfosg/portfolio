@@ -12,6 +12,7 @@ const Articles = () => {
 
   if (loading) return <h3>{ t('loading') }</h3>
   if (blogs.length < 1) return <h3>{ t('notFound') }</h3>
+
   return (
     <ArticlesContainer>
       {

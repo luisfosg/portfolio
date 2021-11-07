@@ -1,7 +1,7 @@
 import { BlogType } from 'hooks/useBlogs'
 
 export const getAllBlogs = async () => {
-  const res = await fetch('https://dev.to/api/articles?username=luisfosg')
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API}/blog`)
   return await res.json()
 }
 

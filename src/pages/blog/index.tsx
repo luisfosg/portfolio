@@ -1,5 +1,6 @@
-import Articles from 'components/Articles'
 import useTranslation from 'next-translate/useTranslation'
+
+import Articles from 'components/Articles'
 
 const Blog = () => {
   const { t } = useTranslation('blog')

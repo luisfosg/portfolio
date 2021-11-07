@@ -52,7 +52,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       blog
-    }
+    },
+    revalidate: 1200
   }
 }
 
