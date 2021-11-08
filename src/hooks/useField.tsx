@@ -17,6 +17,7 @@ const useField = (type: string) => {
 
   const reset = () => {
     setValue('')
+    setError('')
   }
 
   return {

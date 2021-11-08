@@ -1,12 +1,12 @@
 import useTranslation from 'next-translate/useTranslation'
 
-import useBlogs, { BlogProps } from 'hooks/useBlogs'
+import useBlogs from 'hooks/useBlogs'
 
 import Article from '../Article'
 
 import { ArticlesContainer } from './articles.styles'
 
-const Articles = ({ posts }: BlogProps) => {
+const Articles = ({ posts }: any) => {
   const { t } = useTranslation('blog')
   const { blogs, loading } = useBlogs(posts)
 
@@ -18,13 +18,12 @@ const Articles = ({ posts }: BlogProps) => {
       {
         blogs.map(blog => <Article
           key={blog.id}
-          id={blog.id}
           title={blog.title}
           description={blog.description}
-          tag_list={blog.tag_list}
+          collection_id={blog.collection_id}
+          tags={blog.tags}
           canonical_url={blog.canonical_url}
           cover_image={blog.cover_image}
-          body_html={blog.body_html}
           body_markdown={blog.body_markdown}
         />)
       }

@@ -1,16 +1,43 @@
 import { BlogType } from 'hooks/useBlogs'
 
-export const getBlogs = async (lang: string, blogs: BlogType[]) => {
-  const language = lang === 'es' ? 'spanish' : ''
+export const getBlogs = async (lang: string, blogs: any) => {
+  const filterBlogs: BlogType[] = []
 
-  if (language !== 'spanish') {
-    return blogs.filter((item) => !item.tag_list.includes('spanish'))
+  for (const item of Object.keys(blogs)) {
+    if (lang !== 'es') {
+      filterBlogs.push(
+        ...blogs[item].filter((blog: BlogType) => !blog.tags.includes('spanish'))
+      )
+    } else {
+      filterBlogs.push(
+        ...blogs[item].filter((blog: BlogType) => blog.tags.includes('spanish'))
+      )
+    }
   }
-  return blogs.filter((item) => item.tag_list.includes(language))
+
+  return filterBlogs
 }
 
 export const getBlog = async (id: string) => {
   const res = await fetch(`https://dev.to/api/articles/${id}`)
-  const data = await res.json()
-  return data
+  return await res.json()
+}
+
+export const getBlogId = async (locale: string, id: string) => {
+  let blog: BlogType[] | [] = []
+
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API}/blog`)
+  const blogs = await res.json()
+
+  for (const item of Object.keys(blogs)) {
+    if (item === id) {
+      if (locale !== 'es') {
+        blog = blogs[item].filter((blog: BlogType) => !blog.tags.includes('spanish'))
+      } else {
+        blog = blogs[item].filter((blog: BlogType) => blog.tags.includes('spanish'))
+      }
+    }
+  }
+
+  return blog[0]
 }

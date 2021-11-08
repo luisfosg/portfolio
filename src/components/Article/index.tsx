@@ -5,9 +5,9 @@ import Link from 'next/link'
 import { ArticleContainer, ImageWrapper, ArticleTag } from './article.styles'
 import { BlogType } from 'hooks/useBlogs'
 
-const Article = ({ title, id, description, tag_list, cover_image }: BlogType) => {
+const Article = ({ title, description, tags, cover_image, collection_id }: BlogType) => {
   return (
-    <Link href={`/blog/${id}`} passHref>
+    <Link href={`/blog/${collection_id}`} passHref>
       <a>
         <ArticleContainer>
           <ImageWrapper>
@@ -15,7 +15,7 @@ const Article = ({ title, id, description, tag_list, cover_image }: BlogType) =>
           </ImageWrapper>
           <h1>{ title }</h1>
           {
-            tag_list && tag_list.map((tag: string) => {
+            tags && tags.map((tag: string) => {
               if (tag === 'spanish') return null
               return (
                 <ArticleTag key={tag}>#{ tag }</ArticleTag>

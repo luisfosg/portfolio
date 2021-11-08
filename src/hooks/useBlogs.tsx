@@ -4,21 +4,17 @@ import { getBlogs } from 'services/blogs'
 import useTranslation from 'next-translate/useTranslation'
 
 export type BlogType = {
-  id: number,
+  id?: number,
   title: string,
   description: string,
-  tag_list: string[],
+  tags: string[],
   cover_image: string,
   canonical_url: string,
-  body_html: string,
   body_markdown: string,
+  collection_id: number,
 }
 
-export type BlogProps = {
-  posts: BlogType[]
-}
-
-const useBlogs = (posts: BlogType[]) => {
+const useBlogs = (posts: any) => {
   const { lang } = useTranslation()
   const [allBlogs] = useState<BlogType[]>(posts)
 
