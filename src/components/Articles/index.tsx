@@ -13,6 +13,8 @@ const Articles = ({ posts }: any) => {
   if (loading) return <h3>{ t('loading') }</h3>
   if (blogs.length < 1) return <h3>{ t('notFound') }</h3>
 
+  console.log(blogs)
+
   return (
     <ArticlesContainer>
       {
@@ -20,6 +22,8 @@ const Articles = ({ posts }: any) => {
           key={blog.id}
           title={blog.title}
           description={blog.description}
+          readable_publish_date={blog.readable_publish_date}
+          reading_time_minutes={blog.reading_time_minutes}
           collection_id={blog.collection_id}
           tags={blog.tags}
           canonical_url={blog.canonical_url}

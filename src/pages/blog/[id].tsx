@@ -31,9 +31,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API}/blog`)
     blogs = await res.json()
-  } catch (error) {
-    console.log(error)
-  }
+  } catch (error) {}
 
   if (!blogs) {
     return {

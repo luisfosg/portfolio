@@ -19,9 +19,7 @@ export async function getStaticProps () {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API}/blog`)
     posts = await res.json()
-  } catch (error) {
-    console.log(error)
-  }
+  } catch (error) {}
 
   return {
     props: {

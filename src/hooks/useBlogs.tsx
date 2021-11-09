@@ -7,6 +7,8 @@ export type BlogType = {
   id?: number,
   title: string,
   description: string,
+  readable_publish_date: string,
+  reading_time_minutes: number,
   tags: string[],
   cover_image: string,
   canonical_url: string,

@@ -14,7 +14,7 @@ export const ArticleContainer = styled.article`
   border: 1px solid ${({ theme }) => addOpacity(theme.colors.nord3, 0.2)};
 
   &:hover {
-    background: ${({ theme }) => addOpacity(theme.colors.nord4, 0.2)};
+    background: ${({ theme }) => addOpacity(theme.colors.nord4, 0.25)};
   }
 `
 
@@ -32,7 +32,7 @@ export const ImageWrapper = styled.div`
     img {
       width: 100%;
       height: 100%;
-      opacity: 0.9;
+      opacity: 0.85;
       object-fit: cover;
 
       &:hover {
@@ -42,7 +42,20 @@ export const ImageWrapper = styled.div`
   }
 `
 
+export const ArticleTitle = styled.h1`
+  font-size: 1.5rem;
+  margin: 0;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: ${({ theme }) => theme.colors.nord1};
+`
+
 export const ArticleTag = styled.span`
   margin-left: 1rem;
   color: ${({ theme }) => theme.colors.nord12};
+`
+
+export const DateRead = styled.span`
+  margin: 0.5rem;
+  color: ${({ theme }) => theme.colors.nord11};
 `

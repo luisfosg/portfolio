@@ -5,6 +5,7 @@ export const ArticlesContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 10px;
   grid-column-gap: 15px;
+  margin-top: 1.1rem;
   margin-bottom: 1.1rem;
 
   @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {

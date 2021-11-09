@@ -2,10 +2,18 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { ArticleContainer, ImageWrapper, ArticleTag } from './article.styles'
+import { ArticleContainer, ImageWrapper, ArticleTag, DateRead, ArticleTitle } from './article.styles'
 import { BlogType } from 'hooks/useBlogs'
 
-const Article = ({ title, description, tags, cover_image, collection_id }: BlogType) => {
+const Article = ({
+  title,
+  description,
+  tags,
+  cover_image,
+  collection_id,
+  readable_publish_date,
+  reading_time_minutes
+}: BlogType) => {
   return (
     <Link href={`/blog/${collection_id}`} passHref>
       <a>
@@ -13,7 +21,7 @@ const Article = ({ title, description, tags, cover_image, collection_id }: BlogT
           <ImageWrapper>
             <Image src={cover_image} layout="fill" alt={title} priority/>
           </ImageWrapper>
-          <h1>{ title }</h1>
+          <ArticleTitle>🔵 { title } <DateRead>» { reading_time_minutes } min</DateRead></ArticleTitle>
           {
             tags && tags.map((tag: string) => {
               if (tag === 'spanish') return null
@@ -22,6 +30,7 @@ const Article = ({ title, description, tags, cover_image, collection_id }: BlogT
               )
             })
           }
+          <DateRead>- { readable_publish_date }</DateRead>
           <p>{ description }</p>
         </ArticleContainer>
       </a>

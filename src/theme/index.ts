@@ -43,7 +43,7 @@ declare module 'styled-components' {
 
 const globalTheme = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-  breakpoints: ['40em', '52em', '64em', '120em'],
+  breakpoints: ['40rem', '52rem', '64rem', '120rem'],
   fontSizes: ['13px', '16px']
 }
 
