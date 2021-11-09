@@ -21,7 +21,7 @@ const Article = ({
           <ImageWrapper>
             <Image src={cover_image} layout="fill" alt={title} priority/>
           </ImageWrapper>
-          <ArticleTitle>🔵 { title } <DateRead>» { reading_time_minutes } min</DateRead></ArticleTitle>
+          <ArticleTitle>🔵 { title }</ArticleTitle>
           {
             tags && tags.map((tag: string) => {
               if (tag === 'spanish') return null

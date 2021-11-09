@@ -4,6 +4,7 @@
   "pages": {
     "*": ["common", "footer", "header"],
     "/blog": ["blog"],
+    "/blog/[id]": ["blog"],
     "/contact": ["contact"],
     "/404": ["404"]
   }

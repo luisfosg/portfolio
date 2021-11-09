@@ -1,5 +1,7 @@
 {
   "title": "Coding With LuisFOsG",
   "loading": "Loading...",
-  "notFound": "There is no Blog at the moment."
+  "notFound": "There is no Blog at the moment.",
+  "timeReads": "{{time}} minutes of reading",
+  "timeRead": "{{time}} minute of reading"
 }

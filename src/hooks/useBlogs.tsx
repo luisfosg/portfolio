@@ -7,13 +7,15 @@ export type BlogType = {
   id?: number,
   title: string,
   description: string,
+  collection_id: number,
   readable_publish_date: string,
   reading_time_minutes: number,
   tags: string[],
   cover_image: string,
-  canonical_url: string,
-  body_markdown: string,
-  collection_id: number,
+  canonical_url?: string,
+  body_markdown?: string,
+  created_at?: string,
+  edited_at?: string,
 }
 
 const useBlogs = (posts: any) => {

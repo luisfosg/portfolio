@@ -1,5 +1,7 @@
 {
   "title": "Programando con LuisFOsG",
   "loading": "Cargando...",
-  "notFound": "No hay ningún Blog por el momento."
+  "notFound": "No hay ningún Blog por el momento.",
+  "timeReads": "{{time}} minutos de lectura",
+  "timeRead": "{{time}} minuto de lectura"
 }

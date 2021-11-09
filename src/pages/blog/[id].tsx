@@ -1,26 +1,50 @@
+import useTranslation from 'next-translate/useTranslation'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { parse } from 'marked'
+import Image from 'next/image'
 
 import { getBlogId } from 'services/blogs'
 import { BlogType } from 'hooks/useBlogs'
 
-import { PostBody } from 'styles/blog.style'
+import { PostBody, ImageContainer, InfoWrapper, Title } from 'styles/blog.style'
+import { ArticleTag, DateRead } from 'components/Article/article.styles'
 
 type BlogIdProps = {
   blog: BlogType
 }
 
 const BlogId = ({ blog }: BlogIdProps) => {
+  const { t } = useTranslation('blog')
+
   let html = ''
 
   try {
-    html = parse(blog.body_markdown)
+    html = parse(blog.body_markdown || '')
   } catch (error) {
     html = '<h1>Error</h1>'
   }
 
   return (
     <>
+      <ImageContainer>
+        <Image src={blog.cover_image} layout="fill" alt={blog.title} />
+      </ImageContainer>
+      <InfoWrapper>
+        <Title>{ blog.title }</Title>
+        {
+          blog.tags && blog.tags.map((tag: string) => {
+            if (tag === 'spanish') return null
+            return (
+              <ArticleTag key={tag}>#{ tag }</ArticleTag>
+            )
+          })
+        }
+        <DateRead>» {
+          t(blog.reading_time_minutes > 1 ? 'timeReads' : 'timeRead', {
+            time: blog.reading_time_minutes
+          })
+         }</DateRead>
+      </InfoWrapper>
       <PostBody dangerouslySetInnerHTML={{ __html: html }} />
     </>
   )
