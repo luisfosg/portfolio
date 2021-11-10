@@ -30,7 +30,7 @@ const Article = ({
               )
             })
           }
-          <DateRead>- { readable_publish_date }</DateRead>
+          <DateRead>• { readable_publish_date }</DateRead>
           <p>{ description }</p>
         </ArticleContainer>
       </a>

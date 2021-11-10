@@ -4,5 +4,7 @@
   "notFound": "There is no Blog at the moment.",
   "timeReads": "{{time}} minutes of reading",
   "timeRead": "{{time}} minute of reading",
-  "feedback": "Leave me your Feedback :D"
+  "feedback": "Leave me your Feedback :D",
+  "posted": "Posted on",
+  "updated": "Updated on"
 }

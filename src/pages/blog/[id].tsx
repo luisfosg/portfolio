@@ -5,8 +5,9 @@ import Image from 'next/image'
 
 import { getBlogId } from 'services/blogs'
 import { BlogType } from 'hooks/useBlogs'
+import { formatDate } from 'utils/index'
 
-import { PostBody, ImageContainer, InfoWrapper, Title, BlogMessage } from 'styles/blog.style'
+import { PostBody, ImageContainer, InfoWrapper, Title, BlogMessage, InfoContent, DateContent } from 'styles/blog.style'
 import { ArticleTag, DateRead } from 'components/Article/article.styles'
 
 type BlogIdProps = {
@@ -14,7 +15,7 @@ type BlogIdProps = {
 }
 
 const BlogId = ({ blog }: BlogIdProps) => {
-  const { t } = useTranslation('blog')
+  const { t, lang } = useTranslation('blog')
 
   let html = ''
 
@@ -27,23 +28,32 @@ const BlogId = ({ blog }: BlogIdProps) => {
   return (
     <>
       <ImageContainer>
-        <Image src={blog.cover_image} layout="fill" alt={blog.title} />
+        <Image src={blog.cover_image} layout="fill" alt={blog.title} priority/>
       </ImageContainer>
       <InfoWrapper>
         <Title>{ blog.title }</Title>
-        {
-          blog.tags && blog.tags.map((tag: string) => {
-            if (tag === 'spanish') return null
-            return (
-              <ArticleTag key={tag}>#{ tag }</ArticleTag>
-            )
-          })
-        }
-        <DateRead>» {
-          t(blog.reading_time_minutes > 1 ? 'timeReads' : 'timeRead', {
-            time: blog.reading_time_minutes
-          })
-         }</DateRead>
+        <InfoContent>
+          {
+            blog.tags && blog.tags.map((tag: string) => {
+              if (tag === 'spanish') return null
+              return (
+                <ArticleTag key={tag}>#{ tag }</ArticleTag>
+              )
+            })
+          }
+          <DateContent>
+            {t('posted') } <strong>{
+              formatDate({ dateParser: blog.created_at || '', lang })
+            }</strong> • {t('updated') } <strong>{
+              formatDate({ dateParser: blog.edited_at || '', lang })
+            }</strong>
+          </DateContent>
+          <DateRead>{
+            t(blog.reading_time_minutes > 1 ? 'timeReads' : 'timeRead', {
+              time: blog.reading_time_minutes
+            })
+          }</DateRead>
+        </InfoContent>
       </InfoWrapper>
       <PostBody dangerouslySetInnerHTML={{ __html: html }} />
       <BlogMessage>

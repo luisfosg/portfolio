@@ -59,6 +59,28 @@ export const InfoWrapper = styled.div`
   font-size: 1.3rem;
   text-align: center;
   margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+`
+
+export const InfoContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    min-width: 12rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
+    flex-direction: column
+  }
+`
+
+export const DateContent = styled.span`
+  font-size: 1rem;
 `
 
 export const Title = styled.h1`
