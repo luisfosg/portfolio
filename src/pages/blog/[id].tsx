@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { getBlogId } from 'services/blogs'
 import { BlogType } from 'hooks/useBlogs'
 
-import { PostBody, ImageContainer, InfoWrapper, Title } from 'styles/blog.style'
+import { PostBody, ImageContainer, InfoWrapper, Title, BlogMessage } from 'styles/blog.style'
 import { ArticleTag, DateRead } from 'components/Article/article.styles'
 
 type BlogIdProps = {
@@ -46,6 +46,12 @@ const BlogId = ({ blog }: BlogIdProps) => {
          }</DateRead>
       </InfoWrapper>
       <PostBody dangerouslySetInnerHTML={{ __html: html }} />
+      <BlogMessage>
+        <a target="_blank" href={ blog.canonical_url } rel="noreferrer">
+          <Image src="/images/dev-to.svg" width="25" height="25" alt="dev.to" />
+          <span>{ t('feedback') }</span>
+        </a>
+      </BlogMessage>
     </>
   )
 }

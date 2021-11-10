@@ -20,4 +20,6 @@ export const ButtonStyled = styled.button`
     opacity: .5;
     pointer-events: none;
   }
+
+  user-select: none;
 `

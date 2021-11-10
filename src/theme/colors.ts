@@ -34,7 +34,7 @@ export const themeLight: Colors = {
   nord4: '#4C566A',
   nord5: '#D8DEE9',
   nord6: '#E5E9F0',
-  nord7: '#ECEFF4',
+  nord7: '#EFEFEF',
   nord8: '#8FBCBB',
   nord9: '#88C0D0',
   nord10: '#81A1C1',

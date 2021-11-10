@@ -41,5 +41,10 @@ export const GlobalStyle = createGlobalStyle`
       background-color: ${({ theme }) => theme.colors.nord1};
       border-radius: 9999px;
     }
+
+    ::selection {
+      background-color: ${({ theme }) => theme.colors.nord1};
+      color: ${({ theme }) => theme.colors.background};
+    }
   }
 `

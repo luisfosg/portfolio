@@ -58,6 +58,7 @@ export const ImageContainer = styled.div`
 export const InfoWrapper = styled.div`
   font-size: 1.3rem;
   text-align: center;
+  margin-top: 1rem;
 `
 
 export const Title = styled.h1`
@@ -66,4 +67,34 @@ export const Title = styled.h1`
   margin: 0;
   padding: 0;
   color: ${({ theme }) => theme.colors.nord1};
+`
+
+export const BlogMessage = styled.div`
+  margin: 2rem 0;
+
+  background-color: ${({ theme }) => theme.colors.nord7};
+  color: ${({ theme }) => theme.colors.nord11};
+  width: 100%;
+  min-height: 5rem;
+  border-radius: 10px;
+  border: 1px solid ${({ theme }) => theme.colors.nord10};
+  font-size: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    margin-left: 0.5rem;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a:hover {
+    color: ${({ theme }) => theme.colors.nord16};
+  }
 `

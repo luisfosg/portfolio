@@ -41,6 +41,8 @@ export const InputStyled = styled.input`
   &:focus-within {
     transform:scale(1.01, 1.01);
   }
+
+  user-select: none;
 `
 
 export const LabelStyled = styled.label`

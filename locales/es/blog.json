@@ -3,5 +3,6 @@
   "loading": "Cargando...",
   "notFound": "No hay ningún Blog por el momento.",
   "timeReads": "{{time}} minutos de lectura",
-  "timeRead": "{{time}} minuto de lectura"
+  "timeRead": "{{time}} minuto de lectura",
+  "feedback": "Déjame tus comentarios :D"
 }

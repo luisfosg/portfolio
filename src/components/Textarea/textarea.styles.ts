@@ -35,6 +35,8 @@ export const TextareaStyled = styled.textarea`
   &:focus-within {
     transform:scale(1.01, 1.01);
   }
+
+  user-select: none;
 `
 
 export const LabelStyled = styled.label`
