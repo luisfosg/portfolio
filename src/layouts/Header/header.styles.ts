@@ -110,6 +110,7 @@ export const Name = styled.h1`
   @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     span {
       display: none;
+      margin-left: 0.5rem;
     }
   }
 `
