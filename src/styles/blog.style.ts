@@ -75,12 +75,17 @@ export const InfoContent = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
-    flex-direction: column
+    flex-direction: column;
   }
 `
 
 export const DateContent = styled.span`
   font-size: 1rem;
+  margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
+    margin-top: 1.5rem !important;
+  }
 `
 
 export const Title = styled.h1`
@@ -88,7 +93,7 @@ export const Title = styled.h1`
   font-weight: bold;
   margin: 0;
   padding: 0;
-  color: ${({ theme }) => theme.colors.nord1};
+  color: ${({ theme }) => theme.colors.nord11};
 `
 
 export const BlogMessage = styled.div`

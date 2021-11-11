@@ -48,6 +48,7 @@ export const ModalContent = styled.div`
   padding: 2rem;
   width: 100%;
   height: 100%;
+  font-size: 1.3rem;
 
   display: flex;
   text-align: center;

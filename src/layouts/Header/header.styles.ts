@@ -108,7 +108,7 @@ export const Name = styled.h1`
   cursor: pointer;
 
   span {
-    margin-left: 0.5rem;
+    margin-left: 0.3rem;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
