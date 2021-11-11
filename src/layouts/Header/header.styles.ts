@@ -107,10 +107,13 @@ export const Name = styled.h1`
   font-size: 1.3rem;
   cursor: pointer;
 
+  span {
+    margin-left: 0.5rem;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     span {
       display: none;
-      margin-left: 1rem;
     }
   }
 `
