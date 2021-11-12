@@ -11,8 +11,7 @@ const Article = ({
   tags,
   cover_image,
   collection_id,
-  readable_publish_date,
-  reading_time_minutes
+  readable_publish_date
 }: BlogType) => {
   return (
     <Link href={`/blog/${collection_id}`} passHref>
