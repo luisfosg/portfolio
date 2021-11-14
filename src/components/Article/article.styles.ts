@@ -15,6 +15,11 @@ export const ArticleContainer = styled.article`
 
   &:hover {
     background: ${({ theme }) => addOpacity(theme.colors.nord4, 0.25)};
+    color: ${({ theme }) => theme.colors.text};
+
+    img {
+      opacity: 1;
+    }
   }
 `
 
@@ -34,10 +39,6 @@ export const ImageWrapper = styled.div`
       height: 100%;
       opacity: 0.85;
       object-fit: cover;
-
-      &:hover {
-        opacity: 1;
-      }
     }
   }
 `

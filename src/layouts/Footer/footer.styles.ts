@@ -24,9 +24,4 @@ export const SectionFooter = styled.section`
 
 export const FooterLink = styled.a`
   margin: 0.3rem 2rem;
-  color: ${({ theme }) => theme.colors.nord2};
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.nord8};
-  }
 `

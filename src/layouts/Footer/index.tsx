@@ -17,7 +17,6 @@ const Footer = () => {
           <Link href="/blog" passHref>
             <FooterLink>Blog</FooterLink>
           </Link>
-          <FooterLink href="mailto:luisfosgdev@gmail.com" target="_blank">{ t('email') }</FooterLink>
           <Link href="/contact" passHref>
             <FooterLink>{ t('contact') }</FooterLink>
           </Link>

@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const ArticlesContainer = styled.div`
+  width: 100%;
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 10px;

@@ -83,6 +83,7 @@ export const NavLink = styled.a<NavLinkProps>`
 
   &:active,
   &:hover {
+    color: inherit;
     background-color: ${({ theme, animated }) => animated ? 'transparent' : addOpacity(theme.colors.nord5, 0.5)};
     transform: ${({ animated }) => animated ? 'rotate(360deg)' : 'none'};
     opacity: ${({ animated }) => animated ? '0.5' : '1'};
