@@ -28,15 +28,9 @@ const FormContact = () => {
 
   const closeModal = () => setShowModal(false)
 
-  const handleEmail = async (e: any) => {
-    if (e.target.value === '') return
-    if (!e.target.value.includes('@') || e.target.value.includes(' ')) {
-      email.setError(t('invalidEmail'))
-    }
-  }
-
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    const emailRegex = /\S+@\S+\.\S+/
 
     let error = false
     const value = {
@@ -49,8 +43,9 @@ const FormContact = () => {
       name.setError(t('notName'))
       error = true
     }
-    if (!value.email.includes('@') || value.email.includes(' ')) {
-      email.setError(t('notEmail'))
+
+    if (!emailRegex.test(value.email)) {
+      value.email ? email.setError(t('invalidEmail')) : email.setError(t('notEmail'))
       error = true
     }
     if (!value.message) {
@@ -69,7 +64,7 @@ const FormContact = () => {
   return (
     <FormContactContainer>
       <FormContactTitle center>{ t('title') }</FormContactTitle>
-      <FormContainer onSubmit={handleSubmit}>
+      <FormContainer onSubmit={handleSubmit} noValidate>
         <Input
           {...name.form}
           id="name"
@@ -85,7 +80,7 @@ const FormContact = () => {
           placeholder={ t('email') }
           label={ t('email') }
           error={email.error}
-          onBlur={handleEmail}
+          pattern='[^@\s]+@[^@\s]+\.[^@\s]+'
         />
         <Textarea
           {...message.form}

@@ -5,14 +5,13 @@ export const InputStyled = styled.input`
   width: 100%;
   height: 3rem;
   font-size: 1.3rem;
-  border: none;
+  border: 1px solid transparent;
   padding: 0 0.8rem;
   outline: none;
   border-radius: 10px;
 
   background-color: ${({ theme }) => addOpacity(theme.colors.nord7, 0.6)};
   color: ${({ theme }) => theme.colors.text};
-
 
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
@@ -22,8 +21,12 @@ export const InputStyled = styled.input`
     -webkit-box-shadow: 0 0 0 30px ${({ theme }) => addOpacity(theme.colors.nord7, 0.8)} inset !important;
   }
 
-  ::placeholder {
+  &::placeholder {
     color: transparent;
+  }
+
+  &:invalid {
+    border-bottom: 1px solid ${({ theme }) => addOpacity(theme.colors.nord12, 0.8)};
   }
 
   &:focus {
@@ -33,7 +36,7 @@ export const InputStyled = styled.input`
   &:focus + label,
   &:not(:placeholder-shown) + label{
     font-size: 1rem;
-    padding-left: 1.2rem;
+    margin-left: 1.2rem;
     transform: translateY(-3.5rem);
     cursor: default;
   }
@@ -47,7 +50,7 @@ export const InputStyled = styled.input`
 
 export const LabelStyled = styled.label`
   font-size: 1.2rem;
-  padding-left: 0.8rem;
+  margin-left: 0.8rem;
   color: ${({ theme }) => addOpacity(theme.colors.nord1, 0.6)};
   display: block;
 

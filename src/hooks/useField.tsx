@@ -12,6 +12,7 @@ const useField = (type: string) => {
 
   const onChange = (e: any) => {
     setValue(e.target.value)
+    e.target.value === '' ? e.target.setCustomValidity('Error') : e.target.setCustomValidity('')
     if (error !== '') setError('')
   }
 

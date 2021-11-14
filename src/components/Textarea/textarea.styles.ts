@@ -7,8 +7,8 @@ export const TextareaStyled = styled.textarea`
   padding: 0.8rem;
   font-size: 1.3rem;
   border-radius: 10px;
+  border: 1px solid transparent;
 
-  border: none;
   outline: none;
   resize: vertical;
   min-height: 10rem;
@@ -16,8 +16,12 @@ export const TextareaStyled = styled.textarea`
   background-color: ${({ theme }) => addOpacity(theme.colors.nord7, 0.6)};
   color: ${({ theme }) => theme.colors.text};
 
-  ::placeholder {
+  &::placeholder {
     color: transparent;
+  }
+
+  &:invalid {
+    border-bottom: 1px solid ${({ theme }) => addOpacity(theme.colors.nord12, 0.8)};
   }
 
   &:focus {
@@ -27,7 +31,7 @@ export const TextareaStyled = styled.textarea`
   &:focus + label,
   &:not(:placeholder-shown) + label{
     font-size: 1rem;
-    padding-left: 1.2rem;
+    margin-left: 1.2rem;
     transform: translateY(7.5rem);
     cursor: default;
   }
@@ -41,7 +45,7 @@ export const TextareaStyled = styled.textarea`
 
 export const LabelStyled = styled.label`
   font-size: 1.2rem;
-  padding-left: 0.8rem;
+  margin-left: 0.8rem;
   color: ${({ theme }) => addOpacity(theme.colors.nord1, 0.6)};
 
   position: absolute;
