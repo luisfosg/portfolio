@@ -11,10 +11,6 @@ export const FormContactContainer = styled.div`
   background: ${({ theme }) => addOpacity(theme.colors.nord4, 0.2)};
   box-shadow: 2px 2px 10px ${({ theme }) => addOpacity(theme.colors.nord14, 0.1)};
   border-radius: 10px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
-    margin-top: 2rem;
-  }
 `
 
 type FormContactProps = {
