@@ -1,4 +1,5 @@
 import useTranslation from 'next-translate/useTranslation'
+import Head from 'next/head'
 
 import Articles from 'components/Articles'
 
@@ -7,6 +8,9 @@ const Blog = ({ posts }: any) => {
 
   return (
     <>
+      <Head>
+        <title>Blog | LuisFOsG</title>
+      </Head>
       <h1>{ t('title') }</h1>
       <Articles posts={posts} />
     </>

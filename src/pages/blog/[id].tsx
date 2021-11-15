@@ -2,6 +2,7 @@ import useTranslation from 'next-translate/useTranslation'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { parse } from 'marked'
 import Image from 'next/image'
+import Head from 'next/head'
 
 import { getBlogId } from 'services/blogs'
 import { BlogType } from 'hooks/useBlogs'
@@ -27,6 +28,9 @@ const BlogId = ({ blog }: BlogIdProps) => {
 
   return (
     <>
+      <Head>
+        <title>{ blog.title } | LuisFOsG</title>
+      </Head>
       <ImageContainer>
         <Image src={blog.cover_image} layout="fill" alt={blog.title} priority/>
       </ImageContainer>
