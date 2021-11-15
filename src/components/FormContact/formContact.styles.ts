@@ -13,7 +13,7 @@ export const FormContactContainer = styled.div`
   border-radius: 10px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 `
 

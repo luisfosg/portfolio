@@ -10,7 +10,7 @@ export const FormContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 15px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints[2]}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     grid-template-columns: 1fr;
   }
 `

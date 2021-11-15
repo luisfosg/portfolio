@@ -1,9 +1,11 @@
 import useTranslation from 'next-translate/useTranslation'
+import { useRouter } from 'next/router'
 import Head from 'next/head'
 
 import Articles from 'components/Articles'
 
 const Blog = ({ posts }: any) => {
+  const router = useRouter()
   const { t } = useTranslation('blog')
 
   return (
@@ -12,7 +14,7 @@ const Blog = ({ posts }: any) => {
         <title>Blog | LuisFOsG</title>
       </Head>
       <h1>{ t('title') }</h1>
-      <Articles posts={posts} />
+      { router.isFallback ? <p>Loading...</p> : <Articles posts={posts} /> }
     </>
   )
 }

@@ -59,7 +59,7 @@ export const NavHidden = styled.div<NavHiddenProps>`
     transition: .5s all ease;
     z-index: -1;
 
-    background-color: ${({ theme }) => addOpacity(theme.colors.background, 0.8)};
+    background-color: ${({ theme }) => addOpacity(theme.colors.background, 0.9)};
     backdrop-filter: blur(3px);
   }
 `
