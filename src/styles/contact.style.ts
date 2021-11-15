@@ -18,3 +18,8 @@ export const FormContainer = styled.div`
 export const Info = styled.div`
   width: 100%;
 `
+
+export const Text = styled.p`
+  margin: 2rem 0;
+  font-size: 1.1rem;
+`

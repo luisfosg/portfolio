@@ -1,5 +1,5 @@
 {
-  "info": "Info",
+  "info": "Enlaces",
   "title": "Contacto",
   "name": "Nombre",
   "email": "Correo Electrónico",
@@ -16,5 +16,7 @@
   "error3": "Disculpe las molestias 😥",
   "titleSend": "🕊 Enviado Correctamente",
   "send1": "Las palomas mensajeras han hecho su trabajo.",
-  "send2": "Estará en mi puerta lo más rápido posible 😁"
+  "send2": "Estará en mi puerta lo más rápido posible 😁",
+  "text1": "A continuación tienes algunos enlaces de interés para que puedas contactar conmigo.",
+  "text2": "o si prefieres, te dejo este pequeño formulario para una comunicación más rápida 👉🏻"
 }
