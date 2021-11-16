@@ -9,13 +9,20 @@ export const FormContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 15px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints[2]}) {
     grid-template-columns: 1fr;
   }
 `
 
 export const Info = styled.div`
   width: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[2]}) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `
 
 export const Text = styled.p`
@@ -26,8 +33,8 @@ export const Text = styled.p`
 export const Section = styled.section`
   margin-top: 4rem;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
-    margin-top: 2rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints[2]}) {
+    margin: 0;
   }
 `
 
@@ -38,5 +45,9 @@ export const SectionFlex = styled.div`
 
   a {
     margin: 1rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[2]}) {
+    justify-content: center;
   }
 `

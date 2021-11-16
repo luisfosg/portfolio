@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { addOpacity } from 'utils'
 
 export const LinkStyled = styled.a`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;

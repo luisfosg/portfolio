@@ -1,5 +1,6 @@
 import useTranslation from 'next-translate/useTranslation'
 import Head from 'next/head'
+import Image from 'next/image'
 
 import FormContact from 'components/FormContact'
 import { FormContactTitle } from 'components/FormContact/formContact.styles'
@@ -24,6 +25,9 @@ const Contact = () => {
             </Text>
             <SectionFlex>
               <LinkCircle href="mailto:luisfosgdev@gmail.com">📫</LinkCircle>
+              <LinkCircle target="_blank" href="https://www.linkedin.com/in/luisfosg/">
+                <Image src="/images/linkedin.svg" width="25" height="25" alt="LinkedIn" />
+              </LinkCircle>
             </SectionFlex>
             <Text>
               { t('text2') }

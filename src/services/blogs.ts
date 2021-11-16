@@ -15,7 +15,9 @@ export const getBlogs = async (lang: string, blogs: any) => {
     }
   }
 
-  return filterBlogs
+  return filterBlogs.sort((a: BlogType, b: BlogType) => {
+    return new Date(b.edited_at || '').getTime() - new Date(a.edited_at || '').getTime()
+  })
 }
 
 export const getBlog = async (id: string) => {
