@@ -3,6 +3,7 @@
   "locales": ["es", "en"],
   "pages": {
     "*": ["common", "footer", "header"],
+    "/": ["index"],
     "/blog": ["blog"],
     "/blog/[id]": ["blog"],
     "/contact": ["contact"],

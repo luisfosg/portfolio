@@ -11,6 +11,7 @@ export const HiContent = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     grid-template-columns: 1fr;
+    padding: 0 0 2rem 0;
   }
 `
 
@@ -20,8 +21,29 @@ export const Description = styled.section`
   height: 100%;
   order: 0;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    margin: 1rem 0;
+    font-size: 1.7rem;
+  }
+
+  span {
+    display: block !important;
+    position: relative !important;
+    min-width: 15rem;
+    max-width: 15rem;
+    min-height: 3rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
-    grid-template-columns: 1fr;
+    text-align: center;
     order: 1;
   }
 `
