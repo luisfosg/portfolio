@@ -44,6 +44,7 @@ export const Description = styled.section`
 
   @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     text-align: center;
+    align-items: center;
     order: 1;
   }
 `
