@@ -33,9 +33,9 @@ export const Description = styled.section`
   span {
     display: block !important;
     position: relative !important;
-    min-width: 15rem;
-    max-width: 15rem;
-    min-height: 3rem;
+    min-width: 12rem;
+    max-width: 12rem;
+    min-height: 2.5rem;
   }
 
   p {

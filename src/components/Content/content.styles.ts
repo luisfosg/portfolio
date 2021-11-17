@@ -10,6 +10,10 @@ export const Content = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     width: 90%;
   }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints[3]}) {
+    width: 70%;
+  }
 `
 
 export const ContentBox = styled(Content)`
