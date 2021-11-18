@@ -6,5 +6,7 @@
   "timeRead": "{{time}} minute of reading",
   "feedback": "Leave me your Feedback :D",
   "posted": "Posted on",
-  "updated": "Updated on"
+  "updated": "Updated on",
+  "inWorking": "🚧 Work in progress 👷🏻‍♂️🏗️",
+  "error": "❌ Error"
 }

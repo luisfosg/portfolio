@@ -20,10 +20,20 @@ const BlogId = ({ blog }: BlogIdProps) => {
 
   let html = ''
 
+  if (!blog.title) {
+    return (
+    <>
+      <h1>{ t('inWorking') }</h1>
+    </>
+    )
+  }
+
   try {
     html = parse(blog.body_markdown || '')
   } catch (error) {
-    html = '<h1>Error</h1>'
+    html = `
+      <h1>${t('error')}</h1>
+    `
   }
 
   return (
@@ -110,7 +120,7 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
 
   return {
     props: {
-      blog
+      blog: blog || {}
     },
     revalidate: 1200
   }
