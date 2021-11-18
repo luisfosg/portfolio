@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const HiContent = styled.div`
   width: 100%;
-  min-height: 70vh;
+  min-height: 33rem;
   padding: 2rem 0;
 
   display: grid;
@@ -52,7 +52,7 @@ export const Description = styled.section`
 export const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
-  min-height: 70vh;
+  min-height: 33rem;
   height: 100%;
   order: 1;
 

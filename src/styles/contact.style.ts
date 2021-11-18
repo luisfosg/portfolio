@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const FormContainer = styled.div`
   width: 100%;
   margin: 3rem 0;
-  min-height: 70vh;
+  min-height: 33rem;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
