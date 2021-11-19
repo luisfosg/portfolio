@@ -76,3 +76,15 @@ export const ImageWrapper = styled.div`
     }
   }
 `
+
+export const LastContent = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-top: 1px solid ${({ theme }) => theme.colors.nord5};
+  margin: 2rem 0;
+  padding: 2rem 0;
+`

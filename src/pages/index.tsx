@@ -4,7 +4,7 @@ import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
 
-import { HiContent, Description, ImageWrapper } from 'styles/index.style'
+import { HiContent, Description, ImageWrapper, LastContent } from 'styles/index.style'
 
 type User = {
   name?: string,
@@ -44,6 +44,11 @@ const Home: NextPage = () => {
           />
         </ImageWrapper>
       </HiContent>
+      <LastContent>
+        <h2>{ t('index:lastContent') }</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/sXl-RZDrDEM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        <p>{ t('index:descriptionVideo') }</p>
+      </LastContent>
     </>
   )
 }
