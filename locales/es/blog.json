@@ -5,8 +5,8 @@
   "timeReads": "{{time}} minutos de lectura",
   "timeRead": "{{time}} minuto de lectura",
   "feedback": "Déjame tus comentarios :D",
-  "posted": "Publicado:",
-  "updated": "Editado:",
+  "posted": "Publicado: ",
+  "updated": "Editado: ",
   "inWorking": "🚧 Trabajo en Proceso 👷🏻‍♂️🏗️",
   "error": "❌ Error"
 }

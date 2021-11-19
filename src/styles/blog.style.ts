@@ -17,6 +17,10 @@ export const PostBody = styled.div`
     margin: 0 auto;
   }
 
+  a {
+    color: ${({ theme }) => theme.colors.nord11};
+  }
+
   a:hover {
     text-decoration: underline;
     color: ${({ theme }) => theme.colors.nord15};

@@ -56,11 +56,20 @@ const BlogId = ({ blog }: BlogIdProps) => {
             })
           }
           <DateContent>
-            {t('posted') } <strong>{
-              formatDate({ dateParser: blog.created_at || '', lang })
-            }</strong> • {t('updated') } <strong>{
-              formatDate({ dateParser: blog.edited_at || '', lang })
-            }</strong>
+            { t('posted') }
+            <strong>
+              { formatDate({ dateParser: blog.created_at || '', lang }) }
+            </strong>
+            {
+              blog.edited_at && (
+                <>
+                  &nbsp;• { t('updated') }
+                  <strong>
+                    { formatDate({ dateParser: blog.edited_at || '', lang }) }
+                  </strong>
+                </>
+              )
+            }
           </DateContent>
           <DateRead>{
             t(blog.reading_time_minutes > 1 ? 'timeReads' : 'timeRead', {
