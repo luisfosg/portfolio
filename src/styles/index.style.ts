@@ -88,3 +88,13 @@ export const LastContent = styled.div`
   margin: 2rem 0;
   padding: 2rem 0;
 `
+
+export const Video = styled.iframe`
+  width: 100%;
+  min-height: 20rem;
+  max-width: 45rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
+    min-height: 15rem;
+  }
+`
