@@ -25,7 +25,7 @@ const Contact = () => {
             </Text>
             <SectionFlex>
               <LinkCircle href="mailto:luisfosgdev@gmail.com">📫</LinkCircle>
-              <LinkCircle target="_blank" href="https://www.linkedin.com/in/luisfosg/">
+              <LinkCircle target="_blank" href="https://www.linkedin.com/in/luisfosg">
                 <Image src="/images/linkedin.svg" width="25" height="25" alt="LinkedIn" />
               </LinkCircle>
             </SectionFlex>

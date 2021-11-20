@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const PostBody = styled.div`
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   margin-top: 2rem;
 
@@ -11,9 +11,15 @@ export const PostBody = styled.div`
   align-items: center;
   font-size: 1.3rem;
 
+  text-align: justify;
+
+  h2 {
+    text-align: center;
+  }
+
   img {
     width: 100%;
-    max-width: 100%;
+    max-width: 50rem;
     margin: 0 auto;
   }
 
@@ -31,6 +37,23 @@ export const PostBody = styled.div`
 
     li {
       margin-top: 1rem;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
+    width: 100%;
+    text-align: start;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints[3]}) {
+    width: 100%;
+
+    img {
+      max-width: 100%;
     }
   }
 `
