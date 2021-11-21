@@ -53,7 +53,7 @@ export const PostBody = styled.div`
     width: 100%;
 
     img {
-      max-width: 100%;
+      max-width: 70rem;
     }
   }
 `

@@ -46,7 +46,7 @@ const Home: NextPage = () => {
       </HiContent>
       <LastContent>
         <h2>{ t('index:lastContent') }</h2>
-        <Video src="https://www.youtube.com/embed/KHb_XDEN3p4" title="Coding With LuisFOsG" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></Video>
+        <Video src="" title="Coding With LuisFOsG" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></Video>
         <p>{ t('index:descriptionVideo') }</p>
       </LastContent>
     </>
