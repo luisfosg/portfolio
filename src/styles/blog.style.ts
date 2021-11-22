@@ -15,6 +15,7 @@ export const PostBody = styled.div`
 
   h2 {
     text-align: center;
+    color: ${({ theme }) => theme.colors.darknessLight};
   }
 
   img {
@@ -33,10 +34,10 @@ export const PostBody = styled.div`
   }
 
   ul, ol {
-    width: 80%;
+    width: 100%;
 
     li {
-      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
   }
 

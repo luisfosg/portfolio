@@ -45,9 +45,9 @@ const Home: NextPage = () => {
         </ImageWrapper>
       </HiContent>
       <LastContent>
-        <h2>{ t('index:lastContent') }</h2>
-        <Video src="" title="Coding With LuisFOsG" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></Video>
-        <p>{ t('index:descriptionVideo') }</p>
+        {/* <h2>{ t('index:lastContent') }</h2> */}
+        <Video src="https://www.youtube.com/embed/f02mOEt11OQ" title="Coding With LuisFOsG" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></Video>
+        {/* <p>{ t('index:descriptionVideo') }</p> */}
       </LastContent>
     </>
   )
