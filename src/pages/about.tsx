@@ -20,10 +20,16 @@ const About = () => {
       </InfoWrapper>
       <PostBody>
         <h2>{ t('subtitle1') }</h2>
+        <ImageContainer>
+          <Image src="https://i.imgur.com/8pZjiHI.png" alt="Code" layout="fill" />
+        </ImageContainer>
         <p>{ t('description1') }</p>
 
         <h2>{ t('subtitle2') }</h2>
         <p>{ t('description2') }</p>
+        <ImageContainer>
+          <Image src="https://i.imgur.com/8pZjiHI.png" alt="Code" layout="fill" />
+        </ImageContainer>
 
         <h2>{ t('subtitle3') }</h2>
         <p>{ t('description3') }<strong>{ t('strong1') }</strong></p>
@@ -36,6 +42,9 @@ const About = () => {
         <p>{ t('description5') }<a href="https://www.youtube.com/c/Programaci%C3%B3nATS/videos" target="_blank" rel="noreferrer">{ t('a1') }</a>{ t('description5-1') }</p>
         <p>{ t('description5-2') }<strong>{ t('strong3') }</strong>{ t('description5-3') }</p>
 
+        <ImageContainer>
+          <Image src="https://i.imgur.com/8pZjiHI.png" alt="Code" layout="fill" />
+        </ImageContainer>
         <em>{ t('em2') }</em>
 
         <h2>{ t('subtitle6') }</h2>
@@ -43,6 +52,11 @@ const About = () => {
 
         <h2>{ t('subtitle7') }</h2>
         <p>{ t('description7') }</p>
+
+        <ImageContainer>
+          <Image src="https://i.imgur.com/8pZjiHI.png" alt="Code" layout="fill" />
+        </ImageContainer>
+
         <p>{ t('description7-1') }</p>
       </PostBody>
     </>
