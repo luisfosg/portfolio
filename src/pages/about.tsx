@@ -33,7 +33,7 @@ const About = () => {
 
         <h2>{ t('subtitle4') }</h2>
         <p>{ t('description4') }<strong>{ t('strong2') }</strong>{ t('description4-1') }</p>
-        <ImageContainer>
+        <ImageContainer height="30rem">
           <Image src="https://i.imgur.com/dk8Hekr.jpg" alt="Code" layout="fill" />
         </ImageContainer>
 
@@ -42,8 +42,8 @@ const About = () => {
         <p>{ t('description5') }<a href="https://www.youtube.com/c/Programaci%C3%B3nATS/videos" target="_blank" rel="noreferrer">{ t('a1') }</a>{ t('description5-1') }</p>
         <p>{ t('description5-2') }<strong>{ t('strong3') }</strong>{ t('description5-3') }</p>
 
-        <ImageContainer>
-          <Image src="https://i.imgur.com/tgzu96b.png" alt="Code" layout="fill" />
+        <ImageContainer height="30rem">
+          <Image src="https://i.imgur.com/3aAHilM.jpg" alt="Code" layout="fill" />
         </ImageContainer>
         <em>{ t('em2') }</em>
 
@@ -53,7 +53,7 @@ const About = () => {
         <h2>{ t('subtitle7') }</h2>
         <p>{ t('description7') }</p>
 
-        <ImageContainer>
+        <ImageContainer height="30rem">
           <Image src="https://i.imgur.com/vk95jFJ.png" alt="Code" layout="fill" />
         </ImageContainer>
 

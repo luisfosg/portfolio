@@ -58,13 +58,14 @@ export const PostBody = styled.div`
 `
 
 type ImageContainterProps = {
-  opacity?: string
+  opacity?: string,
+  height?: string,
 }
 
 export const ImageContainer = styled.div<ImageContainterProps>`
   position: relative;
   width: 100%;
-  height: 20rem;
+  height: ${({ height }) => height || '20rem'};
   margin: 0 auto;
 
   span {
