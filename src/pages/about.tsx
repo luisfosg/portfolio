@@ -13,22 +13,19 @@ const About = () => {
         <title>{ t('title') }</title>
       </Head>
       <ImageContainer>
-        <Image src="https://i.imgur.com/EKskhAM.jpeg" layout="fill" alt="About" priority/>
+        <Image src="https://i.imgur.com/S0LL2KM.jpg" layout="fill" alt="About" priority/>
       </ImageContainer>
       <InfoWrapper>
         <Title>{ t('title') }</Title>
       </InfoWrapper>
       <PostBody>
         <h2>{ t('subtitle1') }</h2>
-        <ImageContainer>
-          <Image src="https://i.imgur.com/8pZjiHI.png" alt="Code" layout="fill" />
-        </ImageContainer>
         <p>{ t('description1') }</p>
 
         <h2>{ t('subtitle2') }</h2>
         <p>{ t('description2') }</p>
         <ImageContainer>
-          <Image src="https://i.imgur.com/8pZjiHI.png" alt="Code" layout="fill" />
+          <Image src="https://i.imgur.com/sCE4YuV.png" alt="Code" layout="fill" />
         </ImageContainer>
 
         <h2>{ t('subtitle3') }</h2>
@@ -36,6 +33,9 @@ const About = () => {
 
         <h2>{ t('subtitle4') }</h2>
         <p>{ t('description4') }<strong>{ t('strong2') }</strong>{ t('description4-1') }</p>
+        <ImageContainer>
+          <Image src="https://i.imgur.com/dk8Hekr.jpg" alt="Code" layout="fill" />
+        </ImageContainer>
 
         <h2>{ t('subtitle5') }</h2>
         <em>{ t('em1') }</em>
@@ -43,7 +43,7 @@ const About = () => {
         <p>{ t('description5-2') }<strong>{ t('strong3') }</strong>{ t('description5-3') }</p>
 
         <ImageContainer>
-          <Image src="https://i.imgur.com/8pZjiHI.png" alt="Code" layout="fill" />
+          <Image src="https://i.imgur.com/tgzu96b.png" alt="Code" layout="fill" />
         </ImageContainer>
         <em>{ t('em2') }</em>
 
@@ -54,7 +54,7 @@ const About = () => {
         <p>{ t('description7') }</p>
 
         <ImageContainer>
-          <Image src="https://i.imgur.com/8pZjiHI.png" alt="Code" layout="fill" />
+          <Image src="https://i.imgur.com/vk95jFJ.png" alt="Code" layout="fill" />
         </ImageContainer>
 
         <p>{ t('description7-1') }</p>

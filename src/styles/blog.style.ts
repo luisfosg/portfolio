@@ -51,15 +51,17 @@ export const PostBody = styled.div`
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints[3]}) {
-    width: 100%;
-
     img {
       max-width: 70rem;
     }
   }
 `
 
-export const ImageContainer = styled.div`
+type ImageContainterProps = {
+  opacity?: string
+}
+
+export const ImageContainer = styled.div<ImageContainterProps>`
   position: relative;
   width: 100%;
   height: 20rem;
@@ -74,7 +76,7 @@ export const ImageContainer = styled.div`
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.8;
+      ${({ opacity }) => opacity && `opacity: ${opacity};`}
     }
   }
 
