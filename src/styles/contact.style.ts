@@ -9,7 +9,7 @@ export const FormContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 15px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints[2]}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     grid-template-columns: 1fr;
   }
 `
@@ -17,7 +17,7 @@ export const FormContainer = styled.div`
 export const Info = styled.div`
   width: 100%;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints[2]}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,7 +33,7 @@ export const Text = styled.p`
 export const Section = styled.section`
   margin-top: 4rem;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints[2]}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     margin: 0;
   }
 `
@@ -47,7 +47,7 @@ export const SectionFlex = styled.div`
     margin: 1rem;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints[2]}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     justify-content: center;
   }
 `
