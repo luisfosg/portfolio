@@ -15,7 +15,7 @@ export const Header = styled.header<HeaderProps>`
   top: 0;
   width: 100%;
   min-height: 7.2vh;
-  z-index: 1;
+  z-index: 2;
 
   box-shadow: ${({ scroll, isDark }) => {
     return isDark

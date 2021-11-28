@@ -4,7 +4,17 @@ import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
 
-import { HiContent, Description, ImageWrapper, LastContent, Video } from 'styles/index.style'
+/* import SlideShow from 'components/SlideShow' */
+
+import {
+  HiContent,
+  Description,
+  ImageWrapper,
+  LastContent,
+  Video,
+  Content,
+  LastContentGrid
+} from 'styles/index.style'
 
 type User = {
   name?: string,
@@ -44,10 +54,23 @@ const Home: NextPage = () => {
           />
         </ImageWrapper>
       </HiContent>
+
       <LastContent>
         <h2>{ t('index:lastContent') }</h2>
-        <Video src="https://www.youtube.com/embed/4dSrEW0doyw" title="Coding With LuisFOsG" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></Video>
-        <p>{ t('index:descriptionVideo') }</p>
+        <LastContentGrid>
+          <Content>
+            <Video
+              src="https://www.youtube.com/embed/4dSrEW0doyw"
+              title="Coding With LuisFOsG"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen
+            />
+            <p>{ t('index:descriptionVideo') }</p>
+          </Content>
+          <Content>
+            {/* <SlideShow/> */}
+          </Content>
+        </LastContentGrid>
       </LastContent>
     </>
   )

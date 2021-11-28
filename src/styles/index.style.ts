@@ -89,6 +89,25 @@ export const LastContent = styled.div`
   padding: 2rem 0;
 `
 
+export const LastContentGrid = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 15px;
+
+  margin-top: 2rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+`
+
+export const Content = styled.section`
+  width: 100%;
+  max-height: 20rem;
+`
+
 export const Video = styled.iframe`
   width: 100%;
   min-height: 20rem;
