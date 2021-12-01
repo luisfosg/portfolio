@@ -19,6 +19,7 @@
     "next-translate": "1.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-elastic-carousel": "0.11.5",
     "react-spring": "9.3.0",
     "styled-components": "5.3.3"
   },
@@ -68,7 +69,11 @@
     "globals": {
       "JSX": true
     },
-    "extends": ["plugin:react/recommended", "next/core-web-vitals", "standard"],
+    "extends": [
+      "plugin:react/recommended",
+      "next/core-web-vitals",
+      "standard"
+    ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
       "ecmaFeatures": {
@@ -77,7 +82,10 @@
       "ecmaVersion": "latest",
       "sourceType": "module"
     },
-    "plugins": ["react", "@typescript-eslint"],
+    "plugins": [
+      "react",
+      "@typescript-eslint"
+    ],
     "rules": {
       "@next/next/no-document-import-in-page": "off",
       "no-use-before-define": "off"

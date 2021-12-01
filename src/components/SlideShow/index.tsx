@@ -1,37 +1,26 @@
 import Image from 'next/image'
+import Carousel from 'react-elastic-carousel'
 
-import RightIcon from '../Icons/right'
-import LeftIcon from '../Icons/left'
+import { Container } from './slideShow.styles'
 
-import { ContentSlides, ContentSlide, Slide } from './slideShow.styles'
+const items = [
+  { id: 1, image: 'https://i.imgur.com/SkCEbqw.png' },
+  { id: 2, image: 'https://i.imgur.com/GpzaZ6h.png' },
+  { id: 3, image: 'https://i.imgur.com/ONSEjCm.png' }
+]
 
-const SlideShow = () => {
+const EmblaCarousel = () => {
   return (
-    <ContentSlides>
-      <div>
-        <ContentSlide>
-          <Slide>
-            <Image src="https://i.imgur.com/LCpdckK.png" width="500" height="500" alt="Image"/>
-          </Slide>
-          <Slide>
-            <Image src="https://i.imgur.com/vk95jFJ.png" width="500" height="500" alt="Image"/>
-          </Slide>
-          <Slide>
-            <Image src="https://i.imgur.com/LCpdckK.png" width="500" height="500" alt="Image"/>
-          </Slide>
-          <Slide>
-            <Image src="https://i.imgur.com/vk95jFJ.png" width="500" height="500" alt="Image"/>
-          </Slide>
-        </ContentSlide>
-        <button>
-          <LeftIcon/>
-        </button>
-        <button>
-          <RightIcon/>
-        </button>
-      </div>
-    </ContentSlides>
+    <Carousel>
+      {
+        items.map(item => (
+          <Container key={item.id}>
+            <Image src={item.image} width="400" height="400" alt={item.id.toString()} />
+          </Container>
+        ))
+      }
+    </Carousel>
   )
 }
 
-export default SlideShow
+export default EmblaCarousel

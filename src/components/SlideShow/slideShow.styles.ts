@@ -1,42 +1,16 @@
 import styled from 'styled-components'
 
-export const ContentSlides = styled.section`
+export const Container = styled.section`
   min-width: 100%;
   min-height: 100%;
-
-  overflow: hidden;
+  height: 440px;
 `
 
-export const ContentSlide = styled.div`
-  min-width: 100%;
-  min-height: 100%;
+export const CarouselContainer = styled.div`
+  min-width: 40rem;
 
-  display: flex;
-  flex-wrap: nowrap;
-`
-
-export const Slide = styled.div`
-  min-width: 100%;
-  min-height: 100%;
-  max-height: 100%;
-
-  overflow: hidden;
-  transition: .3s ease all;
-
-  span {
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     min-width: 100%;
-    min-height: 100%;
-    max-height: 100%;
     width: 100%;
-    height: 100%;
-
-    img {
-      min-width: 100%;
-      min-height: 100%;
-      max-height: 100%;
-      object-fit: cover;
-    }
   }
-
-  z-index: 1;
 `

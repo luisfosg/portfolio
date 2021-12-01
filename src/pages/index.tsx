@@ -4,7 +4,7 @@ import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
 
-/* import SlideShow from 'components/SlideShow' */
+import SlideShow from 'components/SlideShow'
 
 import {
   HiContent,
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
             <p>{ t('index:descriptionVideo') }</p>
           </Content>
           <Content>
-            {/* <SlideShow/> */}
+            <SlideShow/>
           </Content>
         </LastContentGrid>
       </LastContent>

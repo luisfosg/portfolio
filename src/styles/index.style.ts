@@ -105,7 +105,7 @@ export const LastContentGrid = styled.div`
 
 export const Content = styled.section`
   width: 100%;
-  max-height: 20rem;
+  max-height: 40em;
 `
 
 export const Video = styled.iframe`
