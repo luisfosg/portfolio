@@ -11,7 +11,7 @@ const items = [
 
 const EmblaCarousel = () => {
   return (
-    <Carousel>
+    <Carousel isRTL={false} itemsToShow={1}>
       {
         items.map(item => (
           <Container key={item.id}>
