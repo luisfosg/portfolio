@@ -117,3 +117,16 @@ export const Video = styled.iframe`
     min-height: 15rem;
   }
 `
+
+export const Git = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url('https://i.imgur.com/SkCEbqw.png');
+  background-size: cover;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .7;
+  }
+`

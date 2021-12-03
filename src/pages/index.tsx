@@ -1,10 +1,9 @@
 /* eslint-disable camelcase */
 import type { NextPage } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
-
-import SlideShow from 'components/SlideShow'
 
 import {
   HiContent,
@@ -13,7 +12,8 @@ import {
   LastContent,
   Video,
   Content,
-  LastContentGrid
+  LastContentGrid,
+  Git
 } from 'styles/index.style'
 
 type User = {
@@ -68,7 +68,9 @@ const Home: NextPage = () => {
             <p>{ t('index:descriptionVideo') }</p>
           </Content>
           <Content>
-            <SlideShow/>
+            <Link href="/git" passHref>
+              <Git/>
+            </Link>
           </Content>
         </LastContentGrid>
       </LastContent>
