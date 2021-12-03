@@ -3,7 +3,7 @@ import Script from 'next/script'
 const InstaCarousel = () => {
   return (
     <div>
-      <blockquote className="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CW_6yBaJptC/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style={
+      <blockquote className="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CXAdPforvEU/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style={
         {
           background: '#FFF',
           border: '0',
@@ -19,7 +19,7 @@ const InstaCarousel = () => {
         <div style={{
           padding: '16px'
         }}>
-          <a href="https://www.instagram.com/p/CW_6yBaJptC/?utm_source=ig_embed&amp;utm_campaign=loading" style={{
+          <a href="https://www.instagram.com/p/CXAdPforvEU/?utm_source=ig_embed&amp;utm_campaign=loading" style={{
             background: '#FFFFFF',
             lineHeight: '0',
             padding: '0 0',
@@ -90,7 +90,7 @@ const InstaCarousel = () => {
               whiteSpace: 'nowrap'
             }
           }>
-            <a href="https://www.instagram.com/p/CW_6yBaJptC/?utm_source=ig_embed&amp;utm_campaign=loading"
+            <a href="https://www.instagram.com/p/CXAdPforvEU/?utm_source=ig_embed&amp;utm_campaign=loading"
             style={{
               color: '#c9c8cd',
               fontFamily: 'Arial,sans-serif',

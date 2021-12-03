@@ -122,11 +122,12 @@ export const Git = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  background: url('https://i.imgur.com/SkCEbqw.png');
+  background: url('https://i.imgur.com/sZaswaK.png');
   background-size: cover;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
-    opacity: .7;
+    opacity: .8;
   }
 `
