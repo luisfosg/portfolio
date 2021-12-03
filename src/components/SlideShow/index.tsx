@@ -1,3 +1,5 @@
+import Script from 'next/script'
+
 const InstaCarousel = () => {
   return (
     <div>
@@ -103,7 +105,7 @@ const InstaCarousel = () => {
           </p>
         </div>
       </blockquote>
-      <script async src="//www.instagram.com/embed.js"></script>
+      <Script async src="//www.instagram.com/embed.js"></Script>
     </div>
   )
 }
