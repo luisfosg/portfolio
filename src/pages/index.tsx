@@ -1,19 +1,13 @@
 /* eslint-disable camelcase */
 import type { NextPage } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
 
 import {
   HiContent,
   Description,
-  ImageWrapper,
-  LastContent,
-  Video,
-  Content,
-  LastContentGrid,
-  Git
+  ImageWrapper
 } from 'styles/index.style'
 
 type User = {
@@ -54,26 +48,6 @@ const Home: NextPage = () => {
           />
         </ImageWrapper>
       </HiContent>
-
-      <LastContent>
-        <h2>{ t('index:lastContent') }</h2>
-        <LastContentGrid>
-          <Content>
-            <Video
-              src="https://www.youtube.com/embed/4dSrEW0doyw"
-              title="Coding With LuisFOsG"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen
-            />
-            <p>{ t('index:descriptionVideo') }</p>
-          </Content>
-          <Content>
-            <Link href="/git" passHref>
-              <Git/>
-            </Link>
-          </Content>
-        </LastContentGrid>
-      </LastContent>
     </>
   )
 }

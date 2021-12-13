@@ -13,7 +13,7 @@ const About = () => {
         <title>{ t('title') }</title>
       </Head>
       <ImageContainer>
-        <Image src="https://i.imgur.com/S0LL2KM.jpg" layout="fill" alt="About" priority/>
+        <Image src="https://i.imgur.com/EKskhAM.jpeg" layout="fill" alt="About" priority/>
       </ImageContainer>
       <InfoWrapper>
         <Title>{ t('title') }</Title>
