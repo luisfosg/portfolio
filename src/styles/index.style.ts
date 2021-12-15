@@ -1,9 +1,24 @@
 import styled from 'styled-components'
 
+import { addOpacity } from 'utils'
+
+export const AwesomeSquare = styled.section`
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+
+  background-color: ${props => addOpacity(props.theme.colors.nord11, 0.3)};
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints[1]}) {
+    padding: 3rem 2rem;
+  }
+`
+
 export const HiContent = styled.div`
   width: 100%;
-  min-height: 33rem;
-  padding: 2rem 0;
+  height: auto;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -11,12 +26,12 @@ export const HiContent = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     grid-template-columns: 1fr;
-    padding: 0 0 2rem 0;
+    padding: 0;
   }
 `
 
 export const Description = styled.section`
-  padding: 2rem 0;
+  padding-top: 2rem;
   width: 100%;
   height: 100%;
   order: 0;
@@ -26,8 +41,13 @@ export const Description = styled.section`
   justify-content: center;
 
   h1 {
-    margin: 1rem 0;
-    font-size: 1.7rem;
+    color: ${({ theme }) => theme.colors.nord11};
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  h2 {
+    margin-top: 0;
   }
 
   span {
@@ -74,60 +94,5 @@ export const ImageWrapper = styled.div`
     span {
       clip-path: none;
     }
-  }
-`
-
-export const LastContent = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  border-top: 1px solid ${({ theme }) => theme.colors.nord5};
-  margin: 2rem 0;
-  padding: 2rem 0;
-`
-
-export const LastContentGrid = styled.div`
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 15px;
-
-  margin-top: 2rem;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-`
-
-export const Content = styled.section`
-  width: 100%;
-  max-height: 40em;
-`
-
-export const Video = styled.iframe`
-  width: 100%;
-  min-height: 20rem;
-  max-width: 45rem;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
-    min-height: 15rem;
-  }
-`
-
-export const Git = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: url('https://i.imgur.com/sZaswaK.png');
-  background-size: cover;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    opacity: .8;
   }
 `

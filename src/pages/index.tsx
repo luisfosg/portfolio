@@ -5,6 +5,7 @@ import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
 
 import {
+  AwesomeSquare,
   HiContent,
   Description,
   ImageWrapper
@@ -25,29 +26,32 @@ const Home: NextPage = () => {
       const res = await data.json()
       setUser(res)
     }
+
     fetchData()
   }, [])
 
   return (
     <>
-      <HiContent>
-        <Description>
-          <Image src="/images/loading.svg" layout="fill" alt="loading"/>
-          <h1>{ t('index:subtitle') }</h1>
-          <p>
-            { t('index:description1') }<br /><br />{ t('index:description2') }
-          </p>
-          <h2>{ t('index:getStarted') }</h2>
-        </Description>
-        <ImageWrapper>
-          <Image
-            src={ user.avatar_url ? user.avatar_url : '/images/loading.svg' }
-            layout="fill"
-            alt={ user.name ? user.name : 'loading' }
-            priority
-          />
-        </ImageWrapper>
-      </HiContent>
+      <AwesomeSquare>
+        <HiContent>
+          <Description>
+            <h1>LuisFOsG - Luis Osorio</h1>
+            <h2>{ t('index:subtitle') }</h2>
+            <p>
+              { t('index:description1') }<br /><br />{ t('index:description2') }
+            </p>
+            <h3>{ t('index:getStarted') }</h3>
+          </Description>
+          <ImageWrapper>
+            <Image
+              src="https://i.imgur.com/6EopE0j.jpg"
+              layout="fill"
+              alt={ user.name ? user.name : 'loading' }
+              priority
+            />
+          </ImageWrapper>
+        </HiContent>
+      </AwesomeSquare>
     </>
   )
 }
