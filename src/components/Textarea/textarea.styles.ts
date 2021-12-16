@@ -13,7 +13,7 @@ export const TextareaStyled = styled.textarea`
   resize: vertical;
   min-height: 10rem;
 
-  background-color: ${({ theme }) => addOpacity(theme.colors.nord7, 0.6)};
+  background-color: ${({ theme }) => addOpacity(theme.colors.nord7, 0.4)};
   color: ${({ theme }) => theme.colors.text};
 
   &::placeholder {
@@ -26,6 +26,7 @@ export const TextareaStyled = styled.textarea`
 
   &:focus {
     box-shadow: 0 0 4px 1px ${({ theme }) => addOpacity(theme.colors.nord9, 0.3)};
+    background-color: ${({ theme }) => addOpacity(theme.colors.nord7, 0.6)};
   }
 
   &:focus + label,
@@ -38,6 +39,10 @@ export const TextareaStyled = styled.textarea`
 
   &:focus-within {
     transform:scale(1.01, 1.01);
+  }
+
+  &:hover {
+    background-color: ${({ theme }) => addOpacity(theme.colors.nord7, 0.5)};
   }
 
   user-select: none;

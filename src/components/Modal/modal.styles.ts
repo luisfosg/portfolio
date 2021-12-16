@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { addOpacity } from 'utils'
 
 export const animationModal = {
   config: {
@@ -66,10 +67,10 @@ export const CloseMoldalButton = styled.button`
 
   cursor: pointer;
   font-size: 2rem;
-  color: ${({ theme }) => theme.colors.nord7};
+  color: ${({ theme }) => addOpacity(theme.colors.nord1, 0.4)};
 
   &:hover {
-    color: ${({ theme }) => theme.colors.nord8};
+    color: ${({ theme }) => addOpacity(theme.colors.nord1, 0.6)};
   }
 
   user-select: none;

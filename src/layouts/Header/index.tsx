@@ -6,8 +6,8 @@ import useTranslation from 'next-translate/useTranslation'
 
 import Burger from 'components/Icons/burger'
 import Close from 'components/Icons/close'
-
 import { ContentBox as Content } from 'components/Content/content.styles'
+import NavLink from 'components/NavLink'
 
 import useDarkMode from 'hooks/useDarkMode'
 import useScroll from 'hooks/useScroll'
@@ -17,7 +17,7 @@ import {
   Header as StyledHeader,
   Nav,
   NavHidden,
-  NavLink,
+  NavLinkStyled,
   Name,
   Hamburger,
   ImageWrapper
@@ -58,36 +58,36 @@ const Header = () => {
         </Link>
         <Nav>
           <NavHidden isOpen={isOpen}>
-            <Link href="/" passHref>
-              <NavLink isHidden onClick={() => handleClick(2)}>{ t('home') }</NavLink>
-            </Link>
-            <Link href="/about" passHref>
-              <NavLink isHidden onClick={() => handleClick(2)}>{ t('about') }</NavLink>
-            </Link>
-            <Link href="/blog" passHref>
-              <NavLink isHidden onClick={() => handleClick(2)}>Blog</NavLink>
-            </Link>
-            <Link href="/contact" passHref>
-              <NavLink isHidden onClick={() => handleClick(2)}>{ t('contact') }</NavLink>
-            </Link>
+            <NavLink href="/" isHidden onClick={() => handleClick(2)}>
+              { t('home') }
+            </NavLink>
+            <NavLink href="/about" isHidden onClick={() => handleClick(2)}>
+              { t('about') }
+            </NavLink>
+            <NavLink href="/blog" isHidden onClick={() => handleClick(2)}>
+              Blog
+            </NavLink>
+            <NavLink href="/contact" isHidden onClick={() => handleClick(2)}>
+              { t('contact') }
+            </NavLink>
           </NavHidden>
           <Hamburger onClick={() => handleClick(1)}>
             { isOpen ? <Close fill={fill} /> : <Burger fill={ fill } /> }
           </Hamburger>
-          <NavLink animated onClick={() => toggleTheme()}>
+          <NavLinkStyled animated onClick={() => toggleTheme()}>
             { isDark ? '🌞' : '🌙' }
-          </NavLink>
+          </NavLinkStyled>
           {
             router.locales?.map(locale => (
               locale !== router.locale && (
                 <Link key={locale} href={router.asPath} locale={locale} passHref>
-                  <NavLink key={locale}>
+                  <NavLinkStyled key={locale}>
                     {
                       locale === 'es'
                         ? <Image src="/images/es.svg" width="25" height="25" alt="España" />
                         : <Image src="/images/en.svg" width="25" height="25" alt="United States" />
                     }
-                  </NavLink>
+                  </NavLinkStyled>
                 </Link>
               )
             ))

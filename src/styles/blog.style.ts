@@ -22,9 +22,11 @@ export const PostBody = styled.div`
     width: 100%;
     max-width: 50rem;
     margin: 0 auto;
+    border-radius: 1rem;
   }
 
   a {
+    text-decoration: underline;
     color: ${({ theme }) => theme.colors.nord11};
   }
 

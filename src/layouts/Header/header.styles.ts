@@ -66,10 +66,11 @@ export const NavHidden = styled.div<NavHiddenProps>`
 
 type NavLinkProps = {
   isHidden?: boolean,
+  isActive?: boolean,
   animated?: boolean,
 }
 
-export const NavLink = styled.a<NavLinkProps>`
+export const NavLinkStyled = styled.a<NavLinkProps>`
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -89,6 +90,12 @@ export const NavLink = styled.a<NavLinkProps>`
     opacity: ${({ animated }) => animated ? '0.5' : '1'};
     transition: opacity, transform 1s;
   }
+
+  ${({ isActive, theme }) => isActive && `
+    color: inherit;
+    background-color: ${addOpacity(theme.colors.nord5, 0.5)};
+    pointer-events: none;
+  `}
 
   @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     ${({ isHidden }) => isHidden && `

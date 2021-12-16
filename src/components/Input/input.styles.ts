@@ -10,7 +10,7 @@ export const InputStyled = styled.input`
   outline: none;
   border-radius: 10px;
 
-  background-color: ${({ theme }) => addOpacity(theme.colors.nord7, 0.6)};
+  background-color: ${({ theme }) => addOpacity(theme.colors.nord7, 0.4)};
   color: ${({ theme }) => theme.colors.text};
 
   &:-webkit-autofill,
@@ -31,6 +31,7 @@ export const InputStyled = styled.input`
 
   &:focus {
     box-shadow: 0 0 4px 1px ${({ theme }) => addOpacity(theme.colors.nord9, 0.3)};
+    background-color: ${({ theme }) => addOpacity(theme.colors.nord7, 0.6)};
   }
 
   &:focus + label,
@@ -43,6 +44,10 @@ export const InputStyled = styled.input`
 
   &:focus-within {
     transform:scale(1.01, 1.01);
+  }
+
+  &:hover {
+    background-color: ${({ theme }) => addOpacity(theme.colors.nord7, 0.5)};
   }
 
   user-select: none;

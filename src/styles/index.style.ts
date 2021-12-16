@@ -12,7 +12,7 @@ export const AwesomeSquare = styled.section`
   margin-bottom: 2rem;
 
   @media (min-width: ${({ theme }) => theme.breakpoints[1]}) {
-    padding: 3rem 2rem;
+    padding: 3rem;
   }
 `
 
@@ -80,6 +80,7 @@ export const ImageWrapper = styled.div`
     width: 100%;
     height: 100%;
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+    border-radius: 0 1rem 1rem 0;
 
     img {
       object-fit: cover;
@@ -93,6 +94,7 @@ export const ImageWrapper = styled.div`
 
     span {
       clip-path: none;
+      border-radius: 1rem 1rem 0 0;
     }
   }
 `

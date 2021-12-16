@@ -80,7 +80,7 @@ const BlogId = ({ blog }: BlogIdProps) => {
       </InfoWrapper>
       <PostBody dangerouslySetInnerHTML={{ __html: html }} />
       <BlogMessage>
-        <a target="_blank" href={ blog.canonical_url } rel="noreferrer">
+        <a target="_blank" href={ `${blog.canonical_url}#comments` } rel="noreferrer">
           <Image src="/images/dev-to.svg" width="25" height="25" alt="dev.to" />
           <span>{ t('feedback') }</span>
         </a>
