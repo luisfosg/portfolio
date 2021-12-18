@@ -6,6 +6,8 @@ import { useEffect, useState } from 'react'
 
 import {
   AwesomeSquare,
+  Square,
+  Square2,
   HiContent,
   Description,
   ImageWrapper
@@ -33,6 +35,8 @@ const Home: NextPage = () => {
   return (
     <>
       <AwesomeSquare>
+        <Square/>
+        <Square2 />
         <HiContent>
           <Description>
             <h1>LuisFOsG - Luis Osorio</h1>

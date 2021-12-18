@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { addOpacity } from 'utils'
 
 export const AwesomeSquare = styled.section`
+  position: relative;
+
   width: 100%;
   height: auto;
   padding: 2rem;
@@ -11,8 +13,50 @@ export const AwesomeSquare = styled.section`
   border-radius: 2rem;
   margin-bottom: 2rem;
 
+  z-index: 0;
+
   @media (min-width: ${({ theme }) => theme.breakpoints[1]}) {
     padding: 3rem;
+  }
+`
+
+export const Square = styled.div`
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  min-width: 60%;
+  min-height: 100%;
+
+  border-radius: 2rem 0 0 2rem;
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  background-color: ${props => addOpacity(props.theme.colors.nord11, 0.2)};
+
+  z-index: -1;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
+    display: none;
+  }
+`
+
+export const Square2 = styled.div`
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  min-width: 60%;
+  min-height: 100%;
+
+  border-radius: 2rem 0 0 0;
+  clip-path: polygon(0 0, 52% 52%, 100% 0);
+  background-color: ${props => addOpacity(props.theme.colors.nord12, 0.2)};
+
+  z-index: -1;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
+    display: none;
   }
 `
 
@@ -41,13 +85,17 @@ export const Description = styled.section`
   justify-content: center;
 
   h1 {
-    color: ${({ theme }) => theme.colors.nord11};
+    color: ${({ theme }) => theme.colors.nord1};
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   h2 {
     margin-top: 0;
+  }
+
+  h3 {
+    font-size: 1.5rem;
   }
 
   span {
@@ -66,6 +114,10 @@ export const Description = styled.section`
     text-align: center;
     align-items: center;
     order: 1;
+
+    h1 {
+      font-size: 2rem;
+    }
   }
 `
 
