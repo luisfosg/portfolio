@@ -10,7 +10,7 @@ export const TextareaStyled = styled.textarea`
   border: 1px solid transparent;
 
   outline: none;
-  resize: vertical;
+  resize: none;
   min-height: 10rem;
 
   background-color: ${({ theme }) => addOpacity(theme.colors.nord7, 0.4)};

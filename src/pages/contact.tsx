@@ -3,10 +3,15 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import FormContact from 'components/FormContact'
-import { FormContactTitle } from 'components/FormContact/formContact.styles'
-
-import { FormContainer, Info, Text, Section, SectionFlex } from 'styles/contact.style'
 import LinkCircle from 'components/LinkCircle'
+
+import { FormContactTitle } from 'components/FormContact/formContact.styles'
+import { FormContainer, Info, Text, SectionFlex } from 'styles/contact.style'
+
+import {
+  Square,
+  Square2
+} from 'styles/index.style'
 
 const Contact = () => {
   const { t } = useTranslation('contact')
@@ -18,21 +23,21 @@ const Contact = () => {
       </Head>
       <FormContainer>
         <Info>
+          <Square radius="10px" width="98%" opacity={0.1} />
+          <Square2 radius="10px" width="98%" opacity={0.1} />
           <FormContactTitle>{ t('info') }</FormContactTitle>
-          <Section>
-            <Text>
-              { t('text1') }
-            </Text>
-            <SectionFlex>
-              <LinkCircle href="mailto:luisfosgdev@gmail.com">📫</LinkCircle>
-              <LinkCircle target="_blank" href="https://www.linkedin.com/in/luisfosg">
-                <Image src="/images/linkedin.svg" width="25" height="25" alt="LinkedIn" />
-              </LinkCircle>
-            </SectionFlex>
-            <Text>
-              { t('text2') }
-            </Text>
-          </Section>
+          <Text>
+            { t('text1') }
+          </Text>
+          <SectionFlex>
+            <LinkCircle href="mailto:luisfosgdev@gmail.com">📫</LinkCircle>
+            <LinkCircle target="_blank" href="https://www.linkedin.com/in/luisfosg">
+              <Image src="/images/linkedin.svg" width="25" height="25" alt="LinkedIn" />
+            </LinkCircle>
+          </SectionFlex>
+          <Text>
+            { t('text2') }
+          </Text>
         </Info>
         <FormContact/>
       </FormContainer>

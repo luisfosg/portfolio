@@ -63,7 +63,7 @@ const FormContact = () => {
 
   return (
     <FormContactContainer>
-      <FormContactTitle center>{ t('title') }</FormContactTitle>
+      <FormContactTitle>{ t('title') }</FormContactTitle>
       <FormContainer onSubmit={handleSubmit} noValidate>
         <Input
           {...name.form}

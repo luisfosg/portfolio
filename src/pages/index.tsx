@@ -35,8 +35,8 @@ const Home: NextPage = () => {
   return (
     <>
       <AwesomeSquare>
-        <Square/>
-        <Square2 />
+        <Square radius="2rem" width="60%" opacity={0.1} />
+        <Square2 radius="2rem" width="60%" opacity={0.1} />
         <HiContent>
           <Description>
             <h1>LuisFOsG - Luis Osorio</h1>

@@ -13,17 +13,15 @@ export const FormContactContainer = styled.div`
   border-radius: 10px;
 `
 
-type FormContactProps = {
-  center?: boolean
-}
-
-export const FormContactTitle = styled.h2<FormContactProps>`
-  font-size: 1.5rem;
+export const FormContactTitle = styled.h2`
+  font-size: 2rem;
   font-weight: bold;
+
   margin: 0;
-  margin-bottom: 2rem;
   padding: 0;
-  text-align: ${({ center }) => (center ? 'center' : 'left')};
+  margin-bottom: 1rem;
+
+  text-align: center;
 `
 
 export const FormContainer = styled.form`
