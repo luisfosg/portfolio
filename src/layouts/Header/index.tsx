@@ -61,9 +61,6 @@ const Header = () => {
             <NavLink href="/" isHidden onClick={() => handleClick(2)}>
               { t('home') }
             </NavLink>
-            <NavLink href="/about" isHidden onClick={() => handleClick(2)}>
-              { t('about') }
-            </NavLink>
             <NavLink href="/blog" isHidden onClick={() => handleClick(2)}>
               Blog
             </NavLink>

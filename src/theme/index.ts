@@ -26,6 +26,7 @@ export type Colors = {
   nord14: string,
   nord15: string,
   nord16: string,
+  variant1: string,
   darkness: string;
   darknessLight: string;
   light: string;

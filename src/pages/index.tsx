@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 import type { NextPage } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
 
@@ -12,6 +13,7 @@ import {
   Description,
   ImageWrapper
 } from 'styles/index.style'
+import { AncordStyled } from 'components/Button/button.styles'
 
 type User = {
   name?: string,
@@ -44,7 +46,9 @@ const Home: NextPage = () => {
             <p>
               { t('index:description1') }<br /><br />{ t('index:description2') }
             </p>
-            <h3>{ t('index:getStarted') }</h3>
+            <Link href="/about" passHref>
+              <AncordStyled isBackground>{ t('index:getStarted') }</AncordStyled>
+            </Link>
           </Description>
           <ImageWrapper>
             <Image
