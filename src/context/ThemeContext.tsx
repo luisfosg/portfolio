@@ -16,7 +16,10 @@ const Context = React.createContext<ThemeContextProps>({
 })
 
 export const ThemeContextProvider = ({ children }: ThemeProps) => {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState(():string => {
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    return isDark ? 'dark' : 'light'
+  })
 
   const setMode = (mode: string) => {
     window.localStorage.setItem('theme', mode)

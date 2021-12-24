@@ -94,14 +94,21 @@ export const Description = styled.section`
     color: ${({ theme }) => theme.colors.nord1};
     margin: 0;
     font-size: 2.5rem;
+    font-weight: 400;
+
+    span {
+      font-size: 3rem;
+      min-width: 100%;
+      max-width: 100%;
+      font-weight: 900;
+      color: ${({ theme }) => theme.colors.variant1};
+      height: auto;
+    }
   }
 
   h2 {
     margin-top: 0;
-  }
-
-  h3 {
-    font-size: 1.5rem;
+    font-weight: 400;
   }
 
   span {

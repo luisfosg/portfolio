@@ -7,7 +7,9 @@ const useDarkMode = () => {
 
   useEffect(() => {
     const lsTheme = window.localStorage.getItem('theme')
-    lsTheme ? toggleTheme(lsTheme) : toggleTheme('light')
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+    lsTheme ? toggleTheme(lsTheme) : toggleTheme(isDark ? 'dark' : 'light')
     setMounted(true)
   }, [toggleTheme])
 
