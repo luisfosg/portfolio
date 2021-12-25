@@ -47,7 +47,7 @@ export const ArticleTitle = styled.h1`
   font-size: 1.5rem;
   margin: 0;
   margin-top: 0.5rem;
-  font-weight: bold;
+  font-weight: 400;
   color: ${({ theme }) => theme.colors.nord1};
 `
 

@@ -12,10 +12,11 @@ export const ButtonStyled = styled.button<ButtonProps>`
   width: ${({ maxWidth }) => maxWidth || '100%'};
   height: 3.1rem;
   font-size: 1.3rem;
+  font-weight: 400;
   border: ${({ isBackground, theme }) => isBackground ? `1px solid ${addOpacity(theme.colors.nord11, 0.5)}` : 'none'};
   border-radius: 9999px;
   background-color: ${({ isBackground, theme }) => (isBackground ? 'transparent' : addOpacity(theme.colors.nord11, 0.5))};
-  color: ${({ theme, isBackground }) => isBackground ? theme.colors.nord11 : theme.colors.darkness};
+  color: ${({ theme, isBackground }) => isBackground ? theme.colors.nord11 : theme.colors.variant2};
 
   &:hover,
   &:active {
@@ -43,6 +44,7 @@ export const AncordStyled = styled.a<ButtonProps>`
   min-height: 3.1rem;
 
   font-size: 1.3rem;
+  font-weight: 400;
   border: ${({ isBackground, theme }) => isBackground ? `1px solid ${addOpacity(theme.colors.nord11, 0.5)}` : 'none'};
   border-radius: 9999px;
   background-color: ${({ isBackground, theme }) => (isBackground ? 'transparent' : addOpacity(theme.colors.nord11, 0.5))};

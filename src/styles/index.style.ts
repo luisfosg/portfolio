@@ -91,36 +91,21 @@ export const Description = styled.section`
   justify-content: center;
 
   h1 {
-    color: ${({ theme }) => theme.colors.nord1};
+    color: ${({ theme }) => theme.colors.variant1};
     margin: 0;
-    font-size: 2.5rem;
-    font-weight: 400;
-
-    span {
-      font-size: 3rem;
-      min-width: 100%;
-      max-width: 100%;
-      font-weight: 900;
-      color: ${({ theme }) => theme.colors.variant1};
-      height: auto;
-    }
+    font-size: 3.5rem;
+    font-weight: 900;
   }
 
   h2 {
     margin-top: 0;
-    font-weight: 400;
-  }
-
-  span {
-    display: block !important;
-    position: relative !important;
-    min-width: 12rem;
-    max-width: 12rem;
-    min-height: 2.5rem;
+    font-weight: 500;
   }
 
   p {
     font-size: 1.1rem;
+    color: ${({ theme }) => theme.colors.nord1};
+    font-weight: 400;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {

@@ -7,6 +7,7 @@ export const InputStyled = styled.input`
   font-size: 1.3rem;
   border: 1px solid transparent;
   padding: 0 0.8rem;
+  font-weight: 300;
   outline: none;
   border-radius: 10px;
 

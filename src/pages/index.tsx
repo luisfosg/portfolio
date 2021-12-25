@@ -41,7 +41,7 @@ const Home: NextPage = () => {
         <Square2 radius="2rem" width="60%" opacity={0.1} />
         <HiContent>
           <Description>
-            <h1>LuisFOsG<span>Luis Osorio</span></h1>
+            <h1>Luis Osorio</h1>
             <h2>{ t('index:subtitle') }</h2>
             <p>
               { t('index:description1') }<br /><br />{ t('index:description2') }

@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-size: ${({ theme }) => theme.fontSizes[0]};
+    font-weight: 300;
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
     scrollbar-gutter: stable;
@@ -27,6 +28,10 @@ export const GlobalStyle = createGlobalStyle`
     &:hover {
       color: ${({ theme }) => theme.colors.nord8};
     }
+  }
+
+  strong {
+    font-weight: 420;
   }
 
   * {

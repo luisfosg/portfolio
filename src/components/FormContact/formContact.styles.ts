@@ -15,7 +15,7 @@ export const FormContactContainer = styled.div`
 
 export const FormContactTitle = styled.h2`
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 500;
 
   margin: 0;
   padding: 0;

@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export",
-    "commit": "git-cz",
+    "co": "git-cz",
     "lint": "next lint --fix",
     "prepare": "husky install"
   },
