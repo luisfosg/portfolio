@@ -3,6 +3,7 @@ const nextTranslate = require('next-translate')
 
 module.exports = {
   reactStrictMode: true,
+  styledComponents: true,
   images: {
     domains: [
       'i.imgur.com',

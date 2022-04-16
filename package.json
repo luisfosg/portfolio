@@ -12,7 +12,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "emailjs-com": "3.2.0",
+    "@emailjs/browser": "3.6.2",
     "luxon": "2.3.1",
     "marked": "4.0.14",
     "next": "12.1.5",
