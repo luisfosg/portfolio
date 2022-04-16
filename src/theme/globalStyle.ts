@@ -43,12 +43,16 @@ export const GlobalStyle = createGlobalStyle`
 
     ::-webkit-scrollbar {
       width: 10px;
-      background-color: ${({ theme }) => theme.colors.background};
+      background-color: ${({ theme }) => theme.colors.nord5};
     }
 
     ::-webkit-scrollbar-thumb {
       background-color: ${({ theme }) => theme.colors.nord1};
       border-radius: 9999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: ${({ theme }) => theme.colors.nord8};
     }
 
     ::selection {
