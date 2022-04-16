@@ -1,8 +1,8 @@
 import { Colors } from './index'
 
 export const themeDark: Colors = {
-  background: '#2E3440',
-  text: '#fff',
+  background: '#152028',
+  text: '#d9d9d9',
   nord1: '#D8DEE9',
   nord2: '#E5E9F0',
   nord3: '#ECEFF4',
@@ -28,8 +28,8 @@ export const themeDark: Colors = {
 }
 
 export const themeLight: Colors = {
-  background: '#ECEFF4',
-  text: '#434C5E',
+  background: '#F5F5F5',
+  text: '#404040',
   nord1: '#2E3440',
   nord2: '#3B4252',
   nord3: '#434C5E',

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const PostBody = styled.div`
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   margin-top: 2rem;
 
@@ -9,9 +9,9 @@ export const PostBody = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.3rem;
 
-  text-align: justify;
+  font-size: 1.5rem;
+  font-weight: 400;
 
   h2 {
     text-align: center;
