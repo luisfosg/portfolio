@@ -7,8 +7,6 @@ type HeaderProps = {
 }
 
 export const Header = styled.header<HeaderProps>`
-  -webkit-transition: .3s ease-in-out background-color, box-shadow;
-  transition: .3s ease-in-out background-color, box-shadow;
   display: inline-flex;
   position: sticky;
   flex-wrap: wrap;
@@ -80,7 +78,6 @@ export const NavLinkStyled = styled.a<NavLinkProps>`
   padding: 0.15rem 0.5rem;
   margin: 0 10px;
   font-size: 1.5rem;
-  transition: background-color 0.2ms ease-in-out;
 
   &:active,
   &:hover {

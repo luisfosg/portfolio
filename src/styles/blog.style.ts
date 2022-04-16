@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import { addOpacity } from 'utils'
 
 export const PostBody = styled.div`
   width: 70%;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 4rem;
 
   display: flex;
   flex-direction: column;
@@ -16,6 +17,8 @@ export const PostBody = styled.div`
   h2 {
     text-align: center;
     color: ${({ theme }) => theme.colors.darknessLight};
+    margin-bottom: 2rem;
+    margin-top: 3rem
   }
 
   img {
@@ -132,7 +135,7 @@ export const Title = styled.h1`
 export const BlogMessage = styled.div`
   margin: 2rem 0;
 
-  background-color: ${({ theme }) => theme.colors.nord7};
+  background-color: ${({ theme }) => addOpacity(theme.colors.nord7, 0.5)};
   color: ${({ theme }) => theme.colors.nord11};
   width: 100%;
   min-height: 5rem;
@@ -155,6 +158,6 @@ export const BlogMessage = styled.div`
   }
 
   a:hover {
-    color: ${({ theme }) => theme.colors.nord16};
+    color: ${({ theme }) => theme.colors.nord15};
   }
 `

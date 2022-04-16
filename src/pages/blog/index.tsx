@@ -13,7 +13,7 @@ const Blog = ({ posts }: any) => {
       <Head>
         <title>Blog | LuisFOsG</title>
       </Head>
-      <h1>{ t('title') }</h1>
+      <h1 style={{ textAlign: 'center' }}>{ t('title') }</h1>
       { router.isFallback ? <p>Loading...</p> : <Articles posts={posts} /> }
     </>
   )

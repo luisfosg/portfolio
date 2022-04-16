@@ -9,9 +9,6 @@ export const GlobalStyle = createGlobalStyle`
 
     font-family: 'Nunito', sans-serif;
 
-    -webkit-transition: .3s ease-in-out background-color;
-    transition: .3s ease-in-out background-color;
-
     ::-webkit-scrollbar {
       width: 10px;
       background-color: ${({ theme }) => theme.colors.nord5};

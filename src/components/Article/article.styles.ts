@@ -7,11 +7,17 @@ export const ArticleContainer = styled.article`
   height: 100%;
   padding: 1.5rem;
   background: ${({ theme }) => addOpacity(theme.colors.nord4, 0.1)};
-  box-shadow: 0 8px 32px 0 ${({ theme }) => addOpacity(theme.colors.nord6, 0.37)};
-  backdrop-filter: blur( 6px );
-  -webkit-backdrop-filter: blur( 6.5px );
+  box-shadow: 0 8px 32px 0 ${({ theme }) => addOpacity(theme.colors.nord6, 0.17)};
+  backdrop-filter: blur( 2px );
   border-radius: 10px;
   border: 1px solid ${({ theme }) => addOpacity(theme.colors.nord3, 0.2)};
+
+  p {
+    color: ${({ theme }) => theme.colors.nord1};
+    margin-top: 1rem;
+    font-weight: 300;
+    line-height: 0.9;
+  }
 
   &:hover {
     background: ${({ theme }) => addOpacity(theme.colors.nord4, 0.25)};

@@ -30,7 +30,7 @@ export const themeDark: Colors = {
 export const themeLight: Colors = {
   background: '#F5F5F5',
   text: '#404040',
-  nord1: '#2E3440',
+  nord1: '#242933',
   nord2: '#3B4252',
   nord3: '#434C5E',
   nord4: '#4C566A',
