@@ -13,9 +13,9 @@ export const ArticleContainer = styled.article`
   border: 1px solid ${({ theme }) => addOpacity(theme.colors.nord3, 0.2)};
 
   p {
-    color: ${({ theme }) => theme.colors.nord1};
+    color: ${({ theme }) => theme.colors.textDark};
     margin-top: 1rem;
-    font-weight: 300;
+    font-size: 1.2rem;
     line-height: 0.9;
   }
 

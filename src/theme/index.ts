@@ -10,6 +10,7 @@ type Themes = {
 export type Colors = {
   background: string,
   text: string,
+  textDark: string,
   nord1: string,
   nord2: string,
   nord3: string,

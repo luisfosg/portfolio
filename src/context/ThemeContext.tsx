@@ -22,8 +22,9 @@ export const ThemeContextProvider = ({ children }: ThemeProps) => {
   })
 
   const setMode = (mode: string) => {
-    window.localStorage.setItem('theme', mode)
-    setTheme(mode)
+    const newMode = mode === 'light' ? mode : 'dark'
+    window.localStorage.setItem('theme', newMode)
+    setTheme(newMode)
   }
 
   const toggleTheme: Function = (mode?: string) => {

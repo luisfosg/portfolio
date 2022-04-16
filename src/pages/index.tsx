@@ -1,14 +1,13 @@
-/* eslint-disable camelcase */
-import type { NextPage } from 'next'
 /* import useTranslation from 'next-translate/useTranslation'
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react' */
+import Proyects from 'components/proyects/index'
 
-type User = {
+/* type User = {
   name?: string,
   avatar_url?: string
 } */
 
-const Home: NextPage = () => {
+const Home = () => {
   /* const { t } = useTranslation()
   const [user, setUser] = useState<User>({}) */
 
@@ -24,6 +23,7 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <Proyects/>
     </>
   )
 }
