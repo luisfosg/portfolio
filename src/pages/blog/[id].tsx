@@ -1,6 +1,6 @@
 import useTranslation from 'next-translate/useTranslation'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { parse } from 'marked'
+import { Marked } from '@ts-stack/markdown'
 import Image from 'next/image'
 import Head from 'next/head'
 
@@ -29,7 +29,7 @@ const BlogId = ({ blog }: BlogIdProps) => {
   }
 
   try {
-    html = parse(blog.body_markdown || '')
+    html = Marked.parse(blog.body_markdown || '')
   } catch (error) {
     html = `
       <h1>${t('error')}</h1>
