@@ -10,8 +10,51 @@ export const ProyectSection = styled.div`
 `
 
 export const Title = styled.h1`
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
+`
+
+export const ContainerTitle = styled.div`
+  position: relative;
+  height: 3rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`
+
+export const TitleMark = styled.h2`
+  font-size: 2.5rem;
+  position: absolute;
+
+  color: ${({ theme }) => theme.colors.background};
+  text-shadow:
+    -1px -1px 0 ${({ theme }) => theme.colors.nord2},
+    1px -1px 0 ${({ theme }) => theme.colors.nord2},
+    -1px 1px 0 ${({ theme }) => theme.colors.nord2},
+    1px 1px 0 ${({ theme }) => theme.colors.nord2};
+`
+
+export const TitleWave = styled.h2`
+  font-size: 2.5rem;
+  position: absolute;
+
+  color: ${({ theme }) => theme.colors.nord12};
+  animation: wave 3.5s ease-in-out infinite;
+
+  @keyframes wave {
+    0%, 100% {
+      clip-path: polygon(38% 62%, 57% 70%, 71% 58%, 89% 54%, 100% 49%, 100% 100%, 0 100%, 0 69%, 16% 73%);
+    }
+
+    50% {
+      clip-path: polygon(26% 37%, 51% 46%, 72% 36%, 91% 30%, 100% 18%, 100% 100%, 0 100%, 0 44%, 15% 37%);
+    }
+  }
 `
 
 export const Proyect = styled.div`
@@ -24,10 +67,11 @@ export const Proyect = styled.div`
   justify-content: center;
   align-items: center;
 
-  gap: 4rem;
+  gap: 6rem;
 
   @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
     flex-direction: column;
+    gap: 2rem;
   }
 `
 
