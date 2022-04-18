@@ -8,7 +8,8 @@ module.exports = {
     domains: [
       'i.imgur.com',
       'res.cloudinary.com',
-      'avatars.githubusercontent.com'
+      'avatars.githubusercontent.com',
+      'picsum.photos'
     ]
   },
   ...nextTranslate()

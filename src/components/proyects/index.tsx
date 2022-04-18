@@ -1,17 +1,52 @@
 import Image from 'next/image'
 
-import { ProyectSection } from './proyects.styles'
+import {
+  ProyectSection,
+  Title,
+  Proyect,
+  ImageContainer,
+  InfoProyect
+} from './proyects.styles'
 
 const Proyects = () => {
   return (
     <ProyectSection>
-      <h1>Proyectos</h1>
-      <div>
-        <div><Image src="/images/loading.svg" width={400} height={300} alt="Imagen de prueba" /></div>
-        <div>
+      <Title>Proyectos</Title>
+      <Proyect>
+        <ImageContainer>
+          <Image src="https://picsum.photos/300/300" layout='fill' alt="Imagen de prueba" />
+        </ImageContainer>
+        <InfoProyect>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia pariatur fugiat quidem, error a cumque necessitatibus omnis totam reprehenderit officiis ducimus delectus sit doloremque doloribus incidunt veniam provident impedit repellat voluptate at natus perspiciatis quae deleniti. Commodi minus suscipit ipsa sint dolorem, architecto recusandae eaque, consectetur reiciendis odit rerum in.
-        </div>
-      </div>
+        </InfoProyect>
+      </Proyect>
+
+      <Proyect>
+        <InfoProyect>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia pariatur fugiat quidem, error a cumque necessitatibus omnis totam reprehenderit officiis ducimus delectus sit doloremque doloribus incidunt veniam provident impedit repellat voluptate at natus perspiciatis quae deleniti. Commodi minus suscipit ipsa sint dolorem, architecto recusandae eaque, consectetur reiciendis odit rerum in.
+        </InfoProyect>
+        <ImageContainer>
+          <Image src="https://picsum.photos/300/500" layout='fill' alt="Imagen de prueba" />
+        </ImageContainer>
+      </Proyect>
+
+      <Proyect>
+        <ImageContainer>
+          <Image src="https://picsum.photos/300/200" layout='fill' alt="Imagen de prueba" />
+        </ImageContainer>
+        <InfoProyect>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia pariatur fugiat quidem, error a cumque necessitatibus omnis totam reprehenderit officiis ducimus delectus sit doloremque doloribus incidunt veniam provident impedit repellat voluptate at natus perspiciatis quae deleniti. Commodi minus suscipit ipsa sint dolorem, architecto recusandae eaque, consectetur reiciendis odit rerum in.
+        </InfoProyect>
+      </Proyect>
+
+      <Proyect>
+        <InfoProyect>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia pariatur fugiat quidem, error a cumque necessitatibus omnis totam reprehenderit officiis ducimus delectus sit doloremque doloribus incidunt veniam provident impedit repellat voluptate at natus perspiciatis quae deleniti. Commodi minus suscipit ipsa sint dolorem, architecto recusandae eaque, consectetur reiciendis odit rerum in.
+        </InfoProyect>
+        <ImageContainer>
+          <Image src="https://picsum.photos/200/300" layout='fill' alt="Imagen de prueba" />
+        </ImageContainer>
+      </Proyect>
     </ProyectSection>
   )
 }
