@@ -41,7 +41,7 @@ const BlogId = ({ blog }: BlogIdProps) => {
       <Head>
         <title>{ blog.title } | LuisFOsG</title>
       </Head>
-      <ImageContainer opacity="0.8" >
+      <ImageContainer opacity="0.2" >
         <Image src={blog.cover_image} layout="fill" alt={blog.title} priority/>
       </ImageContainer>
       <InfoWrapper>

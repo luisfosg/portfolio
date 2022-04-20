@@ -70,7 +70,8 @@ type ImageContainterProps = {
 export const ImageContainer = styled.div<ImageContainterProps>`
   position: relative;
   width: 100%;
-  height: ${({ height }) => height || '20rem'};
+  min-height: ${({ height }) => height || '15rem'};
+  height: auto;
   margin: 0 auto;
 
   span {
@@ -82,6 +83,9 @@ export const ImageContainer = styled.div<ImageContainterProps>`
       width: 100%;
       height: 100%;
       object-fit: cover;
+      filter: blur(2.5px) brightness(1);
+
+      border: 30px solid transparent;
       ${({ opacity }) => opacity && `opacity: ${opacity};`}
     }
   }
@@ -92,11 +96,16 @@ export const ImageContainer = styled.div<ImageContainterProps>`
 `
 
 export const InfoWrapper = styled.div`
+  position: relative;
   font-size: 1.3rem;
   text-align: center;
-  margin-top: 1rem;
+  top: -2rem;
   width: 100%;
   height: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[1]}) {
+    top: -3rem;
+  }
 `
 
 export const InfoContent = styled.div`

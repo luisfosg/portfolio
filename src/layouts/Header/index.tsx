@@ -81,8 +81,8 @@ const Header = () => {
                   <NavLinkStyled key={locale}>
                     {
                       locale === 'es'
-                        ? <Image src="/images/es.svg" width="25" height="25" alt="España" />
-                        : <Image src="/images/en.svg" width="25" height="25" alt="United States" />
+                        ? <Image src="/images/en.svg" width="25" height="25" alt="United States" />
+                        : <Image src="/images/es.svg" width="25" height="25" alt="España" />
                     }
                   </NavLinkStyled>
                 </Link>
