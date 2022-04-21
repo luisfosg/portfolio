@@ -34,6 +34,9 @@ const Contact = () => {
             <LinkCircle target="_blank" href="https://www.linkedin.com/in/luisfosg">
               <Image src="/images/linkedin.svg" width="25" height="25" alt="LinkedIn" />
             </LinkCircle>
+            <LinkCircle target="_blank" href="https://twitter.com/LuisFOsG_">
+              <Image src="/images/twitter.svg" width="25" height="25" alt="Twitter" />
+            </LinkCircle>
           </SectionFlex>
           <Text>
             { t('text2') }
