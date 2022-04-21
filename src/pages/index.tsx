@@ -1,6 +1,6 @@
 /* import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react' */
-import Proyects from 'components/proyects/index'
+import Proyects from 'components/Proyects'
 
 /* type User = {
   name?: string,
