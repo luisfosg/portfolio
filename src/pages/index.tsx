@@ -1,6 +1,6 @@
 /* import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react' */
-/* import Proyects from 'components/Proyects' */
+import Proyects from 'components/Proyects'
 
 /* type User = {
   name?: string,
@@ -22,9 +22,7 @@ const Home = () => {
   }, []) */
 
   return (
-    <div>
-      Hola Mundo
-    </div>
+    <Proyects/>
   )
 }
 
