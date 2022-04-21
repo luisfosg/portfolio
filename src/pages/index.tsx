@@ -22,9 +22,7 @@ const Home = () => {
   }, []) */
 
   return (
-    <>
-      <Proyects/>
-    </>
+    <Proyects/>
   )
 }
 
