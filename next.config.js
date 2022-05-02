@@ -9,6 +9,7 @@ module.exports = {
       'i.imgur.com',
       'res.cloudinary.com',
       'avatars.githubusercontent.com',
+      'github.com',
       'picsum.photos'
     ]
   },

@@ -4,27 +4,27 @@ import Proyect from 'components/Proyect'
 const MY_PROYECTS = [
   {
     id: 1,
-    title: 'Titulo de Prueba',
-    image: 'https://picsum.photos/400/600',
-    desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia pariatur fugiat quidem, error a cumque necessitatibus omnis totam reprehenderit officiis ducimus delectus sit doloremque doloribus incidunt veniam provident impedit repellat voluptate at natus perspiciatis quae deleniti. Commodi minus suscipit ipsa sint dolorem, architecto recusandae eaque, consectetur reiciendis odit rerum in.'
+    title: 'UNIMAPZ',
+    image: 'https://i.imgur.com/ys2TF5l.png',
+    desc: 'Mapa del Instituto Universitario de la Paz - UNIPAZ, proyecto de aula y trabajo colaborativo. Usamos Leaflet y Open Street Map para el desarrollo de esta página web.'
   },
   {
     id: 2,
-    title: 'Titulo de Prueba',
-    image: 'https://picsum.photos/300/500',
-    desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia pariatur fugiat quidem, error a cumque necessitatibus omnis totam reprehenderit officiis ducimus delectus sit doloremque doloribus incidunt veniam provident impedit repellat voluptate at natus perspiciatis quae deleniti. Commodi minus suscipit ipsa sint dolorem, architecto recusandae eaque, consectetur reiciendis odit rerum in.'
+    title: 'HOME TAB',
+    image: 'https://i.imgur.com/gsHGza2.png',
+    desc: 'Tu nueva pestaña de Inicio de tu Navegador; rapida, personalizable y cómoda.'
   },
   {
     id: 3,
-    title: 'Titulo Prueba',
-    image: 'https://picsum.photos/400/500',
-    desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia pariatur fugiat quidem, error a cumque necessitatibus omnis totam reprehenderit officiis ducimus delectus sit doloremque doloribus incidunt veniam provident impedit repellat voluptate at natus perspiciatis quae deleniti. Commodi minus suscipit ipsa sint dolorem, architecto recusandae eaque, consectetur reiciendis odit rerum in.'
+    title: 'Cold Chat',
+    image: 'https://i.imgur.com/6ZR35Tn.png',
+    desc: 'Chat con Actualización en tiempo real, conectate con tus amigos, y habla con ellos. Como si fuera una aplicacíon más de mensajeria.'
   },
   {
     id: 4,
-    title: 'Titulo Prueba',
-    image: 'https://picsum.photos/300/600',
-    desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia pariatur fugiat quidem, error a cumque necessitatibus omnis totam reprehenderit officiis ducimus delectus sit doloremque doloribus incidunt veniam provident impedit repellat voluptate at natus perspiciatis quae deleniti. Commodi minus suscipit ipsa sint dolorem, architecto recusandae eaque, consectetur reiciendis odit rerum in.'
+    title: 'SHORT URL',
+    image: 'https://github.com/LuisFOsG/Short-Url/raw/main/doc/banner.png',
+    desc: 'Un Acortador de URL y Generador de Codigos QR. controla tus enlaces, cuenta las visitas, colocales contraseña o limita las visitas a tus usuarios.'
   }
 ]
 

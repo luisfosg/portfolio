@@ -72,7 +72,7 @@ const Header = () => {
             { isOpen ? <Close fill={fill} /> : <Burger fill={ fill } /> }
           </Hamburger>
           <NavLinkStyled animated onClick={() => toggleTheme()}>
-            { isDark ? '🌞' : '🌙' }
+            { isDark ? '🌙' : '🌞' }
           </NavLinkStyled>
           {
             router.locales?.map(locale => (
