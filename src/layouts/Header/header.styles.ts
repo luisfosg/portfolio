@@ -110,7 +110,7 @@ export const Name = styled.h1`
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 500;
   cursor: pointer;
 
   span {
