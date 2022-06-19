@@ -12,8 +12,8 @@ export const CursorStyle = styled.div<cursorProps>`
   align-items: center;
 
   position: fixed;
-  width: 45px;
-  height: 45px;
+  width: 30px;
+  height: 30px;
 
   pointer-events: none;
   z-index: 9999;
