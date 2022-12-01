@@ -1,84 +1,16 @@
 {
-  "name": "portfolio",
-  "version": "0.9.0",
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3000",
-    "build": "next build",
-    "start": "next start",
-    "export": "next build && next export",
-    "co": "npm run lint && git add . && sui-mono commit",
-    "lint": "next lint --fix",
-    "prepare": "husky install"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@emailjs/browser": "3.7.0",
-    "@ts-stack/markdown": "1.4.0",
-    "luxon": "3.0.3",
-    "next": "12.3.1",
-    "next-translate": "1.6.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-spring": "9.5.4",
-    "styled-components": "5.3.5"
-  },
-  "devDependencies": {
-    "@s-ui/mono": "2.31.0",
-    "@types/luxon": "3.0.1",
-    "@types/node": "18.7.18",
-    "@types/react": "18.0.21",
-    "@types/react-dom": "18.0.6",
-    "@types/styled-components": "5.1.26",
-    "@typescript-eslint/eslint-plugin": "5.38.0",
-    "@typescript-eslint/parser": "5.38.0",
-    "eslint": "8.23.1",
-    "eslint-config-next": "12.3.1",
-    "eslint-config-standard": "17.0.0",
-    "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-n": "15.3.0",
-    "eslint-plugin-promise": "6.0.1",
-    "eslint-plugin-react": "7.31.8",
-    "husky": "8.0.1",
-    "lint-staged": "13.0.3",
-    "typescript": "4.8.3"
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx}": "eslint --cache --fix"
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "es2021": true,
-      "node": true
-    },
-    "globals": {
-      "JSX": true
-    },
-    "extends": [
-      "plugin:react/recommended",
-      "next/core-web-vitals",
-      "standard"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
-      },
-      "ecmaVersion": "latest",
-      "sourceType": "module"
-    },
-    "plugins": [
-      "react",
-      "@typescript-eslint"
-    ],
-    "rules": {
-      "@next/next/no-document-import-in-page": "off",
-      "no-use-before-define": "off"
-    }
-  },
-  "eslintIgnore": [
-    "node_modules",
-    ".next",
-    ".husky"
-  ]
+    "astro": "1.6.12"
+  }
 }
