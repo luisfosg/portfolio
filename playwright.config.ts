@@ -21,9 +21,15 @@ const config: PlaywrightTestConfig = {
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
+  webServer: {
+    command: 'pnpm run dev',
+    url: 'http://localhost:3000/',
+    timeout: 120 * 1000,
+    reuseExistingServer: !process.env.CI,
+  },
   use: {
     actionTimeout: 0,
-    baseURL: 'http://localhost:3000',
+    baseURL: 'http://localhost:3000/',
     trace: 'on-first-retry',
   },
   projects: [

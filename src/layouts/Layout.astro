@@ -13,18 +13,29 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700&display=swap"
+    rel="stylesheet">
+
+		<title>{title} | LuisFOsG</title>
 	</head>
 	<body>
 		<slot />
+
+    <footer>
+      Hola Mundo
+    </footer>
 	</body>
 </html>
 
 <style is:global>
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
+  * {
+    font-family: 'Nunito';
+  }
+
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
