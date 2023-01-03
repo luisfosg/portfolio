@@ -1,16 +1,35 @@
 ---
+import { Icon } from 'astro-icon'
+
 const ROUTES = [
   {
     route: '/',
-    name: 'Inicio'
+    name: 'Inicio',
+    icon: 'ic:round-home'
   },
   {
     route: '/blog',
-    name: 'Blog'
+    name: 'Blog',
+    icon: 'ri:book-3-fill'
   },
   {
     route: '/contact',
-    name: 'Contacto'
+    name: 'Contacto',
+    icon: 'ph:moon-fill'
+  },
+  {
+    icon: 'openmoji:new-moon-face',
+    name: 'Dark'
+  },
+  {
+    icon: 'noto-v1:sun-with-face',
+    name: 'Light'
+  },
+  {
+    icon: 'cif:lr'
+  },
+  {
+    icon: 'cif:es'
   }
 ]
 ---
@@ -21,10 +40,13 @@ const ROUTES = [
   <ul class="flex">
     {
       ROUTES.map(route => (
-        <li class="mx-2"><a href={route.route}>{route.name}</a></li>
+        <li class="flex items-center justify-center bg-slate-200/20 rounded-lg p-2 mx-2">
+          <a class="flex items-center justify-center" href={route.route}>
+            {route.icon && <Icon class="w-6 h-6" name={route.icon}></Icon>}
+            {route.name && <span class="ml-1">{route.name}</span>}
+          </a>
+        </li>
       ))
     }
-    <li class="mx-2">darkmode</li>
-    <li class="mx-2">lang</li>
   </ul>
 </nav>
