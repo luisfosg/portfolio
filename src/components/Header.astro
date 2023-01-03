@@ -1,0 +1,30 @@
+---
+const ROUTES = [
+  {
+    route: '/',
+    name: 'home'
+  },
+  {
+    route: '/blog',
+    name: 'blog'
+  },
+  {
+    route: '/contact',
+    name: 'contact'
+  }
+]
+---
+
+<nav class="flex justify-between bg-slate-500 px-28">
+  <h1>LuisFOsG</h1>
+
+  <ul class="flex">
+    {
+      ROUTES.map(route => (
+        <li class="mx-2"><a href={route.route}>{route.name}</a></li>
+      ))
+    }
+    <li class="mx-2">darkmode</li>
+    <li class="mx-2">lang</li>
+  </ul>
+</nav>

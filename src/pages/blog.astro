@@ -3,7 +3,7 @@ import { Image } from "@astrojs/image/components";
 
 import Layout from '../layouts/Layout.astro';
 
-const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
+const posts = (await Astro.glob("./blog/en/*.{md,mdx}")).sort(
   (a, b) =>
     new Date(b.frontmatter.publishDate).valueOf() -
     new Date(a.frontmatter.publishDate).valueOf()
@@ -23,10 +23,10 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
                 <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
                   <div>
                     <Image
-                      src={post.frontmatter.image}
+                      src={`${post.frontmatter.image}`}
                       alt="Thumbnail"
                       width={600}
-                      format="avif"
+                      format="jpg"
                       aspectRatio="16:9"
                       class="w-full rounded-md"
                     />
