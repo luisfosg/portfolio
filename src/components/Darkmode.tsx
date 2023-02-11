@@ -1,5 +1,8 @@
 import { useState } from 'react'
-import { toggleDark } from '../store/darkmode';
+import { toggleDark } from '../store/darkmode'
+
+import DarkIcon from '../icons/DarkIcon'
+import LightIcon from '../icons/LightIcon'
 
 const DarkMode = () => {
   const [darkToggle, setDarkToggle] = useState(() => {
@@ -21,18 +24,8 @@ const DarkMode = () => {
       >
         {
           darkToggle
-            ? (
-              <>
-                {/* <Icon class="w-6 h-6" name='openmoji:new-moon-face'></Icon> */}
-                <span>Dark</span>
-              </>
-            )
-            : (
-              <>
-                {/* <Icon class="w-6 h-6" name='openmoji:new-moon-face'></Icon> */}
-                <span>Light</span>
-              </>
-            )
+            ? <LightIcon />
+            : <DarkIcon />
         }
       </div>
     </li>
