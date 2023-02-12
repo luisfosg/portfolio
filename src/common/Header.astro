@@ -1,6 +1,8 @@
 ---
 import { Icon } from 'astro-icon'
-import DarkMode from './Darkmode'
+
+import DarkMode from '@components/Darkmode'
+import Link from '@common/ui/link'
 
 const ROUTES = [
   {
@@ -27,7 +29,7 @@ const ROUTES = [
 ]
 ---
 
-<nav class="fixed flex top-0 items-center justify-between w-full h-14 border-b border-slate-600 px-28">
+<nav class="fixed flex top-0 items-center justify-between w-full h-14 backdrop-blur bg-slate-400/80 dark:bg-slate-800/80 px-28">
   <h1>
     <a href="/">LuisFOsG</a>
   </h1>
@@ -36,10 +38,10 @@ const ROUTES = [
     {
       ROUTES.map(route => (
         <li>
-          <a class="flex items-center justify-center bg-slate-200/20 rounded-lg p-2 mx-2" href={route.route}>
+          <Link to={route.route}>
             {route.icon && <Icon class="w-6 h-6" name={route.icon}></Icon>}
             {route.name && <span class="ml-1">{route.name}</span>}
-          </a>
+          </Link>
         </li>
       ))
     }

@@ -11,6 +11,9 @@
       ],
       "@pages/*": [
         "pages/*"
+      ],
+      "@common/*": [
+        "common/*"
       ]
     },
     "jsx": "react-jsx",
