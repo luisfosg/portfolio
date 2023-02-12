@@ -1,8 +1,11 @@
 ---
+import { astroI18n } from "astro-i18n"
 import '../store/darkmode';
 
 import Header from '@common/Header.astro';
 import Footer from '@common/Footer.astro';
+
+astroI18n.init(Astro)
 
 export interface Props {
 	title: string;

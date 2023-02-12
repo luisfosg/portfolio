@@ -14,7 +14,7 @@
       ],
       "@common/*": [
         "common/*"
-      ]
+      ],
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
