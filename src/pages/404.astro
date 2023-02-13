@@ -1,9 +1,11 @@
 ---
+import { t } from "astro-i18n"
+
 import Layout from '@layouts/Layout.astro';
 ---
 
 <Layout title="Luis Osorio">
-    <main>
-        Pagina no encontrada
-    </main>
+  <main>
+    {t('index.notFound')}
+  </main>
 </Layout>

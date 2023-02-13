@@ -1,4 +1,5 @@
 {
   "{route}": "a-propos",
-  "home": "Este es mi perfil"
+  "home": "Este es mi perfil",
+  "notFound": "Error, pagina no encontrada"
 }

@@ -1,22 +1,24 @@
 ---
+import { l } from "astro-i18n"
 import { Icon } from 'astro-icon'
 
 import DarkMode from '@components/Darkmode'
+import LangMode from '@components/Langmode'
 import Link from '@common/ui/link'
 
 const ROUTES = [
   {
-    route: '/',
+    route: l('/', undefined),
     name: 'Inicio',
     icon: 'ic:round-home'
   },
   {
-    route: '/blog',
+    route: l('/blog', undefined),
     name: 'Blog',
     icon: 'ri:book-3-fill'
   },
   {
-    route: '/contact',
+    route: l('/contact', undefined),
     name: 'Contacto',
     icon: 'ph:moon-fill'
   },
@@ -30,9 +32,7 @@ const ROUTES = [
 ---
 
 <nav class="fixed flex top-0 items-center justify-between w-full h-14 backdrop-blur bg-slate-400/80 dark:bg-slate-800/80 px-28">
-  <h1>
-    <a href="/">LuisFOsG</a>
-  </h1>
+  <a href={l('/', undefined)}>LuisFOsG</a>
 
   <ul class="flex">
     {
@@ -46,6 +46,7 @@ const ROUTES = [
       ))
     }
 
+    <LangMode client:only />
     <DarkMode client:only />
   </ul>
 </nav>

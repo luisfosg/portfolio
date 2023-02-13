@@ -9,7 +9,7 @@ const Link = ({children, to }: Props) => {
 }
 
 type Props = {
-  children: JSX.Element | JSX.Element[];
+  children: JSX.Element | JSX.Element[] | string;
   to?: string
 }
 

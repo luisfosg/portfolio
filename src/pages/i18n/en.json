@@ -1,4 +1,5 @@
 {
   "{route}": "home",
-  "home": "Profile xD"
+  "home": "Profile xD",
+  "notFound": "Error, page not found"
 }
