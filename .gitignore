@@ -26,4 +26,4 @@ package-lock.json
 /playwright/.cache/
 .astro-i18n
 
-en
+src/pages/en

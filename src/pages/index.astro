@@ -1,12 +1,13 @@
 ---
-import { t } from "astro-i18n"
+import { t, changeLanguage } from "i18next";
+import Layout from "../layouts/Layout.astro";
 
-import Layout from '../layouts/Layout.astro';
+changeLanguage("es");
 ---
 
 <Layout title="Luis Osorio">
 	<main>
-    <p>{t('index.home')}</p>
+    <p>{t('home')}</p>
     <p>projects</p>
   </main>
 </Layout>

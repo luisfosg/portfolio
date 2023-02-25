@@ -1,5 +1,4 @@
 ---
-import { l } from "astro-i18n"
 import { Icon } from 'astro-icon'
 
 import DarkMode from '@components/Darkmode'
@@ -8,17 +7,17 @@ import Link from '@common/ui/link'
 
 const ROUTES = [
   {
-    route: l('/', undefined),
+    route: '',
     name: 'Inicio',
     icon: 'ic:round-home'
   },
   {
-    route: l('/blog', undefined),
+    route: '',
     name: 'Blog',
     icon: 'ri:book-3-fill'
   },
   {
-    route: l('/contact', undefined),
+    route: '',
     name: 'Contacto',
     icon: 'ph:moon-fill'
   }
@@ -26,7 +25,7 @@ const ROUTES = [
 ---
 
 <nav class="fixed flex top-0 items-center justify-between w-full h-14 backdrop-blur bg-slate-400/80 dark:bg-slate-800/80 px-28">
-  <a href={l('/', undefined)}>LuisFOsG</a>
+  <a href='/'>LuisFOsG</a>
 
   <ul class="flex">
     {
