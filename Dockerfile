@@ -1,12 +1,12 @@
-FROM node
-
-# Create app directory
-WORKDIR /usr/src/app
+FROM node:19
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
-COPY package*.json ./
+COPY ["package*.json", "/usr/src/"]
+
+# Create app directory
+WORKDIR /usr/src
 
 RUN npm install
 # If you are building your code for production

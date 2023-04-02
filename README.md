@@ -12,14 +12,18 @@
 
 ### ⏳ Install
 
+```bash
+docker compose build
 ```
-pnpm install
+
+```bash
+docker compose up
 ```
 
 ### 🖥 Open in Localhost
 
-```
-pnpm dev
+```mk
+http://localhost:3000/
 ```
 
 ## 📃 License
