@@ -24,6 +24,4 @@ package-lock.json
 /test-results/
 /playwright-report/
 /playwright/.cache/
-.astro-i18n
-
-src/pages/en
+.astro

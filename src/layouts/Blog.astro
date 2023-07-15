@@ -9,8 +9,8 @@ const { frontmatter } = Astro.props;
     <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
       {frontmatter.category}
     </span>
-    <h1
-      class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
+
+    <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
       {frontmatter.title}
     </h1>
     <div class="flex gap-2 mt-3 items-center">
@@ -40,7 +40,8 @@ const { frontmatter } = Astro.props;
     <a
       href="/blog"
       class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
-      >← Back to Blog</a
     >
+      ← Back to Blog
+    </a>
   </div>
 </Layout>
