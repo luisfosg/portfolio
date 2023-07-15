@@ -1,7 +1,4 @@
 ---
-import i18next from "i18next";
-import { HeadHrefLangs } from "astro-i18next/components";
-
 import '../store/darkmode';
 
 import Header from '@common/Header.astro';
@@ -15,7 +12,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang={i18next.language}>
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -30,7 +27,6 @@ const { title } = Astro.props;
       rel="stylesheet"
     >
 
-    <HeadHrefLangs />
 		<title>{title} | LuisFOsG</title>
 	</head>
 
@@ -43,6 +39,27 @@ const { title } = Astro.props;
 
     <Footer />
 	</body>
+
+  <script is:inline>
+    const theme = (() => {
+      if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+        return localStorage.getItem("theme");
+      }
+
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
+      }
+      return "light";
+    })();
+
+    if (theme === "light") {
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
+    }
+
+    window.localStorage.setItem("theme", theme);
+  </script>
 </html>
 
 <style is:global>

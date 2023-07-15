@@ -8,7 +8,7 @@ import LightIcon from '../icons/LightIcon'
 
 const DarkMode = () => {
   const [darkToggle, setDarkToggle] = useState<boolean>(() => {
-    const theme = localStorage.getItem('darkmode') || 'light'
+    const theme = localStorage.getItem('theme') || 'light'
 
     return theme === 'dark'
   })

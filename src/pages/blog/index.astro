@@ -1,9 +1,6 @@
 ---
-import { changeLanguage } from "i18next";
 import { Image } from "@astrojs/image/components";
 import Layout from "@layouts/Layout.astro";
-
-changeLanguage("es");
 
 const posts = (await Astro.glob("./es/*.{md,mdx}")).sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() -
     new Date(a.frontmatter.publishDate).valueOf());

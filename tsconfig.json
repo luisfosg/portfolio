@@ -14,9 +14,12 @@
       ],
       "@common/*": [
         "common/*"
-      ],
+      ]
     },
     "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "esModuleInterop": true,
+    "module": "es2020",
+    "moduleResolution": "node",
   }
 }
