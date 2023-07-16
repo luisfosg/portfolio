@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { getLangFromUrl, useTranslations, getStaticPath } from '../../i18n/utils';
+import { getLangFromUrl, useTranslations, getStaticPath } from '../../../i18n/utils';
 
 export const getStaticPaths = getStaticPath
 
@@ -9,10 +9,9 @@ const t = useTranslations(lang);
 
 ---
 
-<Layout title="Contacto">
+<Layout title="Luis Osorio">
 	<main>
-    <h1>Contacto</h1>
-
+    <h1>Blog</h1>
     {t('nav.home')}
     {t('nav.about')}
   </main>

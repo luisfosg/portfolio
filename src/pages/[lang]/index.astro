@@ -1,19 +1,11 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { getLangFromUrl, useTranslations, getStaticPath } from '../../i18n/utils';
+
+export const getStaticPaths = getStaticPath
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-export async function getStaticPaths() {
-  const paths = [
-    {params: { lang: 'es' }},
-    {params: { lang: 'en' }}
-  ]
-
-  return paths;
-}
-
 ---
 
 <Layout title="Luis Osorio">
