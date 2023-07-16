@@ -1,14 +1,6 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLangFromUrl } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 ---
-
-<Layout title="Luis Osorio">
-	<main>
-    {t('nav.home')}
-    {t('nav.about')}
-  </main>
-</Layout>
+<meta http-equiv="refresh" content={`0;url=/${lang}/`} />

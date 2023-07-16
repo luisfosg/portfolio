@@ -1,19 +1,15 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import Layout from "@layouts/Layout.astro";
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
-
-console.log({
-  lang
-})
-
 const t = useTranslations(lang);
-
 ---
 
-<Layout title="Luis Osorio">
+<Layout title="Contacto">
 	<main>
+    <h1>Contacto</h1>
+
     {t('nav.home')}
     {t('nav.about')}
   </main>
