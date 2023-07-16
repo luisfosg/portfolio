@@ -14,19 +14,19 @@ const ROUTES = [
   {
     route: '/blog',
     name: 'Blog',
-    icon: 'ri:book-3-fill'
+    icon: 'ri:book-fill'
   },
   {
     route: '/contact',
     name: 'Contacto',
-    icon: 'ph:moon-fill'
+    icon: 'ph:phone-fill'
   }
 ]
 
 const lang = getLangFromUrl(Astro.url);
 ---
 
-<nav class="fixed flex top-0 items-center justify-between w-full h-14 backdrop-blur bg-slate-400/80 dark:bg-slate-800/80 px-28">
+<nav class="fixed flex top-0 items-center justify-between w-full h-14 backdrop-blur bg-slate-500/40 dark:bg-slate-700/80 px-28">
   <a href={`/${lang}`}>luisfosg</a>
 
   <ul class="flex">
@@ -34,7 +34,7 @@ const lang = getLangFromUrl(Astro.url);
       ROUTES.map(route => (
         <li>
           <Link to={`/${lang}${route.route}`}>
-            {route.icon && <Icon class="w-6 h-6" name={route.icon}></Icon>}
+            {route.icon && <Icon class="w-4 h-4" name={route.icon}></Icon>}
             {route.name && <span class="ml-1">{route.name}</span>}
           </Link>
         </li>

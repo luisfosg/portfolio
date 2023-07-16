@@ -4,7 +4,6 @@ import { toggleDark } from '../store/darkmode'
 import Button from '@common/ui/button'
 
 import DarkIcon from '../icons/DarkIcon'
-import LoadThemeIcon from '../icons/LoadTheme'
 import LightIcon from '../icons/LightIcon'
 
 const DarkMode = () => {
@@ -24,19 +23,17 @@ const DarkMode = () => {
     toggleDark()
   }
 
-  if (!isMounted) {
-    return (
-      <li >
-        <Button onclick={() => {}}>
-          <LoadThemeIcon />
-        </Button>
-      </li>
-    )
-  }
+  if (!isMounted) return (
+    <li >
+      <Button className='border rounded-full border-slate-700/0 px-1' onclick={() => {}}>
+        <LightIcon />
+      </Button>
+    </li>
+  )
 
   return (
     <li >
-      <Button onclick={handlerTheme}>
+      <Button className='border rounded-full px-1 border-slate-600 dark:border-slate-500' onclick={handlerTheme}>
         {
           darkToggle
             ? <LightIcon />
