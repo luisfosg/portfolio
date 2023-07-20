@@ -1,8 +1,8 @@
 import { STYLE_BUTTONS } from '@common/constant'
 
-const Link = ({children, to }: Props) => {
+const Link = ({children, to, className }: Props) => {
   return (
-    <a className={`${STYLE_BUTTONS}`} href={to}>
+    <a className={`${STYLE_BUTTONS} ${className}`} href={to}>
       {children}
     </a>
   )
@@ -10,6 +10,7 @@ const Link = ({children, to }: Props) => {
 
 type Props = {
   children: JSX.Element | JSX.Element[] | string;
+  className?: string;
   to?: string
 }
 

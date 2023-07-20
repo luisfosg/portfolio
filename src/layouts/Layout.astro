@@ -1,6 +1,5 @@
 ---
 import { getLangFromUrl } from '../i18n/utils';
-import '../store/darkmode';
 
 import Header from '@common/Header.astro';
 import Footer from '@common/Footer.astro';
@@ -35,8 +34,12 @@ const { title } = Astro.props;
 	<body class="w-screen h-screen dark:text-slate-200 bg-slate-400 dark:bg-slate-800">
     <Header />
 
-		<div class="px-28 min-h-[85.2%] pt-24 py-10">
-      <slot />
+		<div class="flex min-h-[85.2%] justify-center">
+
+      <div class="px-28 text-md w-[70%] pt-24 py-10">
+        <slot />
+      </div>
+
     </div>
 
     <Footer />
@@ -51,6 +54,7 @@ const { title } = Astro.props;
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         return "dark";
       }
+
       return "light";
     })();
 

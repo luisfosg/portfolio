@@ -33,14 +33,16 @@ const lang = getLangFromUrl(Astro.url);
     {
       ROUTES.map(route => (
         <li>
-          <Link to={`/${lang}${route.route}`}>
+          <Link className='hover:bg-slate-500/20' to={`/${lang}${route.route}`}>
             {route.icon && <Icon class="w-4 h-4" name={route.icon}></Icon>}
             {route.name && <span class="ml-1">{route.name}</span>}
           </Link>
         </li>
       ))
     }
-
-    <DarkMode client:load />
   </ul>
+
+  <div class="w-10">
+    <DarkMode client:visible />
+  </div>
 </nav>
