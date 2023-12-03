@@ -1,5 +1,25 @@
-<div>
-  ASIDE
+---
+import Profile from "./Profile.astro";
 
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti sunt itaque blanditiis soluta modi explicabo, sapiente ad quia facilis vero, unde odio ullam sit, impedit fugiat provident pariatur sed non! Odit quis consequuntur cum dolor minima optio aliquid porro nobis, eum vero nihil a rerum asperiores ducimus, molestias enim earum sed saepe repudiandae excepturi? Commodi vitae officia iure iusto repellat aperiam alias quibusdam, eligendi, quam, tempore esse minima ea ipsum sequi tenetur ad distinctio. A, assumenda aspernatur excepturi deserunt illum sequi nemo hic, beatae voluptate animi quae. Vero cum suscipit aliquid aperiam, voluptatem consequatur ipsum commodi beatae blanditiis quaerat fuga dolorem quos deserunt placeat rerum quibusdam ullam? Libero aliquid recusandae nesciunt nisi reiciendis, soluta eligendi facilis voluptatibus voluptas corrupti perferendis architecto? Dolorum nulla officia laborum explicabo magni. Repudiandae delectus ea facilis quia illo non soluta quidem ipsam praesentium, enim officiis asperiores dolorem labore doloribus dolores nostrum veritatis exercitationem vel suscipit quisquam est accusantium eveniet fugiat. Alias nobis minus, explicabo corrupti maxime minima officiis recusandae reiciendis tenetur non, accusantium eligendi voluptatibus dicta ratione. Dolorum ullam quae aspernatur natus. Atque mollitia similique harum delectus reprehenderit alias, vero maxime nulla ipsum odit aut facere quaerat repudiandae libero? Quasi, cumque at. Ab, dignissimos alias!</p>
+---
+
+<div id="aside" class="flex flex-col h-[90vh] gap-2 w-full">
+  <div class="[grid-area:profile]">
+    <Profile />
+  </div>
+
+  <div class="[grid-area:main] w-full rounded-lg bg-zinc-800 overflow-y-auto p-3">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ut, veritatis, autem expedita ad vitae minus totam ea voluptate laborum ipsum quasi quod debitis, dolor placeat! Dolorem quidem asperiores consequuntur nam maiores enim, modi exercitationem nesciunt nihil accusamus, nulla atque in libero fuga eligendi. Ex, enim voluptas quos obcaecati maiores ipsum repudiandae perferendis mollitia adipisci commodi nihil provident odit, deserunt totam. Ut unde molestias quas sit eligendi, ducimus iste, temporibus voluptatem laborum, placeat totam! Omnis culpa hic officiis numquam voluptate ipsam quae, sed optio explicabo libero molestiae architecto deserunt placeat? Fugiat adipisci, quae autem voluptate sit cum consequatur sapiente blanditiis ex perferendis reprehenderit minus ipsa ad recusandae natus illum ipsum nemo, minima cumque fugit vitae! Soluta nam porro sit accusamus ipsa eius, excepturi nisi, ut atque, deserunt ratione praesentium dolores! Dolor, beatae eligendi a asperiores ea excepturi, possimus quidem dicta nostrum illo quam esse explicabo laborum distinctio alias error dolore voluptates at voluptatum quibusdam veritatis ipsum saepe magnam? Assumenda doloremque harum voluptates enim, necessitatibus dicta officia voluptas mollitia maxime voluptatum soluta provident magni libero sint. Voluptates, cupiditate rerum sint praesentium accusantium fugiat, eligendi possimus ut nesciunt laborum enim repellendus! Excepturi accusamus animi consequuntur quaerat? Saepe recusandae inventore architecto magni iusto?
+  </div>
 </div>
+
+<style>
+  #aside {
+    display: grid;
+    grid-template-areas:
+    "profile"
+    "main"
+    "main";
+    grid-template-rows: 10vh 1fr;
+  }
+</style>
