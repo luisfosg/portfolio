@@ -15,6 +15,7 @@
     "@iconify-json/material-symbols": "1.1.65",
     "@iconify-json/mingcute": "1.1.13",
     "@iconify-json/ph": "1.1.8",
+    "@iconify-json/streamline": "1.1.7",
     "@iconify-json/tabler": "1.1.100",
     "@iconify/tailwind": "0.1.4",
     "astro": "3.6.4",

@@ -1,6 +1,6 @@
 ---
+import MenuItem from "./MenuItem.astro";
 import Profile from "./Profile.astro";
-
 ---
 
 <div id="aside" class="flex flex-col h-[90vh] gap-2 w-full">
@@ -8,8 +8,18 @@ import Profile from "./Profile.astro";
     <Profile />
   </div>
 
-  <div class="[grid-area:main] w-full rounded-lg bg-zinc-800 overflow-y-auto p-3">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ut, veritatis, autem expedita ad vitae minus totam ea voluptate laborum ipsum quasi quod debitis, dolor placeat! Dolorem quidem asperiores consequuntur nam maiores enim, modi exercitationem nesciunt nihil accusamus, nulla atque in libero fuga eligendi. Ex, enim voluptas quos obcaecati maiores ipsum repudiandae perferendis mollitia adipisci commodi nihil provident odit, deserunt totam. Ut unde molestias quas sit eligendi, ducimus iste, temporibus voluptatem laborum, placeat totam! Omnis culpa hic officiis numquam voluptate ipsam quae, sed optio explicabo libero molestiae architecto deserunt placeat? Fugiat adipisci, quae autem voluptate sit cum consequatur sapiente blanditiis ex perferendis reprehenderit minus ipsa ad recusandae natus illum ipsum nemo, minima cumque fugit vitae! Soluta nam porro sit accusamus ipsa eius, excepturi nisi, ut atque, deserunt ratione praesentium dolores! Dolor, beatae eligendi a asperiores ea excepturi, possimus quidem dicta nostrum illo quam esse explicabo laborum distinctio alias error dolore voluptates at voluptatum quibusdam veritatis ipsum saepe magnam? Assumenda doloremque harum voluptates enim, necessitatibus dicta officia voluptas mollitia maxime voluptatum soluta provident magni libero sint. Voluptates, cupiditate rerum sint praesentium accusantium fugiat, eligendi possimus ut nesciunt laborum enim repellendus! Excepturi accusamus animi consequuntur quaerat? Saepe recusandae inventore architecto magni iusto?
+  <div class="[grid-area:main] w-full rounded-lg bg-zinc-800 overflow-y-auto">
+    <ul class="p-2">
+      <MenuItem>
+        <span class="text-2xl icon-[material-symbols--home-outline-rounded]" />
+        Inicio
+      </MenuItem>
+
+      <MenuItem>
+        <span class="text-lg mr-1 icon-[streamline--application-add]" />
+        Proyectos
+      </MenuItem>
+    </ul>
   </div>
 </div>
 
