@@ -7,6 +7,7 @@ type Link = {
   icon: string;
   iconSize?: string;
   link: string;
+  samePage?: boolean
   name: string,
   color?: string,
   username: string;
@@ -36,6 +37,15 @@ const links: Link[] = [
     name: 'Twitter',
     background: 'bg-black/50',
     username: 'luisfosg_',
+  },
+  {
+    icon: 'icon-[mdi-light--email]',
+    iconSize: 'text-xl',
+    link: 'mailto:luisfosgdev@gmail.com',
+    samePage: true,
+    name: 'Correo',
+    background: 'bg-white/30',
+    username: 'luisfosgdev@gmail.com',
   }
 ]
 ---
@@ -45,26 +55,38 @@ const links: Link[] = [
     <Image class="ml-2 border-8 border-zinc-400 bg-white/20 rounded-full" width="180" height="180" src="/images/avatar.png" alt="luisfosg" />
     <h1 class="mt-5 text-xl text-white/70 italic font-thin uppercase">Luis Osorio</h1>
 
-    <section class="w-3/4 grid grid-cols-3 gap-3 mt-5">
-      {
-        links.map(link => {
-          return (
-            <>
-              <a href={link.link} data-tooltip-placement="bottom" data-tooltip-target={`tooltip-${link.name}`} target="_blank"
-                class={`${link.background} ${link.color || 'text-white'} hover:bg-white/20 hover:text-white cursor-pointer w-full h-12 flex flex-row items-center justify-center rounded-lg`}>
-                <span class={`${link.iconSize || 'text-2xl'} ${link.icon}`} role="img" aria-hidden="true" />
-                <span class="ml-1 text-md font-normal">{link.name}</span>
-              </a>
+    <section class="w-3/4 mx-auto grid lg:grid-cols-3 gap-3 mt-5">
+      {links.map(link => (
+        <div class="relative">
+          <a
+            href={link.link}
+            data-tooltip-placement="bottom"
+            data-tooltip-target={`tooltip-${link.name}`}
+            target={link.samePage ? '_self' : '_blank'}
+            class={`${
+              link.background
+            } ${link.color || 'text-white'} hover:bg-white/20 hover:text-white cursor-pointer w-full h-12 flex flex-row items-center justify-center rounded-lg`}
+          >
+            <span
+              class={`${link.iconSize || 'text-2xl'} ${link.icon}`}
+              role="img"
+              aria-hidden="true"
+            />
+            <span class="ml-1 text-md font-normal">{link.name}</span>
+          </a>
 
-              <div id={`tooltip-${link.name}`} role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-slate-600 transition-opacity duration-300 bg-white/90 rounded-lg shadow-sm opacity-0 tooltip">
-                {link.username}
-                <div class="tooltip-arrow" data-popper-arrow></div>
-              </div>
-            </>
-          )
-        })
-      }
+          <div
+            id={`tooltip-${link.name}`}
+            role="tooltip"
+            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-slate-600 transition-opacity duration-300 bg-white/90 rounded-lg shadow-sm opacity-0 tooltip"
+          >
+            {link.username}
+            <div class="tooltip-arrow" data-popper-arrow />
+          </div>
+        </div>
+      ))}
     </section>
+
   </main>
 </Layout>
 

@@ -12,6 +12,7 @@ export default {
 	},
 	plugins: [
     addDynamicIconSelectors(),
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
+    require('tailwindcss-animated')
   ],
 }
