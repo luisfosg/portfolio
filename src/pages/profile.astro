@@ -2,55 +2,10 @@
 import { Image } from 'astro:assets';
 
 import Layout from '../layouts/Layout.astro';
-
-type Link = {
-  icon: string;
-  iconSize?: string;
-  link: string;
-  samePage?: boolean
-  name: string,
-  color?: string,
-  username: string;
-  background: string,
-}
-
-const links: Link[] = [
-  {
-    icon: 'icon-[ph--github-logo]',
-    link: 'https://github.com/luisfosg',
-    name: 'GitHub',
-    background: 'bg-black/50',
-    username: 'luisfosg',
-  },
-  {
-    icon: 'icon-[bi--linkedin]',
-    iconSize: 'text-lg',
-    link: 'https://www.linkedin.com/in/luisfosg/',
-    name: 'LinkedIn',
-    background: 'bg-blue-500/20',
-    username: 'luisfosg',
-  },
-  {
-    icon: 'icon-[akar-icons--x-fill]',
-    iconSize: 'text-lg',
-    link: 'https://twitter.com/luisfosg_',
-    name: 'Twitter',
-    background: 'bg-black/50',
-    username: 'luisfosg_',
-  },
-  {
-    icon: 'icon-[mdi-light--email]',
-    iconSize: 'text-xl',
-    link: 'mailto:luisfosgdev@gmail.com',
-    samePage: true,
-    name: 'Correo',
-    background: 'bg-white/30',
-    username: 'luisfosgdev@gmail.com',
-  }
-]
+import { links } from '../lib/link-tree'
 ---
 
-<Layout color='bg-gradient-to-r from-gray-800 via-gray-900 to-gray-900' title="Luis Osorio | luisfosg">
+<Layout color='bg-gradient-to-r from-gray-900/90 via-gray-900 to-gray-800' title="Luis Osorio | luisfosg">
   <main class="flex h-full flex-col items-center justify-center">
     <Image class="ml-2 border-8 border-zinc-400 bg-white/20 rounded-full" width="180" height="180" src="/images/avatar.png" alt="luisfosg" />
     <h1 class="mt-5 text-xl text-white/70 italic font-thin uppercase">Luis Osorio</h1>
