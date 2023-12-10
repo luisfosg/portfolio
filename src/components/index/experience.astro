@@ -1,46 +1,36 @@
+---
+import { experiences } from '../../lib/experience'
+---
+
 <section class="w-3/4 mb-20 flex flex-col justify-center items-center">
   <h2 class="font-bold text-center text-white/90 text-2xl">Trazabilidad & Experiencia</h2>
-  <span class="text-center mb-14 mt-2 text-white/40 text-base leading-5">Anexo a continuación la experiencia laboral adquirida en mis 3 años</span>
+  <span class="text-center mb-14 mt-2 text-white/40 text-base leading-5">Destaco a continuación la experiencia laboral adquirida como <i>DEV</i></span>
 
   <ol class="relative border-s border-gray-200 dark:border-gray-700">
-    <li class="mb-10 ms-6">
-        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-            <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-            </svg>
-        </span>
+    {
+      experiences.map(experience => (
+        <li class="mb-10 ms-6">
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-black rounded-full -start-3 ring-8 ring-white/20">
+              <span class={experience.icon} role="img" aria-hidden="true" />
+            </span>
 
-        <h3 class="flex items-center mb-1 text-lg font-semibold text-white/90">Experiencia 1<span class="text-sm font-medium me-2 px-2.5 py-0.5 rounded bg-blue-900 text-blue-300 ms-3">Latest</span></h3>
-        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">January 13th, 2022</time>
-        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus aut impedit harum error ad quibusdam molestiae suscipit sint autem magnam, commodi, illum neque libero similique culpa corrupti. Impedit, perspiciatis incidunt?</p>
-        <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700">
-          <svg class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
-            <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
-          </svg> Ver Sitio Web
-        </a>
-    </li>
-    <li class="mb-10 ms-6">
-        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-            <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-            </svg>
-        </span>
+            <h3 class="flex flex-col md:flex-row items-end md:items-center mb-2 md:mb-1 ml-2 text-lg font-semibold text-white/90">
+              <span class="w-full">{experience.name}</span>
+              {experience.isLasted ? <span class="text-xs md:text-sm font-medium md:me-2 px-2.5 py-0.5 rounded bg-blue-900 text-blue-300 md:ms-3">Actualmente</span> : <div></div>}
+            </h3>
 
-        <h3 class="mb-1 text-lg font-semibold text-white/90">Experiencia 2</h3>
-        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">December 7th, 2021</time>
-        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus aut impedit harum error ad quibusdam molestiae suscipit sint autem magnam, commodi, illum neque libero similique culpa corrupti. Impedit, perspiciatis incidunt?</p>
-    </li>
-    <li class="ms-6">
-        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-            <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-            </svg>
-        </span>
+            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{experience.date}</time>
+            <p class="mb-4 text-sm font-normal text-gray-500 dark:text-gray-400">{experience.description}</p>
 
-        <h3 class="mb-1 text-lg font-semibold text-white/90">Experiencia 3</h3>
-        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">December 2nd, 2021</time>
-        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus aut impedit harum error ad quibusdam molestiae suscipit sint autem magnam, commodi, illum neque libero similique culpa corrupti. Impedit, perspiciatis incidunt?</p>
-    </li>
+            {
+              experience.link && (
+                <a href={experience.link.url} target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700">
+                  <span class={experience.link.icon} role="img" aria-hidden="true" /> <span class="ml-2">{experience.link.name}</span>
+                </a>
+              )
+            }
+        </li>
+      ))
+    }
   </ol>
 </section>
