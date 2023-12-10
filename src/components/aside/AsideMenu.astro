@@ -1,6 +1,8 @@
 ---
 import MenuItem from "./MenuItem.astro";
 import Profile from "./Profile.astro";
+
+import { menuItems } from '../../lib/menu'
 ---
 
 <div id="aside" class="flex flex-col h-[90vh] gap-2 w-full">
@@ -10,15 +12,13 @@ import Profile from "./Profile.astro";
 
   <div class="[grid-area:main] w-full rounded-lg bg-zinc-900 overflow-y-auto">
     <ul class="p-2">
-      <MenuItem  href="/">
-        <span class="text-2xl icon-[material-symbols--home-outline-rounded]" />
-        Inicio
-      </MenuItem>
-
-      <MenuItem href="/project">
-        <span class="text-lg mr-1 icon-[streamline--application-add]" />
-        Proyectos
-      </MenuItem>
+      {
+        menuItems.map(menu => (
+          <MenuItem href={menu.link}>
+            <span class={menu.icon} /> {menu.name}
+          </MenuItem>
+        ))
+      }
     </ul>
   </div>
 </div>
