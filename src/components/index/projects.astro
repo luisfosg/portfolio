@@ -1,0 +1,40 @@
+---
+import { projects } from '@lib/projects'
+
+const maxProjects = projects.slice(0, 6);
+---
+
+<section class="w-3/4 mb-48 flex flex-col justify-center items-center">
+  <h2 class="font-bold text-center text-white/90 text-2xl">Proyectos</h2>
+  <span class="text-center mt-2 text-white/40 text-base leading-5">Esta es una pequeña lista de proyectos, posiblemente alguno tenga acceso restringido por temas de seguridad ^-^ </span>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
+    {
+      maxProjects.map(project => (
+        <a href={`project/${project.id}`}>
+            <section class="relative cursor-pointer text-black/70 w-full bg-black rounded-lg h-56 text-lg project-container">
+            <div class="absolute select-none top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full project-info">
+              <p class="text-white/70 leading-4 font-bold px-2">{project.name}</p>
+            </div>
+
+            <img transition:name={`project-${project.id}`} class="w-full transition duration-300 h-full hover:blur-sm object-cover rounded-lg opacity-50 hover:opacity-30" src={project.image} alt={project.name} />
+          </section>
+        </a>
+      ))
+    }
+  </div>
+
+  <a href="/project" class="text-white mt-11 bg-gradient-to-br from-purple-800 to-blue-900 hover:bg-gradient-to-bl font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Ver más</a>
+</section>
+
+<style>
+  .project-info {
+    display: none;
+    opacity: 0;
+  }
+
+  .project-container:hover .project-info {
+    display: block;
+    opacity: 1;
+  }
+</style>

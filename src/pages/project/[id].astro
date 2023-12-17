@@ -1,0 +1,21 @@
+---
+import type { GetStaticPaths } from "astro";
+
+import Layout from '@layouts/Layout.astro';
+import { projects } from '@lib/projects'
+
+const { id } = Astro.params
+const project = projects.find(project => project.id === id)
+
+export const getStaticPaths = (() => {
+  return projects.map(project => ({
+    params: {
+      id: project.id
+    }
+  }));
+}) satisfies GetStaticPaths;
+---
+
+<Layout title="Luis Osorio | luisfosg">
+  <img transition:name={`project-${project?.id}`} class="w-full rounded-lg" src={project?.image} alt={project?.name} />
+</Layout>

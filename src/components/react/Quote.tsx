@@ -1,4 +1,4 @@
-import { getRandomQuote } from '../../lib/quotes'
+import { getRandomQuote } from '@lib/quotes'
 
 const Quote = () => {
   const quote = getRandomQuote()

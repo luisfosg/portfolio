@@ -1,6 +1,8 @@
 ---
-import AsideMenu from '../components/aside/AsideMenu.astro';
-import Footer from '../components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
+
+import AsideMenu from '@components/aside/AsideMenu.astro';
+import Footer from '@components/Footer.astro';
 
 interface Props {
 	title: string;
@@ -23,6 +25,8 @@ const { title, color } = Astro.props;
 
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+    <ViewTransitions fallback='none'></ViewTransitions>
 	</head>
 	<body>
 		<div id="app" class="relative h-screen p-2 gap-2">

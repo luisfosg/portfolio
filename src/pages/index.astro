@@ -1,15 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '@layouts/Layout.astro';
 
-import Introduction from '../components/index/introduction.astro'
-import Tecnologies from '../components/index/tecnologies.astro'
-import Experience from '../components/index/experience.astro'
+import Introduction from '@components/index/introduction.astro'
+import Tecnologies from '@components/index/tecnologies.astro'
+import Experience from '@components/index/experience.astro'
+import Projects from '@components/index/projects.astro';
 ---
 
 <Layout color="bg-gradient-to-r from-black via-white/[0.05] to-white/[0.08]" title="Luis Osorio | luisfosg">
   <main class="flex flex-col w-full justify-center items-center">
     <Introduction />
     <Tecnologies />
+    <Projects />
     <Experience />
   </main>
 </Layout>
