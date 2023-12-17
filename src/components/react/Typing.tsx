@@ -1,3 +1,4 @@
+import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
 type Props = {
@@ -6,7 +7,7 @@ type Props = {
   classStyle: string;
 }
 
-const Typing = ({ items, message, classStyle }: Props) => {
+const Typing: React.FC<Props> = ({ items, message, classStyle }: Props) => {
   return (
     <span className={classStyle}>
       <TypeAnimation
