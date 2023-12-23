@@ -14,7 +14,7 @@ const Typing: React.FC<Props> = ({ items, message, classStyle }: Props) => {
         wrapper="span"
         speed={10}
         repeat={Infinity}
-      /> <span>{message}</span>
+      /><span> {message}</span>
     </span>
   )
 }
