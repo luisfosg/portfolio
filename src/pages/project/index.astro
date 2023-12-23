@@ -1,10 +1,29 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import Proyect from '@components/Proyect.astro';
+
+import { projects } from '@lib/projects'
 ---
 
-<Layout title="Luis Osorio | luisfosg">
-  Proyectos :D
+<Layout color="bg-gradient-to-r from-black via-white/[0.05] to-white/[0.08]" title="Luis Osorio | luisfosg">
+  <main class="flex flex-col justify-center mt-10">
+    <h2 class="font-bold text-center text-white/90 text-2xl">Proyectos</h2>
+    <span class="text-center mt-2 text-white/40 text-base leading-5">Esta es una pequeña lista de proyectos, posiblemente alguno tenga acceso restringido por temas de seguridad ^-^ </span>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
+      { projects.map(project => <Proyect project={project} />) }
+    </div>
+  </main>
 </Layout>
 
 <style>
+  .project-info {
+    display: none;
+    opacity: 0;
+  }
+
+  .project-container:hover .project-info {
+    display: block;
+    opacity: 1;
+  }
 </style>
