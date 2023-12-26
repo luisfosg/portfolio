@@ -33,6 +33,7 @@
     "@iconify-json/material-symbols": "1.1.68",
     "@iconify-json/mdi-light": "1.1.10",
     "@iconify-json/ph": "1.1.9",
+    "@iconify-json/simple-icons": "1.1.85",
     "@iconify-json/streamline": "1.1.8",
     "@iconify-json/tabler": "1.1.102",
     "@types/react": "18.2.45",
