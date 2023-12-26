@@ -51,8 +51,14 @@ const { title, color } = Astro.props;
     grid-template-areas:
     "main main main"
     "footer footer footer";
-    grid-template-columns: 27vw 1fr;
+    grid-template-columns: 14rem 1fr;
     grid-template-rows: 1fr auto;
+  }
+
+  @media (min-width: 1024px) {
+    #app {
+      grid-template-columns: 20rem 1fr;
+    }
   }
 
   @media (min-width: 768px) {
