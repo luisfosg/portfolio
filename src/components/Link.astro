@@ -1,0 +1,29 @@
+---
+import type { Link } from '@lib/link-tree';
+
+interface Props {
+	link: Link;
+}
+
+const { link } = Astro.props;
+---
+
+<a
+  href={link.link}
+  target={link.samePage ? '_self' : '_blank'}
+  class={`cursor-pointer bg-black/30 hover:bg-white/20 text-white w-full h-12 flex flex-row items-center justify-between rounded-full`}
+>
+  <div class={`ml-2 w-9 h-9 flex justify-center items-center rounded-full ${link.background} border-black`}>
+    <span
+      class={`${link.iconSize || 'text-2xl'} ${link.icon} ${link.color || 'text-white'}`}
+      role="img"
+      aria-hidden="true"
+    />
+  </div>
+
+  <div class="w-20 text-center">
+    <span class="ml-1 text-md truncate font-thin">{link.name}</span>
+  </div>
+
+  <div class="w-11"></div>
+</a>
