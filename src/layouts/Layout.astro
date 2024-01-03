@@ -35,7 +35,7 @@ const { title, color } = Astro.props;
         <AsideMenu />
       </aside>
 
-      <main class={`[grid-area:main] rounded-lg p-5 ${color || 'bg-zinc-900'} overflow-y-auto`}>
+      <main class={`[grid-area:main] rounded-lg ${color || 'bg-zinc-900'} overflow-y-auto`}>
         <slot></slot>
       </main>
 
