@@ -3,13 +3,13 @@ import { techs } from '@lib/tech'
 ---
 
 <section class="w-3/4 mb-48 flex flex-col justify-center items-center">
-  <h2 class="font-bold text-center text-white/90 text-2xl">Habilidades & Tecnologías</h2>
-  <span class="text-center mt-2 text-white/40 text-base leading-5">Te comparto las tecnologías más recurrentes que dispongo para realizar mis proyectos</span>
+  <h2 class="font-bold text-center dark:text-white/90 text-2xl">Habilidades & Tecnologías</h2>
+  <span class="text-center mt-2 dark:text-white/40 text-base leading-5">Te comparto las tecnologías más recurrentes que dispongo para realizar mis proyectos</span>
 
   <div class="flex flex-wrap justify-center gap-2 mt-12">
     {
       techs.map(tech => (
-        <div class="text-black/70 text-lg px-2 rounded-lg bg-white/80 hover:bg-white/70">{tech}</div>
+        <div class="dark:text-black/70 text-lg px-2 rounded-lg text-white bg-black hover:bg-black/80 dark:bg-white/80 dark:hover:bg-white/70">{tech}</div>
       ))
     }
   </div>
