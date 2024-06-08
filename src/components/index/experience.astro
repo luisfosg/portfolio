@@ -3,20 +3,20 @@ import { experiences } from '@lib/experience'
 ---
 
 <section class="w-3/4 mb-20 flex flex-col justify-center items-center">
-  <h2 class="font-bold text-center text-white/90 text-2xl">Trazabilidad & Experiencia</h2>
-  <span class="text-center mb-14 mt-2 text-white/40 text-base leading-5">Destaco a continuación la experiencia laboral adquirida como <i>DEV</i></span>
+  <h2 class="font-bold text-center dark:text-white/90 text-2xl">Trazabilidad & Experiencia</h2>
+  <span class="text-center mb-14 mt-2 dark:text-white/40 text-base leading-5">Destaco a continuación la experiencia laboral adquirida como <i>DEV</i></span>
 
-  <ol class="relative border-s border-gray-200 dark:border-gray-700">
+  <ol class="relative border-s border-gray-800 dark:border-gray-700">
     {
       experiences.map(experience => (
         <li class="mb-10 ms-6">
-            <span class="absolute flex items-center justify-center w-6 h-6 bg-black rounded-full -start-3 ring-8 ring-white/20">
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-black rounded-full -start-3 ring-8 ring-black/30 dark:ring-white/20">
               <span class={experience.icon} role="img" aria-hidden="true" />
             </span>
 
-            <h3 class="flex flex-col md:flex-row items-end md:items-center mb-2 md:mb-1 ml-2 text-lg font-semibold text-white/90">
+            <h3 class="flex flex-col md:flex-row items-end md:items-center mb-2 md:mb-1 ml-2 text-lg font-semibold dark:text-white/90">
               <span class="w-full">{experience.name}</span>
-              {experience.isLasted ? <span class="text-xs md:text-sm font-medium md:me-2 px-2.5 py-0.5 rounded bg-blue-900 text-blue-300 md:ms-3">Actualmente</span> : <div></div>}
+              {experience.isLasted ? <span class="text-xs md:text-sm font-medium md:me-2 px-2.5 py-0.5 rounded bg-blue-900 dark:text-blue-300 text-white md:ms-3">Actualmente</span> : <div></div>}
             </h3>
 
             <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{experience.date}</time>
@@ -24,7 +24,7 @@ import { experiences } from '@lib/experience'
 
             {
               experience.link && (
-                <a href={experience.link.url} target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700">
+                <a href={experience.link.url} target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg bg-gray-800 text-white dark:text-gray-400 border-gray-600 dark:hover:text-white hover:bg-gray-700">
                   <span class={experience.link.icon} role="img" aria-hidden="true" /> <span class="ml-2">{experience.link.name}</span>
                 </a>
               )

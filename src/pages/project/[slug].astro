@@ -17,7 +17,7 @@ export const getStaticPaths = (() => {
 }) satisfies GetStaticPaths;
 ---
 
-<Layout color="bg-gradient-to-r from-black via-white/[0.05] to-white/[0.08]" title="Luis Osorio | luisfosg">
+<Layout color="bg-gradient-to-r from-white via-slate-50 to-slate-200 dark:from-black dark:via-white/[0.05] dark:to-white/[0.08]" title="Luis Osorio | luisfosg">
   <main class="w-full h-full">
     <header class="relative w-full rounded-lg h-60">
       <img transition:name={`project-${project?.id}`} class="rounded-lg object-cover w-full h-full" src={project?.image} alt={project?.name} />
@@ -38,23 +38,23 @@ export const getStaticPaths = (() => {
         }
       </div>
 
-      <section class="flex justify-center items-center bg-white/50 text-gray-950 p-5 rounded-xl m-5">
+      <section class="flex justify-center items-center bg-black dark:bg-white/50 text-white dark:text-gray-950 p-5 rounded-xl m-5">
         <HtmlDisplay htmlCode={project!.description} />
       </section>
 
-      <section class="flex justify-center items-center text-white bg-red-300/20 p-5 rounded-xl m-5">
+      <section class="flex justify-center items-center dark:text-white bg-red-300 dark:bg-red-300/20 p-5 rounded-xl m-5">
         {project!.alert}
       </section>
 
       <section class="flex gap-5 justify-center items-center p-5 rounded-xl m-5">
         {project?.link && (
-          <a target="_blank" href={project?.link} class="bg-white/50 hover:bg-white/80 w-10 h-10 flex justify-center items-center text-black p-2 rounded-full">
+          <a target="_blank" href={project?.link} class="dark:bg-white/50 text-white hover:bg-black/40 bg-black/80 dark:hover:bg-white/80 w-10 h-10 flex justify-center items-center dark:text-black p-2 rounded-full">
             <span class="icon-[ph--link-simple-duotone] text-xl" role="img" aria-hidden="true" />
           </a>
         )}
 
         {project?.repository && (
-          <a target="_blank" href={project?.repository} class="bg-white/50 hover:bg-white/80 w-10 h-10 flex justify-center items-center text-black p-2 rounded-full">
+          <a target="_blank" href={project?.repository} class="dark:bg-white/50 text-white hover:bg-black/40 bg-black/80 dark:hover:bg-white/80 w-10 h-10 flex justify-center items-center dark:text-black p-2 rounded-full">
             <span class="icon-[mdi--github] text-4xl" role="img" aria-hidden="true" />
           </a>
         )}

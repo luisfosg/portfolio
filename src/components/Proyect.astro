@@ -9,9 +9,9 @@ const { project } = Astro.props;
 ---
 
 <a href={`project/${project.slug}`}>
-  <section class="relative cursor-pointer text-black/70 w-full rounded-lg h-56 text-lg project-container">
+  <section class="relative cursor-pointer border-2 dark:border-0 text-black/70 w-full rounded-lg h-56 text-lg project-container">
     <div class="absolute select-none top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full project-info">
-      <p class="text-white/70 leading-4 font-bold px-2">{project.name}</p>
+      <p class="dark:text-white/70 leading-4 font-bold px-2">{project.name}</p>
     </div>
 
     <img transition:name={`project-${project.id}`} class="w-full transition duration-300 h-full hover:blur-sm object-cover rounded-lg opacity-80 hover:opacity-30" src={project.image} alt={project.name} />
