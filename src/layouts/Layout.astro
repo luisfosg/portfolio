@@ -53,7 +53,7 @@ const { title, color } = Astro.props;
       "aside aside aside"
       "footer footer footer";
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: 1fr;
   }
 
   #app:not(.menu-open) {
@@ -62,12 +62,16 @@ const { title, color } = Astro.props;
       "main main main"
       "footer footer footer";
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: 1fr;
   }
 
   #app:not(.menu-open) aside {
     display: none;
   }
+
+  #app.menu-open main {
+      display: none;
+    }
 
   @media (min-width: 768px) {
     #app.menu-open {
@@ -75,6 +79,10 @@ const { title, color } = Astro.props;
         "aside main main"
         "footer footer footer";
       grid-template-columns: 14rem 1fr;
+    }
+
+    #app.menu-open main {
+      display: block;
     }
   }
 </style>
