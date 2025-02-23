@@ -1,3 +1,5 @@
+'use client';
+
 import { getRandomQuote } from '@lib/quotes';
 
 const Quote: React.FC = () => {

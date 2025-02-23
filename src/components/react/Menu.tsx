@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState, useCallback } from "react";
 
 type Props = {};
@@ -7,7 +9,12 @@ const Menu: React.FC<Props> = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleMenu = useCallback(() => {
-    setIsOpenMenu(prevState => !prevState);
+    setIsOpenMenu(prevState => {
+      const newState = !prevState;
+      localStorage.setItem("isOpenMenu", newState.toString());
+      document.getElementById("app")?.classList.toggle("menu-open", newState);
+      return newState;
+    });
   }, []);
 
   const toggleDarkMode = useCallback(() => {
@@ -25,6 +32,10 @@ const Menu: React.FC<Props> = () => {
     const isDark = storedTheme === "dark";
     setIsDarkMode(isDark);
     document.documentElement.classList.toggle("dark", isDark);
+
+    const savedIsOpen = localStorage.getItem("isOpenMenu") === "true";
+    setIsOpenMenu(savedIsOpen);
+    document.getElementById("app")?.classList.toggle("menu-open", savedIsOpen);
   }, []);
 
   return (
