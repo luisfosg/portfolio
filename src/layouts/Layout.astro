@@ -31,7 +31,7 @@ const { title, color } = Astro.props;
 	</head>
 	<body class="dark:bg-black dark:text-white bg-white">
 		<div id="app" class="relative h-screen p-2 gap-2">
-      <aside class="hidden md:block [grid-area:aside] h-full rounded-lg">
+      <aside class="[grid-area:aside] h-full rounded-lg">
         <AsideMenu />
       </aside>
 
@@ -47,26 +47,34 @@ const { title, color } = Astro.props;
 </html>
 
 <style>
-  #app {
+  #app.menu-open {
     display: grid;
     grid-template-areas:
-    "main main main"
-    "footer footer footer";
-    grid-template-columns: 14rem 1fr;
+      "aside aside aside"
+      "footer footer footer";
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
   }
 
-  @media (min-width: 1024px) {
-    #app {
-      grid-template-columns: 20rem 1fr;
-    }
+  #app:not(.menu-open) {
+    display: grid;
+    grid-template-areas:
+      "main main main"
+      "footer footer footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  #app:not(.menu-open) aside {
+    display: none;
   }
 
   @media (min-width: 768px) {
-    #app {
+    #app.menu-open {
       grid-template-areas:
-      "aside main main"
-      "footer footer footer";
+        "aside main main"
+        "footer footer footer";
+      grid-template-columns: 14rem 1fr;
     }
   }
 </style>
