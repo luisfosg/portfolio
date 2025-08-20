@@ -17,7 +17,7 @@
     "@iconify/tailwind": "1.1.3",
     "@sentry/astro": "8.36.0",
     "@spotlightjs/astro": "2.1.11",
-    "astro": "5.3.0",
+    "astro": "5.13.1",
     "flowbite": "2.5.2",
     "react": "18.3.1",
     "react-dom": "18.3.1",
