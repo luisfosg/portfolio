@@ -13,12 +13,24 @@ type Experience = {
 
 export const experiences: Experience[] = [
   {
-    icon: 'icon-[fxemoji--lowerleftpaintbrush]',
-    name: 'Alpes Solutions S.A.S - Outsourcing Davinci',
+    icon: 'icon-[fxemoji--largebluecircle]',
+    name: 'Outsourcing in Davinci Technologies S.A.S',
     date: '1 Enero 2023',
     description: `
-      Involucrado en diversos proyectos de la empresa, trabajando en equipo, cumpliendo con asignaciones y aportando ideas que ayudan en el desarrollo ágil y cumplimiento satisfactorio de las actividades.
+     Gestión y desarrollo de proyectos bajo SCRUM, participando en todo el ciclo de vida del software y diseñando soluciones enfocadas en calidad, experiencia de usuario y entrega oportuna de MVPs en colaboración con equipos multidisciplinarios.
     `,
+    link: {
+      name: 'Visitar Página',
+      icon: 'icon-[ph--link-duotone]',
+      url: 'https://davinci.tech/'
+    },
+    isLasted: true
+  },
+  {
+    icon: 'icon-[fxemoji--briefcase]',
+    name: 'Freelance',
+    date: '10 Enero 2023',
+    description: 'Administración y mantenimiento de sitios web y servidores VPS, implementando mejoras continuas para optimizar rendimiento y experiencia de usuario, y resolviendo incidencias técnicas a nivel de desarrollo y configuración.',
     isLasted: true
   },
   {
