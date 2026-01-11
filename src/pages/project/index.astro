@@ -1,6 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Proyect from '@components/Proyect.astro';
+import Project from '@components/Project.astro';
 
 import { projects } from '@lib/projects'
 ---
@@ -11,7 +11,7 @@ import { projects } from '@lib/projects'
     <span class="text-center mt-2 dark:text-white/40 text-base leading-5">Esta es una pequeña lista de proyectos, posiblemente alguno tenga acceso restringido por temas de seguridad ^-^ </span>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
-      { projects.map(project => <Proyect project={project} />) }
+      { projects.map(project => <Project project={project} />) }
     </div>
   </main>
 </Layout>
