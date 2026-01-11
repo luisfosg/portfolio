@@ -1,5 +1,5 @@
 ---
-import Proyect from '@components/Proyect.astro';
+import Project from '@components/Project.astro';
 import { projects } from '@lib/projects'
 
 const maxProjects = projects.slice(0, 6);
@@ -7,10 +7,10 @@ const maxProjects = projects.slice(0, 6);
 
 <section class="w-3/4 mb-48 flex flex-col justify-center items-center">
   <h2 class="font-bold text-center dark:text-white/90 text-2xl">Proyectos</h2>
-  <span class="text-center mt-2 dark:text-white/40 text-base leading-5">Esta es una pequeña lista de proyectos, posiblemente alguno tenga acceso restringido por temas de seguridad ^-^ </span>
+  <span class="text-center mt-2 dark:text-white/40 text-base leading-5">Esta es una pequeña lista de proyectos públicos</span>
 
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
-    { maxProjects.map(project => <Proyect project={project} />) }
+    { maxProjects.map(project => <Project project={project} />) }
   </div>
 
   <a href="/project" class="text-white mt-11 bg-gradient-to-br from-purple-800 to-blue-900 hover:bg-gradient-to-bl font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Ver más</a>
