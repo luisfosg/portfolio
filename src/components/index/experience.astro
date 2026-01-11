@@ -1,5 +1,34 @@
 ---
 import { experiences } from '@lib/experience'
+
+const formatDate = (iso: string) => {
+  if (!iso) return ''
+
+  const d = new Date(iso)
+
+  const formatted = new Intl.DateTimeFormat('es-ES', {
+    month: 'short',
+    year: 'numeric',
+  }).format(d)
+
+  return formatted.charAt(0).toUpperCase() + formatted.slice(1)
+}
+
+const getDuration = (startIso: string, endIso?: string) => {
+  const start = new Date(startIso)
+  const end = endIso ? new Date(endIso) : new Date()
+
+  let totalMonths = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth())
+  if (totalMonths < 0) totalMonths = 0
+
+  const years = Math.floor(totalMonths / 12)
+  const months = totalMonths % 12
+  const parts = []
+
+  if (years) parts.push(years + (years === 1 ? ' año' : ' años'))
+  if (months) parts.push(months + (months === 1 ? ' mes' : ' meses'))
+  return parts.length ? parts.join(', ') : '0 meses'
+}
 ---
 
 <section class="w-3/4 mb-10 flex flex-col justify-center items-center">
@@ -16,10 +45,12 @@ import { experiences } from '@lib/experience'
 
             <h3 class="flex flex-col md:flex-row items-end md:items-center mb-2 md:mb-1 ml-2 text-lg font-semibold dark:text-white/90">
               <span class="w-full">{experience.name}</span>
-              {experience.isLasted ? <span class="text-xs md:text-sm font-medium md:me-2 px-2.5 py-0.5 rounded bg-blue-900 dark:text-blue-300 text-white md:ms-3">Actualmente</span> : <div></div>}
+              {experience.isLasted ? <span class="text-xs md:text-sm font-medium md:me-2 px-2.5 py-0.5 rounded bg-blue-900 dark:text-blue-300 text-white md:ms-3">Activo</span> : <div></div>}
             </h3>
 
-            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{experience.date}</time>
+            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              {formatDate(experience.startDate)} - {experience.isLasted ? 'Actualmente' : formatDate(experience?.endDate || '')} {' · ' + getDuration(experience.startDate, experience.isLasted ? undefined : experience.endDate)}
+            </time>
             <p class="mb-4 text-sm font-normal text-gray-500 dark:text-gray-400">{experience.description}</p>
 
             {
