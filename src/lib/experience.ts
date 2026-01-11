@@ -15,6 +15,18 @@ type Experience = {
 export const experiences: Experience[] = [
   {
     icon: 'icon-[fxemoji--largebluecircle]',
+    name: 'Ciudadela',
+    startDate: '2026-01-12',
+    description: '',
+    isLasted: true,
+    link: {
+      name: 'Visitar Página',
+      icon: 'icon-[ph--link-duotone]',
+      url: 'https://ciudadela.eu/'
+    }
+  },
+  {
+    icon: 'icon-[fxemoji--briefcase]',
     name: 'Freelance',
     startDate: '2023-01-02',
     description: 'Administración y mantenimiento de sitios web y servidores VPS, implementando mejoras continuas para optimizar rendimiento y experiencia de usuario, y resolviendo incidencias técnicas a nivel de desarrollo y configuración.',
