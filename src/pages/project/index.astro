@@ -6,24 +6,26 @@ import { projects } from '@lib/projects'
 ---
 
 <Layout color="bg-gradient-to-r from-white via-slate-50 to-slate-200 dark:from-black dark:via-white/[0.05] dark:to-white/[0.08]" title="Luis Osorio | luisfosg">
-  <main class="flex flex-col justify-center mt-10 p-5">
-    <h2 class="font-bold text-center dark:text-white/90 text-2xl">Proyectos</h2>
-    <span class="text-center mt-2 dark:text-white/40 text-base leading-5">Esta es una pequeña lista de proyectos, posiblemente alguno tenga acceso restringido por temas de seguridad ^-^ </span>
+  <main class="max-w-7xl mx-auto px-6 py-16">
+    <header class="text-center mb-16 fade-in">
+      <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+        Proyectos
+      </h1>
+      <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+        Una colección curada de mi trabajo. Algunos proyectos pueden tener acceso restringido por razones de seguridad.
+      </p>
+    </header>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
-      { projects.map(project => <Project project={project} />) }
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      { projects.map((project, index) => (
+        <div class={`fade-in-up stagger-${Math.min(index + 1, 6)}`}>
+          <Project project={project} />
+        </div>
+      )) }
     </div>
   </main>
+
+  <style>
+    @import '../../styles/animations.css';
+  </style>
 </Layout>
-
-<style>
-  .project-info {
-    display: none;
-    opacity: 0;
-  }
-
-  .project-container:hover .project-info {
-    display: block;
-    opacity: 1;
-  }
-</style>

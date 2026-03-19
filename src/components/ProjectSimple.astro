@@ -1,0 +1,39 @@
+---
+import type { Project } from '@lib/projects';
+import Badge from './Badge.astro';
+
+interface Props {
+	project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<a href={`project/${project.slug}`} class="group block">
+  <article class="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 overflow-hidden transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-600 hover:shadow-sm">
+    {project.image && (
+      <div class="aspect-video overflow-hidden bg-slate-100 dark:bg-slate-900">
+        <img
+          src={project.image}
+          alt={project.name}
+          class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
+    )}
+
+    <div class="p-4">
+      <h3 class="text-lg font-medium text-slate-900 dark:text-white mb-2">
+        {project.name}
+      </h3>
+
+      <div class="flex flex-wrap gap-2">
+        {(project.technologies || []).slice(0, 2).map(tech => (
+          <Badge variant="subtle">{tech}</Badge>
+        ))}
+        {(project.technologies || []).length > 2 && (
+          <Badge variant="subtle">+{(project.technologies || []).length - 2}</Badge>
+        )}
+      </div>
+    </div>
+  </article>
+</a>

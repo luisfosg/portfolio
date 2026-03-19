@@ -1,0 +1,9 @@
+---
+interface Props {
+  htmlCode: string;
+}
+
+const { htmlCode } = Astro.props;
+---
+
+<div set:html={htmlCode} />

@@ -1,0 +1,18 @@
+---
+interface Props {
+  variant?: 'default' | 'subtle';
+  class?: string;
+}
+
+const { variant = 'default', class: className = '' } = Astro.props;
+
+const baseClasses = "inline-flex items-center px-2 py-1 rounded-md text-xs font-medium transition-colors duration-150";
+const variantClasses = {
+  default: "bg-white/90 dark:bg-white/80 text-slate-800 dark:text-slate-900 backdrop-blur-sm hover:bg-white dark:hover:bg-white/90",
+  subtle: "bg-slate-50 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700"
+};
+---
+
+<span class={`${baseClasses} ${variantClasses[variant]} ${className}`}>
+  <slot />
+</span>

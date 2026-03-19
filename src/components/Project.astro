@@ -1,5 +1,6 @@
 ---
 import type { Project } from '@lib/projects';
+import Badge from './Badge.astro';
 
 interface Props {
 	project: Project;
@@ -8,24 +9,42 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<a href={`project/${project.slug}`}>
-  <section class="relative cursor-pointer border-2 dark:border-0 text-black/70 w-full rounded-lg h-56 text-lg project-container">
-    <div class="absolute select-none top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full project-info">
-      <p class="dark:text-white/70 leading-4 font-bold px-2">{project.name}</p>
+<a href={`project/${project.slug}`} class="group block">
+  <article class="relative bg-white dark:bg-slate-950 rounded-lg border border-slate-200 dark:border-slate-800 overflow-hidden transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-700 hover:shadow-sm h-64">
+    {project.image && (
+      <div class="absolute inset-0">
+        <img
+          src={project.image}
+          alt={project.name}
+          class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+      </div>
+    )}
+
+    <div class="relative h-full">
+      <!-- Título centrado (siempre visible) -->
+      <div class="absolute inset-0 flex items-center justify-center p-6">
+        <h3 class="text-xl font-medium text-white text-center drop-shadow-lg" style="-webkit-text-stroke: 1px black;">
+          {project.name}
+        </h3>
+      </div>
+
+      <!-- Contenido hover (aparece abajo) -->
+      <div class="absolute bottom-0 left-0 right-0 p-6 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+        <div class="flex flex-wrap gap-2 mb-3">
+          {(project.technologies || []).slice(0, 3).map(tech => (
+            <Badge variant="default">{tech}</Badge>
+          ))}
+          {(project.technologies || []).length > 3 && (
+            <Badge variant="default">+{(project.technologies || []).length - 3}</Badge>
+          )}
+        </div>
+
+        <p class="text-white/90 text-sm leading-relaxed drop-shadow">
+          {project.shortDescription || 'Un proyecto construido con tecnologías modernas.'}
+        </p>
+      </div>
     </div>
-
-    <img transition:name={`project-${project.id}`} class="w-full transition duration-300 h-full hover:blur-sm object-cover rounded-lg opacity-80 hover:opacity-30" src={project.image} alt={project.name} />
-  </section>
+  </article>
 </a>
-
-<style>
-  .project-info {
-    display: none;
-    opacity: 0;
-  }
-
-  .project-container:hover .project-info {
-    display: block;
-    opacity: 1;
-  }
-</style>
