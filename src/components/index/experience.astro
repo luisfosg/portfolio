@@ -1,34 +1,7 @@
 ---
 import { experiences } from '@lib/experience'
-
-const formatDate = (iso: string) => {
-  if (!iso) return ''
-
-  const d = new Date(iso)
-
-  const formatted = new Intl.DateTimeFormat('es-ES', {
-    month: 'short',
-    year: 'numeric',
-  }).format(d)
-
-  return formatted.charAt(0).toUpperCase() + formatted.slice(1)
-}
-
-const getDuration = (startIso: string, endIso?: string) => {
-  const start = new Date(startIso)
-  const end = endIso ? new Date(endIso) : new Date()
-
-  let totalMonths = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth())
-  if (totalMonths < 0) totalMonths = 0
-
-  const years = Math.floor(totalMonths / 12)
-  const months = totalMonths % 12
-  const parts = []
-
-  if (years) parts.push(years + (years === 1 ? ' año' : ' años'))
-  if (months) parts.push(months + (months === 1 ? ' mes' : ' meses'))
-  return parts.length ? parts.join(', ') : '0 meses'
-}
+import { formatDate } from '@lib/date-utils'
+import ExperienceDuration from '@components/index/ExperienceDuration'
 ---
 
 <section class="w-3/4 mb-10 flex flex-col justify-center items-center">
@@ -49,7 +22,14 @@ const getDuration = (startIso: string, endIso?: string) => {
             </h3>
 
             <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              {formatDate(experience.startDate)} - {experience.isLasted ? 'Actualmente' : formatDate(experience?.endDate || '')} {' · ' + getDuration(experience.startDate, experience.isLasted ? undefined : experience.endDate)}
+              <span>{formatDate(experience.startDate)} - {experience.isLasted ? 'Actualmente' : formatDate(experience?.endDate || '')}</span>
+              <span class="ml-1">·</span>
+              <ExperienceDuration
+                client:idle
+                startDate={experience.startDate}
+                endDate={experience.endDate}
+                isLasted={experience.isLasted ?? false}
+              />
             </time>
             <p class="mb-4 text-sm font-normal text-gray-500 dark:text-gray-400">{experience.description}</p>
 
