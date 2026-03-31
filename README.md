@@ -2,7 +2,8 @@
 
 Portfolio personal desarrollado con **Astro**, **React** y **Tailwind CSS**, diseñado para mostrar mi trayectoria profesional, proyectos y habilidades técnicas.
 
-![Portfolio Preview](https://via.placeholder.com/800x400?text=Portfolio+Preview)
+<img width="1621" height="1047" alt="image" src="https://github.com/user-attachments/assets/db5ff118-3a58-498e-a87c-fd3258beeea4" />
+
 
 ## 🛠️ Tecnologías
 
