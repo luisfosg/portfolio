@@ -1,54 +1,73 @@
-# Astro Starter Kit: Basics
+# Mi Portfolio Personal
 
-```sh
-npm create astro@latest -- --template basics
+Portfolio personal desarrollado con **Astro**, **React** y **Tailwind CSS**, diseñado para mostrar mi trayectoria profesional, proyectos y habilidades técnicas.
+
+![Portfolio Preview](https://via.placeholder.com/800x400?text=Portfolio+Preview)
+
+## 🛠️ Tecnologías
+
+- **Framework:** Astro 5.x
+- **UI:** React 18 + TypeScript
+- **Estilos:** Tailwind CSS 3.4
+- **Iconos:** Iconify (Material Symbols, Ph, MDI, etc.)
+- **Monitoring:** Sentry + Spotlight
+- **Animaciones:** Tailwind Animated + React Type Animation
+
+### Tech Stack
+
+```
+JavaScript • TypeScript • Tailwind CSS • Next.js • Angular • NestJS • Node.js • Docker • React • Git • MySQL • MongoDB • PostgreSQL • GCP
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚀 Getting Started
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+```bash
+# Instalar dependencias
+npm install
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+# Iniciar servidor de desarrollo
+npm run dev
 
-## 🚀 Project Structure
+# Build para producción
+npm run build
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+# Preview del build
+npm run preview
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+El servidor local estará disponible en `http://localhost:4321`
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 📁 Estructura del Proyecto
 
-Any static assets, like images, can be placed in the `public/` directory.
+```
+src/
+├── components/          # Componentes reutilizables
+│   ├── react/          # Componentes React (Menu, Quote, Typing)
+│   ├── aside/          # Menú lateral (Profile, MenuItem)
+│   └── index/          # Componentes de la página principal
+├── layouts/            # Layouts base (Layout.astro)
+├── lib/                # Datos y utilidades
+│   ├── projects.ts    # Proyectos
+│   ├── experience.ts   # Experiencia laboral
+│   ├── tech.ts        # Tecnologías
+│   └── *.ts           # Utilidades varias
+├── pages/              # Rutas/pages de Astro
+│   ├── index.astro    # Home
+│   ├── profile.astro  # Perfil
+│   └── project/       # Detalle de proyectos
+└── styles/             # Estilos globales
+```
 
-## 🧞 Commands
+## 📋 Contenido
 
-All commands are run from the root of the project, from a terminal:
+### Experiencia
+- **Freelance** (2023 - Presente): Administración de sitios web y servidores VPS
+- **Davinci Technologies S.A.S** (2023 - 2026): Desarrollo full-stack bajo metodología SCRUM
+- **Alpes Solutions S.A.S** (2023): Desarrollo web, trabajo en equipo
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Proyectos
+- **UNIMAPZ**: Sistema interactivo de navegación universitaria para UNIPAZ (Leaflet.js, OpenStreetMap)
 
-## 👀 Want to learn more?
+## 📄 Licencia
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+MIT License - Ver LICENSE para más detalles.
