@@ -51,5 +51,24 @@ export const projects: Project[] = [
     architecture: 'Desarrollado con tecnologías web modernas para garantizar un rendimiento óptimo y una experiencia de usuario excepcional.',
     alert: 'Proyecto desarrollado en equipo con compañeros universitarios. Algunas funciones pueden tener acceso restringido.',
     technologies: ['Leaflet.js', 'JavaScript ES6+', 'HTML5', 'CSS3', 'OpenStreetMap']
+  },
+  {
+    id: '3',
+    slug: 'iban-generator',
+    name: 'IBAN Generator',
+    image: '/images/iban-generator.png',
+    link: 'https://luisfosg.github.io/tools/iban-generator/',
+    repository: 'https://github.com/luisfosg/tools',
+    shortDescription: 'Generador de IBANs de prueba con datos bancarios consistentes para la UE',
+    description: 'IBAN Generator es una herramienta que genera números IBAN de prueba para países de la Unión Europea, con datos bancarios consistentes como BIC/SWIFT, nombre del banco y código de banco. Ideal para desarrolladores que necesitan datos de prueba realistas para integraciones bancarias.',
+    features: [
+      'Soporte para 27 países de la UE con sus respectivos formatos IBAN',
+      'Generación de IBANs con datos bancarios realistas (BBVA, Santander, CaixaBank, etc.)',
+      'Visualización detallada: IBAN, BIC/SWIFT, banco, código de banco, número de cuenta',
+      'Formato con y sin espacios para copiar',
+      'Historial de IBANs generados',
+      'Exportación a JSON'
+    ],
+    technologies: ['Astro', 'React', 'TypeScript', 'Tailwind CSS']
   }
 ]
