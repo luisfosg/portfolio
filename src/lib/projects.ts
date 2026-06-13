@@ -16,6 +16,24 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: '1',
+    slug: 'noteffy',
+    name: 'Noteffy',
+    image: '/images/noteffy.png',
+    link: 'https://luisfosg.github.io/tools/noteffy/',
+    repository: 'https://github.com/luisfosg/tools',
+    shortDescription: 'Calculadora de notas ponderadas en tiempo real',
+    description: 'Noteffy es una calculadora de notas por ponderación que permite a estudiantes calcular su nota final en tiempo real. Soporta múltiples categorías (actividades, exámenes) con pesos personalizados y muestra el progreso de forma visual e interactiva.',
+    features: [
+      'Cálculo de notas ponderadas en tiempo real',
+      'Soporte para múltiples categorías (actividades, exámenes)',
+      'Pesos personalizados por ítem',
+      'Interfaz responsiva e interactiva',
+      'Visualización clara del progreso académico'
+    ],
+    technologies: ['Astro', 'React', 'TypeScript', 'Tailwind CSS', 'pnpm']
+  },
+  {
+    id: '2',
     slug: 'unimapz',
     name: 'UNIMAPZ',
     image: 'https://github.com/TheNewAgeDev/UNIMAPZ/blob/main/.assets/unimapz.png?raw=true',

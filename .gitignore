@@ -21,4 +21,8 @@ package-lock.json
 
 # macOS-specific files
 .DS_Store
+
+# Playwright MCP
+.playwright-mcp/
+
 pnpm-lock.yaml
