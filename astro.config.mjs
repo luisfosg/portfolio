@@ -6,6 +6,11 @@ import spotlightjs from "@spotlightjs/astro";
 
 
 export default defineConfig({
+  vite: {
+    optimizeDeps: {
+      include: ['react-dom/client'],
+    },
+  },
   integrations: [
     react(),
     sentry({

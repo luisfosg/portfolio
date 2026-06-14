@@ -70,5 +70,26 @@ export const projects: Project[] = [
       'Exportación a JSON'
     ],
     technologies: ['Astro', 'React', 'TypeScript', 'Tailwind CSS']
+  },
+  {
+    id: '4',
+    slug: 'qr-generator',
+    name: 'QR Generator',
+    image: '/images/qr-generator.png',
+    link: 'https://luisfosg.github.io/tools/qr-generator/',
+    repository: 'https://github.com/luisfosg/tools',
+    shortDescription: 'Generador de códigos QR personalizables con colores, estilos y logo',
+    description: 'QR Generator es una herramienta que permite crear códigos QR completamente personalizados. Ofrece múltiples opciones de estilo como tipos de puntos (cuadrados, redondeados, clásicos, puntos), esquinas personalizadas, degradados lineales y radiales, ajuste de márgenes, carga de logo central y exportación en PNG, SVG y JPG. Ideal para desarrolladores que necesitan generar QR con identidad de marca.',
+    features: [
+      'Múltiples estilos de puntos: Square, Rounded, Extra Rounded, Classy, Dots',
+      'Esquinas personalizables con varios estilos',
+      'Degradados lineales y radiales para puntos y fondo',
+      'Presets de color: Dark, Light, Brand, Neon',
+      'Corrección de error ajustable (L, M, Q, H)',
+      'Carga de logo central',
+      'Exportación a PNG, SVG y JPG',
+      'Ajuste de márgenes'
+    ],
+    technologies: ['Astro', 'React', 'TypeScript', 'Tailwind CSS', 'qr-code-styling']
   }
 ]
