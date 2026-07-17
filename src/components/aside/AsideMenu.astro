@@ -3,6 +3,8 @@ import MenuItem from "@components/aside/MenuItem.astro";
 import Profile from "@components/aside/Profile.astro";
 
 import { menuItems } from '@lib/menu'
+
+const pathname = Astro.url.pathname;
 ---
 
 <div id="aside" class="flex flex-col h-[90vh] gap-2 w-full">
@@ -11,13 +13,18 @@ import { menuItems } from '@lib/menu'
   </div>
 
   <div class="[grid-area:main] w-full bg-slate-100 rounded-lg dark:bg-zinc-900 overflow-y-auto">
-    <ul class="p-2 dark:bg-transparent rounded-lg">
+    <ul class="p-2 dark:bg-transparent rounded-lg flex flex-col gap-1">
       {
-        menuItems.map(menu => (
-          <MenuItem href={menu.link}>
-            <span class={menu.icon} /> {menu.name}
-          </MenuItem>
-        ))
+        menuItems.map(menu => {
+          const isActive = menu.link === '/'
+            ? pathname === '/'
+            : pathname.startsWith(menu.link);
+          return (
+            <MenuItem href={menu.link} isActive={isActive}>
+              <span class={menu.icon} /> {menu.name}
+            </MenuItem>
+          );
+        })
       }
     </ul>
   </div>
