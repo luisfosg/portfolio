@@ -36,6 +36,16 @@ const Menu: React.FC<Props> = () => {
     const savedIsOpen = localStorage.getItem("isOpenMenu") === "true";
     setIsOpenMenu(savedIsOpen);
     document.getElementById("app")?.classList.toggle("menu-open", savedIsOpen);
+
+    const closeMenu = () => {
+      if (window.innerWidth >= 768) return;
+      setIsOpenMenu(false);
+      localStorage.setItem("isOpenMenu", "false");
+      document.getElementById("app")?.classList.remove("menu-open");
+    };
+
+    window.addEventListener("close-menu", closeMenu);
+    return () => window.removeEventListener("close-menu", closeMenu);
   }, []);
 
   return (
