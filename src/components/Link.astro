@@ -11,7 +11,7 @@ const { link } = Astro.props;
 <a
   href={link.link}
   target={link.samePage ? '_self' : '_blank'}
-  class={`cursor-pointer bg-black/30 hover:bg-white/20 text-white w-full h-12 flex flex-row items-center justify-between rounded-full`}
+  class={`cursor-pointer bg-black/30 hover:bg-white/20 text-white w-full h-12 flex flex-row items-center justify-between rounded-full transition-colors duration-150`}
 >
   <div class={`ml-2 w-9 h-9 flex justify-center items-center rounded-full ${link.background} border-black`}>
     <span
@@ -22,7 +22,7 @@ const { link } = Astro.props;
   </div>
 
   <div class="w-20 text-center">
-    <span class="ml-1 text-md truncate font-thin">{link.name}</span>
+    <span class="ml-1 text-md truncate font-light">{link.name}</span>
   </div>
 
   <div class="w-11"></div>

@@ -64,3 +64,15 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .fade-in-up,
+  .fade-in-scale,
+  .animate-on-scroll {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

@@ -48,11 +48,23 @@ const Menu: React.FC<Props> = () => {
     return () => window.removeEventListener("close-menu", closeMenu);
   }, []);
 
+  const handleKeyDown = (action: () => void) => (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      action();
+    }
+  };
+
   return (
     <section className="flex items-center">
       <div
         onClick={toggleMenu}
-        className="hover:bg-white/20 cursor-pointer flex justify-center items-center p-2 rounded-lg"
+        onKeyDown={handleKeyDown(toggleMenu)}
+        role="button"
+        tabIndex={0}
+        aria-label={isOpenMenu ? "Cerrar menú" : "Abrir menú"}
+        aria-pressed={isOpenMenu}
+        className="hover:bg-white/20 cursor-pointer flex justify-center items-center p-2 rounded-lg transition-colors duration-150"
       >
         <span
           className={`${
@@ -67,7 +79,12 @@ const Menu: React.FC<Props> = () => {
 
       <div
         onClick={toggleDarkMode}
-        className="hover:bg-white/20 cursor-pointer flex justify-center items-center p-2 rounded-lg"
+        onKeyDown={handleKeyDown(toggleDarkMode)}
+        role="button"
+        tabIndex={0}
+        aria-label={isDarkMode ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
+        aria-pressed={isDarkMode}
+        className="hover:bg-white/20 cursor-pointer flex justify-center items-center p-2 rounded-lg transition-colors duration-150"
       >
         <span
           className={`${
