@@ -14,5 +14,10 @@ export const menuItems: Menu[] = [
     link: '/project',
     icon: 'text-lg mr-1 icon-[streamline--application-add]',
     name: 'Proyectos'
+  },
+  {
+    link: '/about',
+    icon: 'text-lg icon-[material-symbols--person-outline-rounded]',
+    name: 'Sobre mí'
   }
 ]
