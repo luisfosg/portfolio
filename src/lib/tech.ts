@@ -1,8 +1,7 @@
 type Tech = string;
 
 export const techs: Tech[] = [
-  'JavaScript', 'TypeScript', 'Tailwind CSS',
-  'Next.js', 'Angular', 'NestJS', 'Node.js', 'Docker',
-  'React', 'Git', 'GitHub', 'MySQL', 'MongoDB', 'PostgreSQL',
-  'GCP'
+  'JavaScript', 'TypeScript', 'React', 'Next.js', 'Angular',
+  'NestJS', 'Node.js', 'Astro', 'Tailwind CSS',
+  'Docker', 'GitHub', 'MySQL', 'MongoDB', 'PostgreSQL', 'GCP'
 ]

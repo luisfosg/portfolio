@@ -30,7 +30,7 @@ export const projects: Project[] = [
       'Interfaz responsiva e interactiva',
       'Visualización clara del progreso académico'
     ],
-    technologies: ['Astro', 'React', 'TypeScript', 'Tailwind CSS', 'pnpm']
+    technologies: ['Astro', 'React', 'TypeScript', 'Tailwind CSS', 'pnpm', 'GitHub']
   },
   {
     id: '2',
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     ],
     architecture: 'Desarrollado con tecnologías web modernas para garantizar un rendimiento óptimo y una experiencia de usuario excepcional.',
     alert: 'Proyecto desarrollado en equipo con compañeros universitarios. Algunas funciones pueden tener acceso restringido.',
-    technologies: ['Leaflet.js', 'JavaScript ES6+', 'HTML5', 'CSS3', 'OpenStreetMap']
+    technologies: ['Leaflet.js', 'JavaScript ES6+', 'OpenStreetMap', 'GitHub']
   },
   {
     id: '3',
@@ -69,7 +69,7 @@ export const projects: Project[] = [
       'Historial de IBANs generados',
       'Exportación a JSON'
     ],
-    technologies: ['Astro', 'React', 'TypeScript', 'Tailwind CSS']
+    technologies: ['Astro', 'React', 'TypeScript', 'Tailwind CSS', 'GitHub']
   },
   {
     id: '4',
@@ -90,6 +90,6 @@ export const projects: Project[] = [
       'Exportación a PNG, SVG y JPG',
       'Ajuste de márgenes'
     ],
-    technologies: ['Astro', 'React', 'TypeScript', 'Tailwind CSS', 'qr-code-styling']
+    technologies: ['Astro', 'React', 'TypeScript', 'Tailwind CSS', 'qr-code-styling', 'GitHub']
   }
 ]
