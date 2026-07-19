@@ -31,6 +31,7 @@ const { title, color } = Astro.props;
     <script is:inline>
       const theme = localStorage.getItem('theme');
       if (theme === 'dark') document.documentElement.classList.add('dark');
+
       const isOpen = localStorage.getItem('isOpenMenu') === 'true';
       if (isOpen) document.getElementById('app')?.classList.add('menu-open');
     </script>

@@ -19,5 +19,10 @@ export const menuItems: Menu[] = [
     link: '/about',
     icon: 'text-lg icon-[material-symbols--person-outline-rounded]',
     name: 'Sobre mí'
+  },
+  {
+    link: '/contact',
+    icon: 'text-lg icon-[mdi-light--email]',
+    name: 'Contacto'
   }
 ]

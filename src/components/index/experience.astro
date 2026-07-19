@@ -22,7 +22,10 @@ import ExperienceDuration from '@components/index/ExperienceDuration'
             </h3>
 
             <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              <span>{formatDate(experience.startDate)} - {experience.isLasted ? 'Actualmente' : formatDate(experience?.endDate || '')}</span>
+              <span>{formatDate(experience.startDate)} - {
+                experience.isLasted ? 'Actualmente' : formatDate(experience?.endDate || '')
+              }</span>
+
               <span class="ml-1">·</span>
               <ExperienceDuration
                 client:idle
