@@ -44,6 +44,14 @@ export const links: Link[] = [
     username: 'luisfosgdev@gmail.com',
   },
   {
+    icon: 'icon-[tabler--file-cv]',
+    background: 'bg-indigo-400',
+    link: 'https://luisfosg-cv.pages.dev/',
+    name: 'CV',
+    username: 'luisfosg-cv',
+    iconSize: 'text-xl',
+  },
+  {
     icon: 'icon-[simple-icons--linktree]',
     background: 'bg-green-400',
     color: 'text-black',
