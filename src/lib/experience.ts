@@ -21,6 +21,18 @@ export const experiences: Experience[] = [
     isLasted: true
   },
   {
+    icon: 'icon-[fxemoji--speechbubble]',
+    name: 'TalkEC',
+    startDate: '2025-08-02',
+    description: 'Co-Founder de una plataforma de comunicación empresarial basada en WhatsApp, con inteligencia artificial, chatbots e integraciones con WhatsApp Business y APIs externas.',
+    isLasted: true,
+    link: {
+      name: 'Visitar Página',
+      icon: 'icon-[ph--link-duotone]',
+      url: 'https://talkec.tech/'
+    }
+  },
+  {
     icon: 'icon-[fxemoji--artistpalette]',
     name: 'Outsourcing in Davinci Technologies S.A.S',
     startDate: '2023-01-02',

@@ -63,6 +63,7 @@ src/
 
 ### Experiencia
 - **Freelance** (2023 - Presente): Administración de sitios web y servidores VPS
+- **TalkEC** (Ago 2025 - Presente): Co-Founder de una plataforma de comunicación empresarial basada en WhatsApp con IA, chatbots e integraciones con WhatsApp Business y APIs externas
 - **Davinci Technologies S.A.S** (2023 - 2026): Desarrollo full-stack bajo metodología SCRUM
 - **Alpes Solutions S.A.S** (2023): Desarrollo web, trabajo en equipo
 
